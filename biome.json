@@ -1,0 +1,24 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"ignore": ["dist/**/*", "node_modules/**/*", "build/**/*"],
+		"include": ["src/**/*.ts"],
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"noForEach": "off"
+			},
+			"style": {
+				"noUnusedTemplateLiteral": "off"
+			},
+			"performance": { "noDelete": "off" },
+			"nursery": {
+				"useImportExtensions": "warn"
+			}
+		}
+	}
+}
