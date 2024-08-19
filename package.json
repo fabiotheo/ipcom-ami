@@ -1,6 +1,6 @@
 {
 	"name": "@ipcom/asterisk-ami",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"type": "module",
 	"main": "./dist/index.js",
 	"types": "./dist/types/index.d.ts",
@@ -12,7 +12,15 @@
 	"keywords": [],
 	"author": "Fabio Theodoro <fabio@ipcom.com.br>",
 	"license": "MIT",
-	"description": "",
+	"description": "Asterisk manager for Asterisk versions 18 and 20",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fabiotheo/ipcom-ami.git"
+	},
+	"bugs": {
+		"url": "https://github.com/fabiotheo/ipcom-ami/issues"
+	},
+	"homepage": "https://github.com/fabiotheo/ipcom-ami#readme",
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
 		"@types/node": "^22.4.0",
