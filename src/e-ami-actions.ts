@@ -431,23 +431,36 @@ export class eAmiActions {
 
 	public Ping(): Promise<boolean> {
 		return new Promise<boolean>((resolve, reject) => {
+			const actionID = new Date().getTime();
+			let timeoutHandle: NodeJS.Timeout | null = null;
+
+			// Iniciar o timeout
+			timeoutHandle = setTimeout(() => {
+				reject(new Error("Timeout to 'Ping' action, try again later..."));
+			}, this.timeOutAction);
+
 			(async () => {
-				const actionID = new Date().getTime();
-
-				setTimeout(() => {
-					reject(new Error("Timeout to 'Ping' action, try again later..."));
-				}, this.timeOutAction);
-
 				try {
 					const response = await this.eAmi.action<I_ActionPing, I_Response>({
 						Action: "Ping",
 						ActionID: actionID,
 					});
 
-					if (response.Response === "Success") resolve(true);
-					else if (response.Request?.Completed === true) resolve(true);
-					else if (response.Request?.Completed === false) reject(response);
+					// Cancela o timeout se o Ping foi bem-sucedido
+					if (timeoutHandle) {
+						clearTimeout(timeoutHandle);
+					}
+
+					if (response.Response === "Success" || response.Request?.Completed) {
+						resolve(true);
+					} else {
+						reject(new Error("Ping action failed"));
+					}
 				} catch (error) {
+					// Cancela o timeout em caso de erro
+					if (timeoutHandle) {
+						clearTimeout(timeoutHandle);
+					}
 					reject(error);
 				}
 			})();

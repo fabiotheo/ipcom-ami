@@ -1,13 +1,14 @@
 {
 	"name": "@ipcom/asterisk-ami",
-	"version": "0.0.3",
+	"version": "0.0.6",
 	"type": "module",
-	"main": "./dist/index.js",
+	"main": "./dist/cjs/index.cjs",
+	"module": "./dist/esm/index.js",
 	"types": "./dist/types/index.d.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "node build.js",
-		"start": "node dist/index.js"
+		"start": "node dist/esm/index.js"
 	},
 	"keywords": [],
 	"author": "Fabio Theodoro <fabio@ipcom.com.br>",
