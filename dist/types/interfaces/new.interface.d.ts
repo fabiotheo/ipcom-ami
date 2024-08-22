@@ -71,3 +71,4 @@ export interface I_NewExten {
     Application: string;
     AppData: string;
 }
+//# sourceMappingURL=new.interface.d.ts.map

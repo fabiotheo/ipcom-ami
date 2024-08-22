@@ -14,3 +14,4 @@ export interface IAddinionalOptions {
     heartbeatInterval?: number;
     excludeEvents?: string[];
 }
+//# sourceMappingURL=configure.interface.d.ts.map

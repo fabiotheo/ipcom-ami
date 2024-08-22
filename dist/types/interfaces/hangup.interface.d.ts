@@ -38,3 +38,4 @@ export interface I_DualHangup {
     hangup: I_Hangup | null;
     hangupRequest: I_HangupRequest | null;
 }
+//# sourceMappingURL=hangup.interface.d.ts.map

@@ -25,3 +25,4 @@ export declare class eAmiActions {
     QueueSummary(options: I_ActionQueueSummary): Promise<I_QueueSummary>;
     Status(options: I_ActionStatus): Promise<I_Status>;
 }
+//# sourceMappingURL=e-ami-actions.d.ts.map

@@ -372,6 +372,7 @@ declare namespace asterisk_ami {
     // Exporting your type guards functions
     export function isAgentComplete(evt: AMIEvent): evt is AgentComplete;
     export function isAgentCalled(evt: AMIEvent): evt is AgentCalled;
+    export function isCdr(evt: AMIEvent): evt is Cdr;
 
     /**
      * Configure option interfaces

@@ -6,3 +6,4 @@ export declare function _isNumber(value: unknown): boolean;
 export declare function _toNumber(value: unknown): number | undefined;
 export declare function _isFinite(value: number | null): boolean;
 export declare function _indexOfArray(array: unknown[], value: unknown): number;
+//# sourceMappingURL=functions.d.ts.map

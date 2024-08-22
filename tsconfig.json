@@ -10,7 +10,9 @@
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 		"declaration": true,
-		"declarationDir": "dist/types"
+		"declarationMap": true,
+		"declarationDir": "dist/types",
+		"removeComments": false
 	},
 	"include": ["src/**/*", "src/index.d.ts"]
 }

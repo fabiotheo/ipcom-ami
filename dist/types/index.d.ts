@@ -87,6 +87,24 @@ export declare class eAmi {
     events: EventEmitter;
     private _maxAuthCount;
     private _authCount;
+    /**
+     * Creates a new instance of the AMI connection.
+     *
+     * @constructor
+     * @param {IeAmiOptions} allOptions - Object containing all the necessary options to configure the connection.
+     * @param {string} allOptions.host - The address of the AMI server.
+     * @param {number} [allOptions.port=5038] - The port of the AMI server. If not specified, the default port 5038 will be used.
+     * @param {string} allOptions.userName - The username for AMI authentication.
+     * @param {string} allOptions.password - The password for AMI authentication.
+     * @param {Object} [allOptions.additionalOptions] - Additional configuration options.
+     * @param {boolean} [allOptions.additionalOptions.reconnect=true] - Whether to automatically reconnect in case of connection failure.
+     * @param {number} [allOptions.additionalOptions.heartbeatInterval=5] - Interval in seconds to send heartbeat packets.
+     * @param {number} [allOptions.additionalOptions.resendTimeOut=5] - Timeout in seconds to resend requests that failed.
+     * @param {Array<string>} [allOptions.additionalOptions.excludeEvents=[]] - List of events that should be ignored.
+     * @param {boolean} [allOptions.additionalOptions.emitAllEvents=false] - Whether to emit all events, even those in the excludeEvents list.
+     * @param {boolean} [allOptions.additionalOptions.debug=false] - Whether to enable debug mode, which prints detailed logs.
+     * @param {number} [allOptions.additionalOptions.maxReconnectCount=5] - Maximum number of reconnection attempts before giving up.
+     */
     constructor(allOptions: IeAmiOptions);
     private internalListeners;
     get excludeEvents(): string[];
@@ -110,3 +128,4 @@ export declare class eAmi {
     action<T extends I_Request, R>(request: T): Promise<R>;
     private getData;
 }
+//# sourceMappingURL=index.d.ts.map

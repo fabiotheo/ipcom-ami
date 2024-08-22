@@ -138,3 +138,4 @@ export interface I_BridgeListItem {
     BridgeNumChannels: number;
     BridgeVideoSourceMode: string;
 }
+//# sourceMappingURL=bridge.interface.d.ts.map

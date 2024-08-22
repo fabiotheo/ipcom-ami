@@ -15,3 +15,4 @@ export interface I_UserEvent {
     Linkedid: number;
     UserEvent: string;
 }
+//# sourceMappingURL=user-event.interface.d.ts.map

@@ -32,3 +32,4 @@ export interface I_Status {
     Variable: string;
     ActionID: string;
 }
+//# sourceMappingURL=status.interface.d.ts.map

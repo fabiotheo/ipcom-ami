@@ -94,3 +94,4 @@ export interface I_DialState {
     DestLinkedid: number;
     DialStatus: string;
 }
+//# sourceMappingURL=dial.interface.d.ts.map

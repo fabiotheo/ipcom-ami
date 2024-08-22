@@ -116,3 +116,4 @@ export interface I_QueueParams {
     ActionID: number | string;
     Response?: string;
 }
+//# sourceMappingURL=queue.d.ts.map

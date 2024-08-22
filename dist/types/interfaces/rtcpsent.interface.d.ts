@@ -68,3 +68,4 @@ export interface I_RTCPReceived {
     Report0LSR: number;
     Report0DLSR: number;
 }
+//# sourceMappingURL=rtcpsent.interface.d.ts.map

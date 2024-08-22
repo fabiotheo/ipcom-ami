@@ -1,3 +1,40 @@
+/**
+ * Represents the data structure for the AGIExecEnd event in Asterisk.
+ *
+ * **Synopsis**: Raised when an AGI command finishes execution.
+ *
+ * **Syntax**:
+ * - `Event: AGIExecEnd`
+ * - `Channel: string`
+ * - `CommandId: string`
+ * - `Result: string`
+ */
+/**
+ * Represents the data structure for the AGIExecEnd event in Asterisk.
+ *
+ * **Synopsis**: Description for AGIExecEnd event.
+ *
+ * **Syntax**:
+ * - `Event: "AGIExecEnd"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Command: string`
+ * - `CommandId: string`
+ * - `ResultCode: string`
+ * - `Result: string`
+ */
 export type AGIExecEnd = {
 	Event: "AGIExecEnd";
 	Channel: string;
@@ -20,6 +57,41 @@ export type AGIExecEnd = {
 	Result: string;
 };
 
+/**
+ * Represents the data structure for the AGIExecStart event in Asterisk.
+ *
+ * **Synopsis**: Raised when an AGI command starts execution.
+ *
+ * **Syntax**:
+ * - `Event: AGIExecStart`
+ * - `Channel: string`
+ * - `CommandId: string`
+ * - `Command: string`
+ */
+/**
+ * Represents the data structure for the AGIExecStart event in Asterisk.
+ *
+ * **Synopsis**: Description for AGIExecStart event.
+ *
+ * **Syntax**:
+ * - `Event: "AGIExecStart"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Command: string`
+ * - `CommandId: string`
+ */
 export type AGIExecStart = {
 	Event: "AGIExecStart";
 	Channel: string;
@@ -40,6 +112,49 @@ export type AGIExecStart = {
 	CommandId: string;
 };
 
+/**
+ * Represents the data structure for the AOCD event in Asterisk.
+ *
+ * **Synopsis**: Raised when an Advice of Charge (AOC-D) message is received.
+ *
+ * **Syntax**:
+ * - `Event: AOCD`
+ * - `Channel: string`
+ * - `AOCAmount: string`
+ */
+/**
+ * Represents the data structure for the AOCD event in Asterisk.
+ *
+ * **Synopsis**: Description for AOCD event.
+ *
+ * **Syntax**:
+ * - `Event: "AOC-D"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Charge: string`
+ * - `Type: string`
+ * - `BillingID: string`
+ * - `TotalType: string`
+ * - `Currency: string`
+ * - `Name: string`
+ * - `Cost: string`
+ * - `Multiplier: string`
+ * - `Units: string`
+ * - `NumberOf: string`
+ * - `TypeOf: string`
+ */
 export type AOCD = {
 	Event: "AOC-D";
 	Channel: string;
@@ -69,6 +184,53 @@ export type AOCD = {
 	TypeOf: string;
 };
 
+/**
+ * Represents the data structure for the AOCE event in Asterisk.
+ *
+ * **Synopsis**: Raised when an Advice of Charge (AOC-E) message is received.
+ *
+ * **Syntax**:
+ * - `Event: AOCE`
+ * - `Channel: string`
+ * - `AOCAmount: string`
+ */
+/**
+ * Represents the data structure for the AOCE event in Asterisk.
+ *
+ * **Synopsis**: Description for AOCE event.
+ *
+ * **Syntax**:
+ * - `Event: "AOC-E"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `ChargingAssociation: string`
+ * - `Number: string`
+ * - `Plan: string`
+ * - `ID: string`
+ * - `Charge: string`
+ * - `Type: string`
+ * - `BillingID: string`
+ * - `TotalType: string`
+ * - `Currency: string`
+ * - `Name: string`
+ * - `Cost: string`
+ * - `Multiplier: string`
+ * - `Units: string`
+ * - `NumberOf: string`
+ * - `TypeOf: string`
+ */
 export type AOCE = {
 	Event: "AOC-E";
 	Channel: string;
@@ -102,6 +264,51 @@ export type AOCE = {
 	TypeOf: string;
 };
 
+/**
+ * Represents the data structure for the AOCS event in Asterisk.
+ *
+ * **Synopsis**: Raised when an Advice of Charge (AOC-S) message is received.
+ *
+ * **Syntax**:
+ * - `Event: AOCS`
+ * - `Channel: string`
+ * - `AOCAmount: string`
+ */
+/**
+ * Represents the data structure for the AOCS event in Asterisk.
+ *
+ * **Synopsis**: Description for AOCS event.
+ *
+ * **Syntax**:
+ * - `Event: "AOC-S"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Chargeable: string`
+ * - `RateType: string`
+ * - `Currency: string`
+ * - `Name: string`
+ * - `Cost: string`
+ * - `Multiplier: string`
+ * - `ChargingType: string`
+ * - `StepFunction: string`
+ * - `Granularity: string`
+ * - `Length: string`
+ * - `Scale: string`
+ * - `Unit: string`
+ * - `SpecialCode: string`
+ */
 export type AOCS = {
 	Event: "AOC-S";
 	Channel: string;
@@ -133,6 +340,58 @@ export type AOCS = {
 	SpecialCode: string;
 };
 
+/**
+ * Represents the data structure for the AgentCalled event in Asterisk.
+ *
+ * **Synopsis**: Raised when a queue member is rung.
+ *
+ * **Syntax**:
+ * - `Event: AgentCalled`
+ * - `Channel: string`
+ * - `AgentCalled: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ */
+/**
+ * Represents the data structure for the AgentCalled event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentCalled event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentCalled"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `DestChannel: string`
+ * - `DestChannelState: number`
+ * - `DestChannelStateDesc: string`
+ * - `DestCallerIDNum: string`
+ * - `DestCallerIDName: string`
+ * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineName: string`
+ * - `DestLanguage: string`
+ * - `DestAccountCode: string`
+ * - `DestContext: string`
+ * - `DestExten: string`
+ * - `DestPriority: string`
+ * - `DestUniqueid: string`
+ * - `DestLinkedid: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ */
 export type AgentCalled = {
 	Event: "AgentCalled";
 	Channel: string;
@@ -168,6 +427,62 @@ export type AgentCalled = {
 	Interface: string;
 };
 
+/**
+ * Represents the data structure for the AgentComplete event in Asterisk.
+ *
+ * **Synopsis**: Raised when a queue member finishes a call.
+ *
+ * **Syntax**:
+ * - `Event: AgentComplete`
+ * - `Channel: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ * - `HoldTime: number`
+ * - `TalkTime: number`
+ */
+/**
+ * Represents the data structure for the AgentComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentComplete"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `DestChannel: string`
+ * - `DestChannelState: number`
+ * - `DestChannelStateDesc: string`
+ * - `DestCallerIDNum: string`
+ * - `DestCallerIDName: string`
+ * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineName: string`
+ * - `DestLanguage: string`
+ * - `DestAccountCode: string`
+ * - `DestContext: string`
+ * - `DestExten: string`
+ * - `DestPriority: string`
+ * - `DestUniqueid: string`
+ * - `DestLinkedid: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ * - `HoldTime: string`
+ * - `TalkTime: string`
+ * - `Reason: string`
+ */
 export type AgentComplete = {
 	Event: "AgentComplete";
 	Channel: string;
@@ -206,7 +521,88 @@ export type AgentComplete = {
 	Reason: string;
 };
 
-// AgentConnect
+/**
+ * Represents the data structure for the AgentConnect event in Asterisk.
+ *
+ * **Synopsis**: Raised when a queue member answers and is bridged to a caller in the queue.
+ *
+ * **Syntax**:
+ * - `Event: AgentConnect`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: number`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `DestChannel: string`
+ * - `DestChannelState: number`
+ * - `DestChannelStateDesc: string`
+ * - `DestCallerIDNum: string`
+ * - `DestCallerIDName: string`
+ * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineName: string`
+ * - `DestLanguage: string`
+ * - `DestAccountCode: string`
+ * - `DestContext: string`
+ * - `DestExten: string`
+ * - `DestPriority: number`
+ * - `DestUniqueid: string`
+ * - `DestLinkedid: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ * - `RingTime: number`
+ * - `HoldTime: number`
+ */
+/**
+ * Represents the data structure for the AgentConnect event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentConnect event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentConnect"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `DestChannel: string`
+ * - `DestChannelState: number`
+ * - `DestChannelStateDesc: string`
+ * - `DestCallerIDNum: string`
+ * - `DestCallerIDName: string`
+ * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineName: string`
+ * - `DestLanguage: string`
+ * - `DestAccountCode: string`
+ * - `DestContext: string`
+ * - `DestExten: string`
+ * - `DestPriority: string`
+ * - `DestUniqueid: string`
+ * - `DestLinkedid: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ * - `RingTime: number`
+ * - `HoldTime: number`
+ */
 export type AgentConnect = {
 	Event: "AgentConnect";
 	Channel: string;
@@ -244,7 +640,84 @@ export type AgentConnect = {
 	HoldTime: number;
 };
 
-// AgentDump
+/**
+ * Represents the data structure for the AgentDump event in Asterisk.
+ *
+ * **Synopsis**: Raised when a queue member hangs up on a caller in the queue.
+ *
+ * **Syntax**:
+ * - `Event: AgentDump`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: number`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `DestChannel: string`
+ * - `DestChannelState: number`
+ * - `DestChannelStateDesc: string`
+ * - `DestCallerIDNum: string`
+ * - `DestCallerIDName: string`
+ * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineName: string`
+ * - `DestLanguage: string`
+ * - `DestAccountCode: string`
+ * - `DestContext: string`
+ * - `DestExten: string`
+ * - `DestPriority: number`
+ * - `DestUniqueid: string`
+ * - `DestLinkedid: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ */
+/**
+ * Represents the data structure for the AgentDump event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentDump event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentDump"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `DestChannel: string`
+ * - `DestChannelState: number`
+ * - `DestChannelStateDesc: string`
+ * - `DestCallerIDNum: string`
+ * - `DestCallerIDName: string`
+ * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineName: string`
+ * - `DestLanguage: string`
+ * - `DestAccountCode: string`
+ * - `DestContext: string`
+ * - `DestExten: string`
+ * - `DestPriority: string`
+ * - `DestUniqueid: string`
+ * - `DestLinkedid: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ */
 export type AgentDump = {
 	Event: "AgentDump";
 	Channel: string;
@@ -280,7 +753,41 @@ export type AgentDump = {
 	Interface: string;
 };
 
-// AgentLogin
+/**
+ * Represents the data structure for the AgentLogin event in Asterisk.
+ *
+ * **Synopsis**: Raised when a queue member logs in.
+ *
+ * **Syntax**:
+ * - `Event: AgentLogin`
+ * - `Channel: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ */
+/**
+ * Represents the data structure for the AgentLogin event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentLogin event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentLogin"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Agent: string`
+ */
 export type AgentLogin = {
 	Event: "AgentLogin";
 	Channel: string;
@@ -300,14 +807,88 @@ export type AgentLogin = {
 	Agent: string;
 };
 
-// AgentLogoff
+/**
+ * Represents the data structure for the AgentLogoff event in Asterisk.
+ *
+ * **Synopsis**: Raised when a queue member logs off.
+ *
+ * **Syntax**:
+ * - `Event: AgentLogoff`
+ * - `Channel: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ * - `LogoffReason: string`
+ */
+/**
+ * Represents the data structure for the AgentLogoff event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentLogoff event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentLogoff"`
+ * - `Agent: string`
+ * - `Logintime: number`
+ */
 export type AgentLogoff = {
 	Event: "AgentLogoff";
 	Agent: string;
 	Logintime: number;
 };
 
-// AgentRingNoAnswer
+/**
+ * Represents the data structure for the AgentRingNoAnswer event in Asterisk.
+ *
+ * **Synopsis**: Raised when a queue member does not answer a call.
+ *
+ * **Syntax**:
+ * - `Event: AgentRingNoAnswer`
+ * - `Channel: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ * - `RingTime: number`
+ */
+/**
+ * Represents the data structure for the AgentRingNoAnswer event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentRingNoAnswer event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentRingNoAnswer"`
+ * - `Channel: string`
+ * - `ChannelState: number`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `DestChannel: string`
+ * - `DestChannelState: number`
+ * - `DestChannelStateDesc: string`
+ * - `DestCallerIDNum: string`
+ * - `DestCallerIDName: string`
+ * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineName: string`
+ * - `DestLanguage: string`
+ * - `DestAccountCode: string`
+ * - `DestContext: string`
+ * - `DestExten: string`
+ * - `DestPriority: string`
+ * - `DestUniqueid: string`
+ * - `DestLinkedid: string`
+ * - `Queue: string`
+ * - `MemberName: string`
+ * - `Interface: string`
+ * - `RingTime: number`
+ */
 export type AgentRingNoAnswer = {
 	Event: "AgentRingNoAnswer";
 	Channel: string;
@@ -344,7 +925,19 @@ export type AgentRingNoAnswer = {
 	RingTime: number;
 };
 
-// Agents
+/**
+ * Represents the data structure for the Agents event in Asterisk.
+ *
+ * **Synopsis**: Raised in response to an Agents command, listing active agents.
+ *
+ * **Syntax**:
+ * - `Event: Agents`
+ * - `Agent: string`
+ * - `Name: string`
+ * - `Status: string`
+ * - `LoggedInTime: string`
+ * - `TalkingTo: string`
+ */
 export type Agents = {
 	Event: "Agents";
 	Agent: string;
@@ -370,23 +963,114 @@ export type Agents = {
 	ActionID: string;
 };
 
-// AgentsComplete
+/**
+ * Represents the data structure for the AgentsComplete event in Asterisk.
+ *
+ * **Synopsis**: Raised after all Agents have been reported in response to an Agents command.
+ *
+ * **Syntax**:
+ * - `Event: AgentsComplete`
+ * - `ListItems: number`
+ */
+/**
+ * Represents the data structure for the AgentsComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for AgentsComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "AgentsComplete"`
+ * - `ActionID: string`
+ */
 export type AgentsComplete = {
 	Event: "AgentsComplete";
 	ActionID: string;
 };
 
+/**
+ * Represents the data structure for the Alarm event in Asterisk.
+ *
+ * **Synopsis**: Raised when a DAHDI channel reports an alarm condition.
+ *
+ * **Syntax**:
+ * - `Event: Alarm`
+ * - `Channel: string`
+ * - `Alarm: string`
+ */
+/**
+ * Represents the data structure for the Alarm event in Asterisk.
+ *
+ * **Synopsis**: Description for Alarm event.
+ *
+ * **Syntax**:
+ * - `Event: "Alarm"`
+ * - `DAHDIChannel: string`
+ * - `Alarm: string`
+ */
 export type Alarm = {
 	Event: "Alarm";
 	DAHDIChannel: string;
 	Alarm: string;
 };
 
+/**
+ * Represents the data structure for the AlarmClear event in Asterisk.
+ *
+ * **Synopsis**: Raised when a DAHDI channel clears an alarm condition.
+ *
+ * **Syntax**:
+ * - `Event: AlarmClear`
+ * - `Channel: string`
+ * - `Alarm: string`
+ */
+/**
+ * Represents the data structure for the AlarmClear event in Asterisk.
+ *
+ * **Synopsis**: Description for AlarmClear event.
+ *
+ * **Syntax**:
+ * - `Event: "AlarmClear"`
+ * - `DAHDIChannel: string`
+ */
 export type AlarmClear = {
 	Event: "AlarmClear";
 	DAHDIChannel: string;
 };
 
+/**
+ * Represents the data structure for the AorDetail event in Asterisk.
+ *
+ * **Synopsis**: Provides information about an AOR (Address of Record).
+ *
+ * **Syntax**:
+ * - `Event: AorDetail`
+ * - `AOR: string`
+ * - `Contact: string`
+ * - `Status: string`
+ */
+/**
+ * Represents the data structure for the AorDetail event in Asterisk.
+ *
+ * **Synopsis**: Description for AorDetail event.
+ *
+ * **Syntax**:
+ * - `Event: "AorDetail"`
+ * - `ObjectType: "aor"`
+ * - `ObjectName: string`
+ * - `MinimumExpiration: string`
+ * - `MaximumExpiration: string`
+ * - `DefaultExpiration: string`
+ * - `QualifyFrequency: string`
+ * - `AuthenticateQualify: string`
+ * - `MaxContacts: string`
+ * - `RemoveExisting: string`
+ * - `RemoveUnavailable: string`
+ * - `Mailboxes: string`
+ * - `OutboundProxy: string`
+ * - `SupportPath: string`
+ * - `TotalContacts: string`
+ * - `ContactsRegistered: string`
+ * - `EndpointName: string`
+ */
 export type AorDetail = {
 	Event: "AorDetail";
 	ObjectType: "aor";
@@ -407,6 +1091,38 @@ export type AorDetail = {
 	EndpointName: string;
 };
 
+/**
+ * Represents the data structure for the AorList event in Asterisk.
+ *
+ * **Synopsis**: Provides a list of AORs (Address of Records).
+ *
+ * **Syntax**:
+ * - `Event: AorList`
+ * - `ObjectType: string`
+ * - `ObjectName: string`
+ * - `AOR: string`
+ */
+/**
+ * Represents the data structure for the AorList event in Asterisk.
+ *
+ * **Synopsis**: Description for AorList event.
+ *
+ * **Syntax**:
+ * - `Event: "AorList"`
+ * - `ObjectType: "aor"`
+ * - `ObjectName: string`
+ * - `MinimumExpiration: string`
+ * - `MaximumExpiration: string`
+ * - `DefaultExpiration: string`
+ * - `QualifyFrequency: string`
+ * - `AuthenticateQualify: string`
+ * - `MaxContacts: string`
+ * - `RemoveExisting: string`
+ * - `RemoveUnavailable: string`
+ * - `Mailboxes: string`
+ * - `OutboundProxy: string`
+ * - `SupportPath: string`
+ */
 export type AorList = {
 	Event: "AorList";
 	ObjectType: "aor";
@@ -424,12 +1140,64 @@ export type AorList = {
 	SupportPath: string;
 };
 
+/**
+ * Represents the data structure for the AorListComplete event in Asterisk.
+ *
+ * **Synopsis**: Indicates that the list of AORs is complete.
+ *
+ * **Syntax**:
+ * - `Event: AorListComplete`
+ * - `ListItems: number`
+ */
+/**
+ * Represents the data structure for the AorListComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for AorListComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "AorListComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type AorListComplete = {
 	Event: "AorListComplete";
 	EventList: string;
 	ListItems: string;
 };
 
+/**
+ * Represents the data structure for the AsyncAGIEnd event in Asterisk.
+ *
+ * **Synopsis**: Raised when an Async AGI command finishes execution.
+ *
+ * **Syntax**:
+ * - `Event: AsyncAGIEnd`
+ * - `Channel: string`
+ * - `CommandId: string`
+ * - `Result: string`
+ */
+/**
+ * Represents the data structure for the AsyncAGIEnd event in Asterisk.
+ *
+ * **Synopsis**: Description for AsyncAGIEnd event.
+ *
+ * **Syntax**:
+ * - `Event: "AsyncAGIEnd"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ */
 export type AsyncAGIEnd = {
 	Event: "AsyncAGIEnd";
 	Channel: string;
@@ -448,6 +1216,17 @@ export type AsyncAGIEnd = {
 	Linkedid: string;
 };
 
+/**
+ * Represents the data structure for the AsyncAGIExec event in Asterisk.
+ *
+ * **Synopsis**: Raised during the execution of an Async AGI command.
+ *
+ * **Syntax**:
+ * - `Event: AsyncAGIExec`
+ * - `Channel: string`
+ * - `CommandId: string`
+ * - `Command: string`
+ */
 export type AsyncAGIExec = {
 	Event: "AsyncAGIExec";
 	Channel: string;
@@ -468,6 +1247,40 @@ export type AsyncAGIExec = {
 	Result: string;
 };
 
+/**
+ * Represents the data structure for the AsyncAGIStart event in Asterisk.
+ *
+ * **Synopsis**: Raised when an Async AGI command starts execution.
+ *
+ * **Syntax**:
+ * - `Event: AsyncAGIStart`
+ * - `Channel: string`
+ * - `CommandId: string`
+ * - `Command: string`
+ */
+/**
+ * Represents the data structure for the AsyncAGIStart event in Asterisk.
+ *
+ * **Synopsis**: Description for AsyncAGIStart event.
+ *
+ * **Syntax**:
+ * - `Event: "AsyncAGIStart"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Env: string`
+ */
 export type AsyncAGIStart = {
 	Event: "AsyncAGIStart";
 	Channel: string;
@@ -487,6 +1300,27 @@ export type AsyncAGIStart = {
 	Env: string;
 };
 
+/**
+ * Represents the data structure for the AttendedTransfer event in Asterisk.
+ *
+ * **Synopsis**: Raised when an attended transfer is attempted.
+ *
+ * **Syntax**:
+ * - `Event: AttendedTransfer`
+ * - `TransfererChannel: string`
+ * - `TransfererUniqueid: string`
+ * - `TransfereeChannel: string`
+ * - `TransfereeUniqueid: string`
+ * - `TransferTargetChannel: string`
+ * - `TransferTargetUniqueid: string`
+ * - `TransfererContext: string`
+ * - `TransfererExten: string`
+ * - `TransfererPriority: number`
+ * - `TransferTargetContext: string`
+ * - `TransferTargetExten: string`
+ * - `TransferTargetPriority: number`
+ * - `Result: string`
+ */
 export type AttendedTransfer = {
 	Event: "AttendedTransfer";
 	Result: "Fail" | "Invalid" | "Not Permitted" | "Success";
@@ -582,6 +1416,36 @@ export type AttendedTransfer = {
 	TransfereeLinkedid: string;
 };
 
+/**
+ * Represents the data structure for the AuthDetail event in Asterisk.
+ *
+ * **Synopsis**: Provides details about an authentication.
+ *
+ * **Syntax**:
+ * - `Event: AuthDetail`
+ * - `ObjectType: string`
+ * - `ObjectName: string`
+ * - `AuthType: string`
+ * - `Password: string`
+ * - `Realm: string`
+ */
+/**
+ * Represents the data structure for the AuthDetail event in Asterisk.
+ *
+ * **Synopsis**: Description for AuthDetail event.
+ *
+ * **Syntax**:
+ * - `Event: "AuthDetail"`
+ * - `ObjectType: "auth"`
+ * - `ObjectName: string`
+ * - `Username: string`
+ * - `Password: string`
+ * - `Md5Cred: string`
+ * - `Realm: string`
+ * - `NonceLifetime: string`
+ * - `AuthType: string`
+ * - `EndpointName: string`
+ */
 export type AuthDetail = {
 	Event: "AuthDetail";
 	ObjectType: "auth";
@@ -595,6 +1459,33 @@ export type AuthDetail = {
 	EndpointName: string;
 };
 
+/**
+ * Represents the data structure for the AuthList event in Asterisk.
+ *
+ * **Synopsis**: Provides a list of authentications.
+ *
+ * **Syntax**:
+ * - `Event: AuthList`
+ * - `ObjectType: string`
+ * - `ObjectName: string`
+ * - `AuthType: string`
+ */
+/**
+ * Represents the data structure for the AuthList event in Asterisk.
+ *
+ * **Synopsis**: Description for AuthList event.
+ *
+ * **Syntax**:
+ * - `Event: "AuthList"`
+ * - `ObjectType: "auth"`
+ * - `ObjectName: string`
+ * - `Username: string`
+ * - `Md5Cred: string`
+ * - `Realm: string`
+ * - `AuthType: string`
+ * - `Password: string`
+ * - `NonceLifetime: string`
+ */
 export type AuthList = {
 	Event: "AuthList";
 	ObjectType: "auth";
@@ -607,12 +1498,41 @@ export type AuthList = {
 	NonceLifetime: string;
 };
 
+/**
+ * Represents the data structure for the AuthListComplete event in Asterisk.
+ *
+ * **Synopsis**: Indicates that the list of authentications is complete.
+ *
+ * **Syntax**:
+ * - `Event: AuthListComplete`
+ * - `ListItems: number`
+ */
+/**
+ * Represents the data structure for the AuthListComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for AuthListComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "AuthListComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type AuthListComplete = {
 	Event: "AuthListComplete";
 	EventList: string;
 	ListItems: string;
 };
 
+/**
+ * Represents the data structure for the AuthMethodNotAllowed event in Asterisk.
+ *
+ * **Synopsis**: Raised when an authentication method is not allowed.
+ *
+ * **Syntax**:
+ * - `Event: AuthMethodNotAllowed`
+ * - `Channel: string`
+ * - `Method: string`
+ */
 export type AuthMethodNotAllowed = {
 	Event: "AuthMethodNotAllowed";
 	EventTV: string;
@@ -628,6 +1548,25 @@ export type AuthMethodNotAllowed = {
 	SessionTV?: string;
 };
 
+/**
+ * Represents the data structure for the BlindTransfer event in Asterisk.
+ *
+ * **Synopsis**: Raised when a blind transfer is attempted.
+ *
+ * **Syntax**:
+ * - `Event: BlindTransfer`
+ * - `TransfererChannel: string`
+ * - `TransfererUniqueid: string`
+ * - `TransfereeChannel: string`
+ * - `TransfereeUniqueid: string`
+ * - `TransfererContext: string`
+ * - `TransfererExten: string`
+ * - `TransfererPriority: number`
+ * - `TransfereeContext: string`
+ * - `TransfereeExten: string`
+ * - `TransfereePriority: number`
+ * - `Result: string`
+ */
 export type BlindTransfer = {
 	Event: "BlindTransfer";
 	Result: "Fail" | "Invalid" | "Not Permitted" | "Success";
@@ -694,6 +1633,20 @@ export type BlindTransfer = {
 	Extension: string;
 };
 
+/**
+ * Represents the data structure for the BridgeCreate event in Asterisk.
+ *
+ * **Synopsis**: Raised when a bridge is created.
+ *
+ * **Syntax**:
+ * - `Event: BridgeCreate`
+ * - `BridgeUniqueid: string`
+ * - `BridgeType: string`
+ * - `BridgeTechnology: string`
+ * - `BridgeCreator: string`
+ * - `BridgeName: string`
+ * - `BridgeNumChannels: number`
+ */
 export type BridgeCreate = {
 	Event: "BridgeCreate";
 	BridgeUniqueid: string;
@@ -706,6 +1659,20 @@ export type BridgeCreate = {
 	BridgeVideoSource?: string;
 };
 
+/**
+ * Represents the data structure for the BridgeDestroy event in Asterisk.
+ *
+ * **Synopsis**: Raised when a bridge is destroyed.
+ *
+ * **Syntax**:
+ * - `Event: BridgeDestroy`
+ * - `BridgeUniqueid: string`
+ * - `BridgeType: string`
+ * - `BridgeTechnology: string`
+ * - `BridgeCreator: string`
+ * - `BridgeName: string`
+ * - `BridgeNumChannels: number`
+ */
 export type BridgeDestroy = {
 	Event: "BridgeDestroy";
 	BridgeUniqueid: string;
@@ -718,6 +1685,21 @@ export type BridgeDestroy = {
 	BridgeVideoSource?: string;
 };
 
+/**
+ * Represents the data structure for the BridgeEnter event in Asterisk.
+ *
+ * **Synopsis**: Raised when a channel enters a bridge.
+ *
+ * **Syntax**:
+ * - `Event: BridgeEnter`
+ * - `BridgeUniqueid: string`
+ * - `BridgeType: string`
+ * - `BridgeTechnology: string`
+ * - `BridgeCreator: string`
+ * - `BridgeName: string`
+ * - `Channel: string`
+ * - `Uniqueid: string`
+ */
 export type BridgeEnter = {
 	Event: "BridgeEnter";
 	BridgeUniqueid: string;
@@ -756,6 +1738,18 @@ export type BridgeEnter = {
 	SwapUniqueid?: string;
 };
 
+/**
+ * Represents the data structure for the BridgeInfoChannel event in Asterisk.
+ *
+ * **Synopsis**: Provides information about channels in a bridge.
+ *
+ * **Syntax**:
+ * - `Event: BridgeInfoChannel`
+ * - `BridgeUniqueid: string`
+ * - `BridgeType: string`
+ * - `Channel: string`
+ * - `Uniqueid: string`
+ */
 export type BridgeInfoChannel = {
 	Event: "BridgeInfoChannel";
 	Channel: string;
@@ -785,6 +1779,16 @@ export type BridgeInfoChannel = {
 	Linkedid: string;
 };
 
+/**
+ * Represents the data structure for the BridgeInfoComplete event in Asterisk.
+ *
+ * **Synopsis**: Indicates that the list of channels in a bridge is complete.
+ *
+ * **Syntax**:
+ * - `Event: BridgeInfoComplete`
+ * - `BridgeUniqueid: string`
+ * - `ListItems: number`
+ */
 export type BridgeInfoComplete = {
 	Event: "BridgeInfoComplete";
 	BridgeUniqueid: string;
@@ -797,6 +1801,21 @@ export type BridgeInfoComplete = {
 	BridgeVideoSource?: string;
 };
 
+/**
+ * Represents the data structure for the BridgeLeave event in Asterisk.
+ *
+ * **Synopsis**: Raised when a channel leaves a bridge.
+ *
+ * **Syntax**:
+ * - `Event: BridgeLeave`
+ * - `BridgeUniqueid: string`
+ * - `BridgeType: string`
+ * - `BridgeTechnology: string`
+ * - `BridgeCreator: string`
+ * - `BridgeName: string`
+ * - `Channel: string`
+ * - `Uniqueid: string`
+ */
 export type BridgeLeave = {
 	Event: "BridgeLeave";
 	BridgeUniqueid: string;
@@ -834,6 +1853,20 @@ export type BridgeLeave = {
 	Linkedid: string;
 };
 
+/**
+ * Represents the data structure for the BridgeMerge event in Asterisk.
+ *
+ * **Synopsis**: Raised when two bridges are merged.
+ *
+ * **Syntax**:
+ * - `Event: BridgeMerge`
+ * - `BridgeUniqueid: string`
+ * - `BridgeType: string`
+ * - `BridgeTechnology: string`
+ * - `BridgeCreator: string`
+ * - `BridgeName: string`
+ * - `BridgeNumChannels: number`
+ */
 export type BridgeMerge = {
 	Event: "BridgeMerge";
 	ToBridgeUniqueid: string;
@@ -854,6 +1887,18 @@ export type BridgeMerge = {
 	FromBridgeVideoSource?: string;
 };
 
+/**
+ * Represents the data structure for the BridgeVideoSourceUpdate event in Asterisk.
+ *
+ * **Synopsis**: Raised when the video source for a bridge is updated.
+ *
+ * **Syntax**:
+ * - `Event: BridgeVideoSourceUpdate`
+ * - `BridgeUniqueid: string`
+ * - `BridgeType: string`
+ * - `VideoSourceChannel: string`
+ * - `VideoSourceUniqueid: string`
+ */
 export type BridgeVideoSourceUpdate = {
 	Event: "BridgeVideoSourceUpdate";
 	BridgeUniqueid: string;
@@ -867,6 +1912,31 @@ export type BridgeVideoSourceUpdate = {
 	BridgePreviousVideoSource: string;
 };
 
+/**
+ * Represents the data structure for the CEL event in Asterisk.
+ *
+ * **Synopsis**: Raised when a Channel Event Logging (CEL) event occurs.
+ *
+ * **Syntax**:
+ * - `Event: CEL`
+ * - `EventName: string`
+ * - `AccountCode: string`
+ * - `CallerIDnum: string`
+ * - `CallerIDname: string`
+ * - `CallerIDani: string`
+ * - `CallerIDrdnis: string`
+ * - `CallerIDdnid: string`
+ * - `Exten: string`
+ * - `Context: string`
+ * - `Application: string`
+ * - `AppData: string`
+ * - `EventTime: string`
+ * - `AMAFlags: string`
+ * - `UniqueID: string`
+ * - `LinkedID: string`
+ * - `Userfield: string`
+ * - `Peer: string`
+ */
 export type CEL = {
 	Event: "CEL";
 	EventName:
@@ -907,6 +1977,62 @@ export type CEL = {
 	Extra: string;
 };
 
+/**
+ * Represents the data structure for the Cdr event in Asterisk.
+ *
+ * **Synopsis**: Raised when a Call Detail Record (CDR) is generated.
+ *
+ * **Syntax**:
+ * - `Event: Cdr`
+ * - `AccountCode: string`
+ * - `Source: string`
+ * - `Destination: string`
+ * - `DestinationContext: string`
+ * - `CallerIDnum: string`
+ * - `CallerIDname: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Channel: string`
+ * - `DestinationChannel: string`
+ * - `LastApplication: string`
+ * - `LastData: string`
+ * - `StartTime: string`
+ * - `AnswerTime: string`
+ * - `EndTime: string`
+ * - `Duration: string`
+ * - `BillableSeconds: string`
+ * - `Disposition: string`
+ * - `AMAFlags: string`
+ * - `UniqueID: string`
+ * - `Userfield: string`
+ * - `PeerAccount: string`
+ */
+/**
+ * Represents the data structure for the Cdr event in Asterisk.
+ *
+ * **Synopsis**: Description for Cdr event.
+ *
+ * **Syntax**:
+ * - `Event: "Cdr"`
+ * - `AccountCode: string`
+ * - `Source: string`
+ * - `Destination: string`
+ * - `DestinationContext: string`
+ * - `CallerID: string`
+ * - `Channel: string`
+ * - `DestinationChannel: string`
+ * - `LastApplication: string`
+ * - `LastData: string`
+ * - `StartTime: string`
+ * - `AnswerTime: string`
+ * - `EndTime: string`
+ * - `Duration: string`
+ * - `BillableSeconds: string`
+ * - `Disposition: "NO ANSWER" | "FAILED" | "BUSY" | "ANSWERED" | "CONGESTION"`
+ * - `AMAFlags: "OMIT" | "BILLING" | "DOCUMENTATION"`
+ * - `UniqueID: string`
+ * - `UserField: string`
+ */
 export type Cdr = {
 	Event: "Cdr";
 	AccountCode: string;
@@ -929,6 +2055,17 @@ export type Cdr = {
 	UserField: string;
 };
 
+/**
+ * Represents the data structure for the ChallengeResponseFailed event in Asterisk.
+ *
+ * **Synopsis**: Raised when a challenge response fails.
+ *
+ * **Syntax**:
+ * - `Event: ChallengeResponseFailed`
+ * - `Channel: string`
+ * - `Peer: string`
+ * - `Method: string`
+ */
 export type ChallengeResponseFailed = {
 	Event: "ChallengeResponseFailed";
 	EventTV: string;
@@ -946,6 +2083,17 @@ export type ChallengeResponseFailed = {
 	SessionTV?: string;
 };
 
+/**
+ * Represents the data structure for the ChallengeSent event in Asterisk.
+ *
+ * **Synopsis**: Raised when a challenge is sent.
+ *
+ * **Syntax**:
+ * - `Event: ChallengeSent`
+ * - `Channel: string`
+ * - `Peer: string`
+ * - `Method: string`
+ */
 export type ChallengeSent = {
 	Event: "ChallengeSent";
 	EventTV: string;
@@ -1258,6 +2406,19 @@ export type ConfbridgeList = {
 	Linkedid: string;
 };
 
+/**
+ * Represents the data structure for the ConfbridgeListRooms event in Asterisk.
+ *
+ * **Synopsis**: Description for ConfbridgeListRooms event.
+ *
+ * **Syntax**:
+ * - `Event: "ConfbridgeListRooms"`
+ * - `Conference: string`
+ * - `Parties: string`
+ * - `Marked: string`
+ * - `Locked: "Yes" | "No"`
+ * - `Muted: "Yes" | "No"`
+ */
 export type ConfbridgeListRooms = {
 	Event: "ConfbridgeListRooms";
 	Conference: string;
@@ -1446,6 +2607,16 @@ export type ContactList = {
 	RoundtripUsec: string;
 };
 
+/**
+ * Represents the data structure for the ContactListComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for ContactListComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "ContactListComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type ContactListComplete = {
 	Event: "ContactListComplete";
 	EventList: string;
@@ -1520,12 +2691,33 @@ export type CoreShowChannel = {
 	Duration: string;
 };
 
+/**
+ * Represents the data structure for the CoreShowChannelMapComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for CoreShowChannelMapComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "CoreShowChannelMapComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type CoreShowChannelMapComplete = {
 	Event: "CoreShowChannelMapComplete";
 	EventList: string;
 	ListItems: string;
 };
 
+/**
+ * Represents the data structure for the CoreShowChannelsComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for CoreShowChannelsComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "CoreShowChannelsComplete"`
+ * - `ActionID: string`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type CoreShowChannelsComplete = {
 	Event: "CoreShowChannelsComplete";
 	ActionID: string;
@@ -1565,6 +2757,16 @@ export type DAHDIChannel = {
 	DAHDIChannel: string;
 };
 
+/**
+ * Represents the data structure for the DNDState event in Asterisk.
+ *
+ * **Synopsis**: Description for DNDState event.
+ *
+ * **Syntax**:
+ * - `Event: "DNDState"`
+ * - `DAHDIChannel: string`
+ * - `Status: "enabled" | "disabled"`
+ */
 export type DNDState = {
 	Event: "DNDState";
 	DAHDIChannel: string;
@@ -1634,17 +2836,46 @@ export type DTMFEnd = {
 	Direction: "Received" | "Sent";
 };
 
+/**
+ * Represents the data structure for the DeadlockStart event in Asterisk.
+ *
+ * **Synopsis**: Description for DeadlockStart event.
+ *
+ * **Syntax**:
+ * - `Event: "DeadlockStart"`
+ * - `Mutex: string`
+ */
 export type DeadlockStart = {
 	Event: "DeadlockStart";
 	Mutex: string;
 };
 
+/**
+ * Represents the data structure for the DeviceStateChange event in Asterisk.
+ *
+ * **Synopsis**: Description for DeviceStateChange event.
+ *
+ * **Syntax**:
+ * - `Event: "DeviceStateChange"`
+ * - `Device: string`
+ * - `State: string`
+ */
 export type DeviceStateChange = {
 	Event: "DeviceStateChange";
 	Device: string;
 	State: string;
 };
 
+/**
+ * Represents the data structure for the DeviceStateListComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for DeviceStateListComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "DeviceStateListComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type DeviceStateListComplete = {
 	Event: "DeviceStateListComplete";
 	EventList: string;
@@ -1929,12 +3160,38 @@ export type EndpointDetail = {
 	OverlapContext: string;
 };
 
+/**
+ * Represents the data structure for the EndpointDetailComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for EndpointDetailComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "EndpointDetailComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type EndpointDetailComplete = {
 	Event: "EndpointDetailComplete";
 	EventList: string;
 	ListItems: string;
 };
 
+/**
+ * Represents the data structure for the EndpointList event in Asterisk.
+ *
+ * **Synopsis**: Description for EndpointList event.
+ *
+ * **Syntax**:
+ * - `Event: "EndpointList"`
+ * - `ObjectType: "endpoint"`
+ * - `ObjectName: string`
+ * - `Transport: string`
+ * - `Aor: string`
+ * - `Auths: string`
+ * - `OutboundAuths: string`
+ * - `DeviceState: string`
+ * - `ActiveChannels: string`
+ */
 export type EndpointList = {
 	Event: "EndpointList";
 	ObjectType: "endpoint";
@@ -1947,12 +3204,32 @@ export type EndpointList = {
 	ActiveChannels: string;
 };
 
+/**
+ * Represents the data structure for the EndpointListComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for EndpointListComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "EndpointListComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type EndpointListComplete = {
 	Event: "EndpointListComplete";
 	EventList: string;
 	ListItems: string;
 };
 
+/**
+ * Represents the data structure for the ExtensionStateListComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for ExtensionStateListComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "ExtensionStateListComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type ExtensionStateListComplete = {
 	Event: "ExtensionStateListComplete";
 	EventList: string;
@@ -2115,6 +3392,17 @@ export type Flash = {
 	Linkedid: string;
 };
 
+/**
+ * Represents the data structure for the FullyBooted event in Asterisk.
+ *
+ * **Synopsis**: Description for FullyBooted event.
+ *
+ * **Syntax**:
+ * - `Event: "FullyBooted"`
+ * - `Status: string`
+ * - `Uptime: string`
+ * - `LastReload: string`
+ */
 export type FullyBooted = {
 	Event: "FullyBooted";
 	Status: string;
@@ -2303,6 +3591,21 @@ export type Hold = {
 	MusicClass: string;
 };
 
+/**
+ * Represents the data structure for the IdentifyDetail event in Asterisk.
+ *
+ * **Synopsis**: Description for IdentifyDetail event.
+ *
+ * **Syntax**:
+ * - `Event: "IdentifyDetail"`
+ * - `ObjectType: "identify"`
+ * - `ObjectName: string`
+ * - `Endpoint: string`
+ * - `SrvLookups: string`
+ * - `Match: string`
+ * - `MatchHeader: string`
+ * - `EndpointName: string`
+ */
 export type IdentifyDetail = {
 	Event: "IdentifyDetail";
 	ObjectType: "identify";
@@ -2360,6 +3663,16 @@ export type InvalidTransport = {
 	SessionTV?: string;
 };
 
+/**
+ * Represents the data structure for the Load event in Asterisk.
+ *
+ * **Synopsis**: Description for Load event.
+ *
+ * **Syntax**:
+ * - `Event: "Load"`
+ * - `Module: string`
+ * - `Status: "Failure" | "Success" | "Decline"`
+ */
 export type Load = {
 	Event: "Load";
 	Module: string;
@@ -2651,6 +3964,15 @@ export type MWIGetComplete = {
 	ListItems: string;
 };
 
+/**
+ * Represents the data structure for the MeetmeEnd event in Asterisk.
+ *
+ * **Synopsis**: Description for MeetmeEnd event.
+ *
+ * **Syntax**:
+ * - `Event: "MeetmeEnd"`
+ * - `Meetme: string`
+ */
 export type MeetmeEnd = {
 	Event: "MeetmeEnd";
 	Meetme: string;
@@ -2719,6 +4041,26 @@ export type MeetmeLeave = {
 	Duration: string;
 };
 
+/**
+ * Represents the data structure for the MeetmeList event in Asterisk.
+ *
+ * **Synopsis**: Description for MeetmeList event.
+ *
+ * **Syntax**:
+ * - `Event: "MeetmeList"`
+ * - `Conference: string`
+ * - `UserNumber: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Channel: string`
+ * - `Admin: string`
+ * - `Role: "Listen only" | "Talk only" | "Talk and listen"`
+ * - `MarkedUser: string`
+ * - `Muted: string`
+ * - `Talking: string`
+ */
 export type MeetmeList = {
 	Event: "MeetmeList";
 	Conference: string;
@@ -2735,6 +4077,20 @@ export type MeetmeList = {
 	Talking: string;
 };
 
+/**
+ * Represents the data structure for the MeetmeListRooms event in Asterisk.
+ *
+ * **Synopsis**: Description for MeetmeListRooms event.
+ *
+ * **Syntax**:
+ * - `Event: "MeetmeListRooms"`
+ * - `Conference: string`
+ * - `Parties: string`
+ * - `Marked: string`
+ * - `Activity: string`
+ * - `Creation: "Dynamic" | "Static"`
+ * - `Locked: string`
+ */
 export type MeetmeListRooms = {
 	Event: "MeetmeListRooms";
 	Conference: string;
@@ -3534,6 +4890,21 @@ export type ParkedCallTimeOut = {
 	ParkingDuration: string;
 };
 
+/**
+ * Represents the data structure for the PeerStatus event in Asterisk.
+ *
+ * **Synopsis**: Description for PeerStatus event.
+ *
+ * **Syntax**:
+ * - `Event: "PeerStatus"`
+ * - `ChannelType: string`
+ * - `Peer: string`
+ * - `PeerStatus: "Unknown" | "Registered" | "Unregistered" | "Rejected" | "Lagged"`
+ * - `Cause: string`
+ * - `Address: string`
+ * - `Port: string`
+ * - `Time: string`
+ */
 export type PeerStatus = {
 	Event: "PeerStatus";
 	ChannelType: string;
@@ -3599,6 +4970,18 @@ export type Pickup = {
 	TargetLinkedid: string;
 };
 
+/**
+ * Represents the data structure for the PresenceStateChange event in Asterisk.
+ *
+ * **Synopsis**: Description for PresenceStateChange event.
+ *
+ * **Syntax**:
+ * - `Event: "PresenceStateChange"`
+ * - `Presentity: string`
+ * - `Status: string`
+ * - `Subtype: string`
+ * - `Message: string`
+ */
 export type PresenceStateChange = {
 	Event: "PresenceStateChange";
 	Presentity: string;
@@ -3607,12 +4990,36 @@ export type PresenceStateChange = {
 	Message: string;
 };
 
+/**
+ * Represents the data structure for the PresenceStateListComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for PresenceStateListComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "PresenceStateListComplete"`
+ * - `EventList: string`
+ * - `ListItems: string`
+ */
 export type PresenceStateListComplete = {
 	Event: "PresenceStateListComplete";
 	EventList: string;
 	ListItems: string;
 };
 
+/**
+ * Represents the data structure for the PresenceStatus event in Asterisk.
+ *
+ * **Synopsis**: Description for PresenceStatus event.
+ *
+ * **Syntax**:
+ * - `Event: "PresenceStatus"`
+ * - `Exten: string`
+ * - `Context: string`
+ * - `Hint: string`
+ * - `Status: string`
+ * - `Subtype: string`
+ * - `Message: string`
+ */
 export type PresenceStatus = {
 	Event: "PresenceStatus";
 	Exten: string;
@@ -3720,6 +5127,24 @@ export type QueueCallerLeave = {
 	Position: string;
 };
 
+/**
+ * Represents the data structure for the QueueEntry event in Asterisk.
+ *
+ * **Synopsis**: Description for QueueEntry event.
+ *
+ * **Syntax**:
+ * - `Event: "QueueEntry"`
+ * - `Queue: string`
+ * - `Position: string`
+ * - `Channel: string`
+ * - `Uniqueid: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Wait: string`
+ * - `Priority: string`
+ */
 export type QueueEntry = {
 	Event: "QueueEntry";
 	Queue: string;
@@ -3854,6 +5279,23 @@ export type QueueMemberStatus = {
 	Wrapuptime: string;
 };
 
+/**
+ * Represents the data structure for the QueueParams event in Asterisk.
+ *
+ * **Synopsis**: Description for QueueParams event.
+ *
+ * **Syntax**:
+ * - `Event: "QueueParams"`
+ * - `Max: string`
+ * - `Strategy: string`
+ * - `Calls: string`
+ * - `Holdtime: string`
+ * - `TalkTime: string`
+ * - `Completed: string`
+ * - `Abandoned: string`
+ * - `ServiceLevelPerf: string`
+ * - `ServiceLevelPerf2: string`
+ */
 export type QueueParams = {
 	Event: "QueueParams";
 	Max: string;
@@ -3947,6 +5389,34 @@ export type RTCPSent = {
 	ReportXDLSR: string;
 };
 
+/**
+ * Represents the data structure for the ReceiveFAX event in Asterisk.
+ *
+ * **Synopsis**: Description for ReceiveFAX event.
+ *
+ * **Syntax**:
+ * - `Event: "ReceiveFAX"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `LocalStationID: string`
+ * - `RemoteStationID: string`
+ * - `PagesTransferred: string`
+ * - `Resolution: string`
+ * - `TransferRate: string`
+ * - `FileName: string`
+ */
 export type ReceiveFAX = {
 	Event: "ReceiveFAX";
 	Channel: string;
@@ -3980,12 +5450,44 @@ export type Registry = {
 	Cause?: string;
 };
 
+/**
+ * Represents the data structure for the Reload event in Asterisk.
+ *
+ * **Synopsis**: Description for Reload event.
+ *
+ * **Syntax**:
+ * - `Event: "Reload"`
+ * - `Module: string`
+ * - `Status: "0" | "1" | "2" | "3" | "4" | "5" | "6"`
+ */
 export type Reload = {
 	Event: "Reload";
 	Module: string;
 	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6";
 };
 
+/**
+ * Represents the data structure for the Rename event in Asterisk.
+ *
+ * **Synopsis**: Description for Rename event.
+ *
+ * **Syntax**:
+ * - `Event: "Rename"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ */
 export type Rename = {
 	Event: "Rename";
 	Channel: string;
@@ -4057,6 +5559,34 @@ export type SIPQualifyPeerDone = {
 	ActionID?: string;
 };
 
+/**
+ * Represents the data structure for the SendFAX event in Asterisk.
+ *
+ * **Synopsis**: Description for SendFAX event.
+ *
+ * **Syntax**:
+ * - `Event: "SendFAX"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `LocalStationID: string`
+ * - `RemoteStationID: string`
+ * - `PagesTransferred: string`
+ * - `Resolution: string`
+ * - `TransferRate: string`
+ * - `FileName: string`
+ */
 export type SendFAX = {
 	Event: "SendFAX";
 	Channel: string;
@@ -4095,6 +5625,29 @@ export type SessionLimit = {
 	SessionTV?: string;
 };
 
+/**
+ * Represents the data structure for the SessionTimeout event in Asterisk.
+ *
+ * **Synopsis**: Description for SessionTimeout event.
+ *
+ * **Syntax**:
+ * - `Event: "SessionTimeout"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Source: "RTPTimeout" | "SIPSessionTimer"`
+ */
 export type SessionTimeout = {
 	Event: "SessionTimeout";
 	Channel: string;
@@ -4114,12 +5667,45 @@ export type SessionTimeout = {
 	Source: "RTPTimeout" | "SIPSessionTimer";
 };
 
+/**
+ * Represents the data structure for the Shutdown event in Asterisk.
+ *
+ * **Synopsis**: Description for Shutdown event.
+ *
+ * **Syntax**:
+ * - `Event: "Shutdown"`
+ * - `Shutdown: "Uncleanly" | "Cleanly"`
+ * - `Restart: "True" | "False"`
+ */
 export type Shutdown = {
 	Event: "Shutdown";
 	Shutdown: "Uncleanly" | "Cleanly";
 	Restart: "True" | "False";
 };
 
+/**
+ * Represents the data structure for the SoftHangupRequest event in Asterisk.
+ *
+ * **Synopsis**: Description for SoftHangupRequest event.
+ *
+ * **Syntax**:
+ * - `Event: "SoftHangupRequest"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Cause: string`
+ */
 export type SoftHangupRequest = {
 	Event: "SoftHangupRequest";
 	Channel: string;
@@ -4139,12 +5725,31 @@ export type SoftHangupRequest = {
 	Cause: string;
 };
 
+/**
+ * Represents the data structure for the SpanAlarm event in Asterisk.
+ *
+ * **Synopsis**: Description for SpanAlarm event.
+ *
+ * **Syntax**:
+ * - `Event: "SpanAlarm"`
+ * - `Span: string`
+ * - `Alarm: string`
+ */
 export type SpanAlarm = {
 	Event: "SpanAlarm";
 	Span: string;
 	Alarm: string;
 };
 
+/**
+ * Represents the data structure for the SpanAlarmClear event in Asterisk.
+ *
+ * **Synopsis**: Description for SpanAlarmClear event.
+ *
+ * **Syntax**:
+ * - `Event: "SpanAlarmClear"`
+ * - `Span: string`
+ */
 export type SpanAlarmClear = {
 	Event: "SpanAlarmClear";
 	Span: string;
@@ -4185,6 +5790,15 @@ export type Status = {
 	Seconds: string;
 };
 
+/**
+ * Represents the data structure for the StatusComplete event in Asterisk.
+ *
+ * **Synopsis**: Description for StatusComplete event.
+ *
+ * **Syntax**:
+ * - `Event: "StatusComplete"`
+ * - `Items: string`
+ */
 export type StatusComplete = {
 	Event: "StatusComplete";
 	Items: string;
@@ -4233,6 +5847,61 @@ export type TransportDetail = {
 	EndpointName: string;
 };
 
+/**
+ * Represents the data structure for the UnParkedCall event in Asterisk.
+ *
+ * **Synopsis**: Description for UnParkedCall event.
+ *
+ * **Syntax**:
+ * - `Event: "UnParkedCall"`
+ * - `ParkeeChannel: string`
+ * - `ParkeeChannelState: string`
+ * - `ParkeeChannelStateDesc: string`
+ * - `ParkeeCallerIDNum: string`
+ * - `ParkeeCallerIDName: string`
+ * - `ParkeeConnectedLineNum: string`
+ * - `ParkeeConnectedLineName: string`
+ * - `ParkeeLanguage: string`
+ * - `ParkeeAccountCode: string`
+ * - `ParkeeContext: string`
+ * - `ParkeeExten: string`
+ * - `ParkeePriority: string`
+ * - `ParkeeUniqueid: string`
+ * - `ParkeeLinkedid: string`
+ * - `ParkerChannel: string`
+ * - `ParkerChannelState: string`
+ * - `ParkerChannelStateDesc: string`
+ * - `ParkerCallerIDNum: string`
+ * - `ParkerCallerIDName: string`
+ * - `ParkerConnectedLineNum: string`
+ * - `ParkerConnectedLineName: string`
+ * - `ParkerLanguage: string`
+ * - `ParkerAccountCode: string`
+ * - `ParkerContext: string`
+ * - `ParkerExten: string`
+ * - `ParkerPriority: string`
+ * - `ParkerUniqueid: string`
+ * - `ParkerLinkedid: string`
+ * - `ParkerDialString: string`
+ * - `Parkinglot: string`
+ * - `ParkingSpace: string`
+ * - `ParkingTimeout: string`
+ * - `ParkingDuration: string`
+ * - `RetrieverChannel: string`
+ * - `RetrieverChannelState: string`
+ * - `RetrieverChannelStateDesc: string`
+ * - `RetrieverCallerIDNum: string`
+ * - `RetrieverCallerIDName: string`
+ * - `RetrieverConnectedLineNum: string`
+ * - `RetrieverConnectedLineName: string`
+ * - `RetrieverLanguage: string`
+ * - `RetrieverAccountCode: string`
+ * - `RetrieverContext: string`
+ * - `RetrieverExten: string`
+ * - `RetrieverPriority: string`
+ * - `RetrieverUniqueid: string`
+ * - `RetrieverLinkedid: string`
+ */
 export type UnParkedCall = {
 	Event: "UnParkedCall";
 	ParkeeChannel: string;
@@ -4299,6 +5968,28 @@ export type UnexpectedAddress = {
 	SessionTV?: string;
 };
 
+/**
+ * Represents the data structure for the Unhold event in Asterisk.
+ *
+ * **Synopsis**: Description for Unhold event.
+ *
+ * **Syntax**:
+ * - `Event: "Unhold"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ */
 export type Unhold = {
 	Event: "Unhold";
 	Channel: string;
@@ -4317,12 +6008,45 @@ export type Unhold = {
 	Linkedid: string;
 };
 
+/**
+ * Represents the data structure for the Unload event in Asterisk.
+ *
+ * **Synopsis**: Description for Unload event.
+ *
+ * **Syntax**:
+ * - `Event: "Unload"`
+ * - `Module: string`
+ * - `Status: "Success"`
+ */
 export type Unload = {
 	Event: "Unload";
 	Module: string;
 	Status: "Success";
 };
 
+/**
+ * Represents the data structure for the UserEvent event in Asterisk.
+ *
+ * **Synopsis**: Description for UserEvent event.
+ *
+ * **Syntax**:
+ * - `Event: "UserEvent"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `UserEvent: string`
+ */
 export type UserEvent = {
 	Event: "UserEvent";
 	Channel: string;
@@ -4342,6 +6066,30 @@ export type UserEvent = {
 	UserEvent: string;
 };
 
+/**
+ * Represents the data structure for the VarSet event in Asterisk.
+ *
+ * **Synopsis**: Description for VarSet event.
+ *
+ * **Syntax**:
+ * - `Event: "VarSet"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ * - `Variable: string`
+ * - `Value: string`
+ */
 export type VarSet = {
 	Event: "VarSet";
 	Channel: string;
@@ -4362,6 +6110,17 @@ export type VarSet = {
 	Value: string;
 };
 
+/**
+ * Represents the data structure for the VoicemailPasswordChange event in Asterisk.
+ *
+ * **Synopsis**: Description for VoicemailPasswordChange event.
+ *
+ * **Syntax**:
+ * - `Event: "VoicemailPasswordChange"`
+ * - `Context: string`
+ * - `Mailbox: string`
+ * - `NewPassword: string`
+ */
 export type VoicemailPasswordChange = {
 	Event: "VoicemailPasswordChange";
 	Context: string;
@@ -4369,6 +6128,28 @@ export type VoicemailPasswordChange = {
 	NewPassword: string;
 };
 
+/**
+ * Represents the data structure for the Wink event in Asterisk.
+ *
+ * **Synopsis**: Description for Wink event.
+ *
+ * **Syntax**:
+ * - `Event: "Wink"`
+ * - `Channel: string`
+ * - `ChannelState: string`
+ * - `ChannelStateDesc: string`
+ * - `CallerIDNum: string`
+ * - `CallerIDName: string`
+ * - `ConnectedLineNum: string`
+ * - `ConnectedLineName: string`
+ * - `Language: string`
+ * - `AccountCode: string`
+ * - `Context: string`
+ * - `Exten: string`
+ * - `Priority: string`
+ * - `Uniqueid: string`
+ * - `Linkedid: string`
+ */
 export type Wink = {
 	Event: "Wink";
 	Channel: string;

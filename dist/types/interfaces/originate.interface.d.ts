@@ -12,3 +12,4 @@ export interface I_OriginateResponse {
     CallerIDNum: number;
     CallerIDName: string;
 }
+//# sourceMappingURL=originate.interface.d.ts.map

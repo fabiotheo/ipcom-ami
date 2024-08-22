@@ -25,3 +25,4 @@ export interface I_CoreShowChannelsComplete {
     EventList: string;
     ListItems: number;
 }
+//# sourceMappingURL=core-interface.d.ts.map
