@@ -2036,6 +2036,7 @@ declare namespace asterisk_ami {
         RECONNECTED: "reconnected",
         MAX_RECONNECT_REACH: "max-reconnect-reach",
         MAX_AUTH_REACH: "max-auth-reach",
+        CLOSE: 'connection.close',
 
         DO_LOGIN: "login",
         RE_LOGIN: "re-login",

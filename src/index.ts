@@ -166,9 +166,11 @@ export class eAmi {
 			this._socketHandler
 				.on("close", () => {
 					if (this.debug) console.log("close AMI connect");
+					this.events.emit(eAMI_EVENTS.CLOSE); // Emitindo evento de fechamento personalizado
 				})
 				.on("end", () => {
 					if (this.debug) console.log("end AMI connect");
+					this.events.emit(eAMI_EVENTS.CLOSE); // Também emitindo evento de fechamento em 'end'
 				})
 				.on("data", (buffer: Buffer) => this.getData(buffer));
 		} else {
@@ -231,34 +233,40 @@ export class eAmi {
 		request = newRequest;
 	}
 
-	private keepConnection(): Promise<boolean> {
-		return new Promise((resolve, reject) => {
-			(async () => {
-				clearInterval(this._heartbeatHandler as Timer);
+	private keepConnection(): void {
+		clearInterval(this._heartbeatHandler as Timer);
 
-				try {
-					const response: boolean = await this.actions.Ping();
+		const sendPing = async () => {
+			try {
+				const response: boolean = await this.actions.Ping();
 
-					if (response) {
-						this._heartbeatOk = true;
-						resolve(true);
-						this._successBitsByInterval++;
-					}
-
-					this._heartbeatHandler = setTimeout(async () => {
-						try {
-							await this.keepConnection();
-						} catch (error) {
-							console.log("keep timeout error", error);
-							this._errorBitsByInterval++;
-						}
-					}, this._heartbeatInterval);
-				} catch (error) {
+				if (response) {
+					this._heartbeatOk = true;
+					this._successBitsByInterval++;
+				} else {
 					this._errorBitsByInterval++;
-					console.log("keep connect error", error);
-					reject(error);
 				}
-			})();
+
+				// Programa o próximo ping
+				this._heartbeatHandler = setTimeout(
+					() => sendPing(),
+					this._heartbeatInterval,
+				);
+			} catch (error) {
+				this._errorBitsByInterval++;
+				if (this.debug) console.log("keep connect error", error);
+
+				// Programa o próximo ping mesmo após um erro
+				this._heartbeatHandler = setTimeout(
+					() => sendPing(),
+					this._heartbeatInterval,
+				);
+			}
+		};
+
+		// Inicia o primeiro ping sem await, pois estamos lidando com promessas internamente
+		sendPing().catch((error) => {
+			if (this.debug) console.log("Initial ping error", error);
 		});
 	}
 

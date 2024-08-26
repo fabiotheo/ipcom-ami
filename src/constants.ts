@@ -50,7 +50,6 @@ export const _AMI_EVENTS = {
 	STATUS: "Status",
 };
 
-
 export const DEFAULT_PORT: number = 5038;
 export const CRLF: string = "\r\n";
 export const END: string = "\r\n\r\n";
@@ -64,6 +63,7 @@ export const _eAMI_EVENTS = {
 	RECONNECTED: "reconnected",
 	MAX_RECONNECT_REACH: "max-reconnect-reach",
 	MAX_AUTH_REACH: "max-auth-reach",
+	CLOSE: "connection.close",
 
 	DO_LOGIN: "login",
 	RE_LOGIN: "re-login",
@@ -78,4 +78,3 @@ export const _eAMI_EVENTS = {
 	ERROR_LOGOUT: "error.logout",
 	ERROR_RECONNECT: "error.reconnect",
 };
-

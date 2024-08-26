@@ -50,6 +50,7 @@ export declare const _eAMI_EVENTS: {
     RECONNECTED: string;
     MAX_RECONNECT_REACH: string;
     MAX_AUTH_REACH: string;
+    CLOSE: string;
     DO_LOGIN: string;
     RE_LOGIN: string;
     LOGGED_IN: string;
