@@ -4,6 +4,7 @@ export interface I_Response {
     ActionID?: number | string;
     Response?: string;
     Request?: I_Request;
+    TimeEvent?: number;
     [p: string]: string | number | boolean | I_Request | undefined;
 }
 export interface I_Request {

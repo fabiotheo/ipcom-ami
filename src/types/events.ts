@@ -1,5 +1,5 @@
 type BaseEvent = {
-	TimeEvent: Date;
+	TimeEvent: number;
 };
 
 /**

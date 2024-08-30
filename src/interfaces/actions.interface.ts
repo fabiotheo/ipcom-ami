@@ -5,9 +5,9 @@ export interface I_Response {
 	ActionID?: number | string;
 	Response?: string;
 	Request?: I_Request;
-	TimeEvent?: Date; // Adicionando a propriedade TimeEvent
+	TimeEvent?: number; // Adicionando a propriedade TimeEvent
 
-	[p: string]: string | number | boolean | Date | I_Request | undefined;
+	[p: string]: string | number | boolean | I_Request | undefined;
 }
 
 export interface I_Request {
