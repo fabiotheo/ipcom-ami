@@ -578,6 +578,8 @@ export class eAmi {
 				dataObject[key] = value ?? undefined;
 			}
 
+			dataObject.TimeEvent = new Date();
+
 			const request = this.getRequest(dataObject.ActionID);
 			dataObject.Request = request !== null ? request : undefined;
 

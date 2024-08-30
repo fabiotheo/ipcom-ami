@@ -1,3 +1,7 @@
+type BaseEvent = {
+	TimeEvent: Date;
+};
+
 /**
  * Represents the data structure for the AGIExecEnd event in Asterisk.
  *
@@ -35,7 +39,7 @@
  * - `ResultCode: string`
  * - `Result: string`
  */
-export type AGIExecEnd = {
+export type AGIExecEnd = BaseEvent & {
 	Event: "AGIExecEnd";
 	Channel: string;
 	ChannelState: number;
@@ -92,7 +96,7 @@ export type AGIExecEnd = {
  * - `Command: string`
  * - `CommandId: string`
  */
-export type AGIExecStart = {
+export type AGIExecStart = BaseEvent & {
 	Event: "AGIExecStart";
 	Channel: string;
 	ChannelState: number;
@@ -155,7 +159,7 @@ export type AGIExecStart = {
  * - `NumberOf: string`
  * - `TypeOf: string`
  */
-export type AOCD = {
+export type AOCD = BaseEvent & {
 	Event: "AOC-D";
 	Channel: string;
 	ChannelState: number;
@@ -231,7 +235,7 @@ export type AOCD = {
  * - `NumberOf: string`
  * - `TypeOf: string`
  */
-export type AOCE = {
+export type AOCE = BaseEvent & {
 	Event: "AOC-E";
 	Channel: string;
 	ChannelState: number;
@@ -309,7 +313,7 @@ export type AOCE = {
  * - `Unit: string`
  * - `SpecialCode: string`
  */
-export type AOCS = {
+export type AOCS = BaseEvent & {
 	Event: "AOC-S";
 	Channel: string;
 	ChannelState: number;
@@ -392,7 +396,7 @@ export type AOCS = {
  * - `MemberName: string`
  * - `Interface: string`
  */
-export type AgentCalled = {
+export type AgentCalled = BaseEvent & {
 	Event: "AgentCalled";
 	Channel: string;
 	ChannelState: number;
@@ -483,7 +487,7 @@ export type AgentCalled = {
  * - `TalkTime: string`
  * - `Reason: string`
  */
-export type AgentComplete = {
+export type AgentComplete = BaseEvent & {
 	Event: "AgentComplete";
 	Channel: string;
 	ChannelState: number;
@@ -603,7 +607,7 @@ export type AgentComplete = {
  * - `RingTime: number`
  * - `HoldTime: number`
  */
-export type AgentConnect = {
+export type AgentConnect = BaseEvent & {
 	Event: "AgentConnect";
 	Channel: string;
 	ChannelState: number;
@@ -718,7 +722,7 @@ export type AgentConnect = {
  * - `MemberName: string`
  * - `Interface: string`
  */
-export type AgentDump = {
+export type AgentDump = BaseEvent & {
 	Event: "AgentDump";
 	Channel: string;
 	ChannelState: number;
@@ -788,7 +792,7 @@ export type AgentDump = {
  * - `Linkedid: string`
  * - `Agent: string`
  */
-export type AgentLogin = {
+export type AgentLogin = BaseEvent & {
 	Event: "AgentLogin";
 	Channel: string;
 	ChannelState: number;
@@ -830,7 +834,7 @@ export type AgentLogin = {
  * - `Agent: string`
  * - `Logintime: number`
  */
-export type AgentLogoff = {
+export type AgentLogoff = BaseEvent & {
 	Event: "AgentLogoff";
 	Agent: string;
 	Logintime: number;
@@ -889,7 +893,7 @@ export type AgentLogoff = {
  * - `Interface: string`
  * - `RingTime: number`
  */
-export type AgentRingNoAnswer = {
+export type AgentRingNoAnswer = BaseEvent & {
 	Event: "AgentRingNoAnswer";
 	Channel: string;
 	ChannelState: number;
@@ -938,7 +942,7 @@ export type AgentRingNoAnswer = {
  * - `LoggedInTime: string`
  * - `TalkingTo: string`
  */
-export type Agents = {
+export type Agents = BaseEvent & {
 	Event: "Agents";
 	Agent: string;
 	Name: string;
@@ -981,7 +985,7 @@ export type Agents = {
  * - `Event: "AgentsComplete"`
  * - `ActionID: string`
  */
-export type AgentsComplete = {
+export type AgentsComplete = BaseEvent & {
 	Event: "AgentsComplete";
 	ActionID: string;
 };
@@ -1006,7 +1010,7 @@ export type AgentsComplete = {
  * - `DAHDIChannel: string`
  * - `Alarm: string`
  */
-export type Alarm = {
+export type Alarm = BaseEvent & {
 	Event: "Alarm";
 	DAHDIChannel: string;
 	Alarm: string;
@@ -1031,7 +1035,7 @@ export type Alarm = {
  * - `Event: "AlarmClear"`
  * - `DAHDIChannel: string`
  */
-export type AlarmClear = {
+export type AlarmClear = BaseEvent & {
 	Event: "AlarmClear";
 	DAHDIChannel: string;
 };
@@ -1071,7 +1075,7 @@ export type AlarmClear = {
  * - `ContactsRegistered: string`
  * - `EndpointName: string`
  */
-export type AorDetail = {
+export type AorDetail = BaseEvent & {
 	Event: "AorDetail";
 	ObjectType: "aor";
 	ObjectName: string;
@@ -1123,7 +1127,7 @@ export type AorDetail = {
  * - `OutboundProxy: string`
  * - `SupportPath: string`
  */
-export type AorList = {
+export type AorList = BaseEvent & {
 	Event: "AorList";
 	ObjectType: "aor";
 	ObjectName: string;
@@ -1159,7 +1163,7 @@ export type AorList = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type AorListComplete = {
+export type AorListComplete = BaseEvent & {
 	Event: "AorListComplete";
 	EventList: string;
 	ListItems: string;
@@ -1198,7 +1202,7 @@ export type AorListComplete = {
  * - `Uniqueid: string`
  * - `Linkedid: string`
  */
-export type AsyncAGIEnd = {
+export type AsyncAGIEnd = BaseEvent & {
 	Event: "AsyncAGIEnd";
 	Channel: string;
 	ChannelState: string;
@@ -1227,7 +1231,7 @@ export type AsyncAGIEnd = {
  * - `CommandId: string`
  * - `Command: string`
  */
-export type AsyncAGIExec = {
+export type AsyncAGIExec = BaseEvent & {
 	Event: "AsyncAGIExec";
 	Channel: string;
 	ChannelState: string;
@@ -1281,7 +1285,7 @@ export type AsyncAGIExec = {
  * - `Linkedid: string`
  * - `Env: string`
  */
-export type AsyncAGIStart = {
+export type AsyncAGIStart = BaseEvent & {
 	Event: "AsyncAGIStart";
 	Channel: string;
 	ChannelState: string;
@@ -1321,7 +1325,7 @@ export type AsyncAGIStart = {
  * - `TransferTargetPriority: number`
  * - `Result: string`
  */
-export type AttendedTransfer = {
+export type AttendedTransfer = BaseEvent & {
 	Event: "AttendedTransfer";
 	Result: "Fail" | "Invalid" | "Not Permitted" | "Success";
 	OrigTransfererChannel: string;
@@ -1446,7 +1450,7 @@ export type AttendedTransfer = {
  * - `AuthType: string`
  * - `EndpointName: string`
  */
-export type AuthDetail = {
+export type AuthDetail = BaseEvent & {
 	Event: "AuthDetail";
 	ObjectType: "auth";
 	ObjectName: string;
@@ -1486,7 +1490,7 @@ export type AuthDetail = {
  * - `Password: string`
  * - `NonceLifetime: string`
  */
-export type AuthList = {
+export type AuthList = BaseEvent & {
 	Event: "AuthList";
 	ObjectType: "auth";
 	ObjectName: string;
@@ -1517,7 +1521,7 @@ export type AuthList = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type AuthListComplete = {
+export type AuthListComplete = BaseEvent & {
 	Event: "AuthListComplete";
 	EventList: string;
 	ListItems: string;
@@ -1533,7 +1537,7 @@ export type AuthListComplete = {
  * - `Channel: string`
  * - `Method: string`
  */
-export type AuthMethodNotAllowed = {
+export type AuthMethodNotAllowed = BaseEvent & {
 	Event: "AuthMethodNotAllowed";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -1567,7 +1571,7 @@ export type AuthMethodNotAllowed = {
  * - `TransfereePriority: number`
  * - `Result: string`
  */
-export type BlindTransfer = {
+export type BlindTransfer = BaseEvent & {
 	Event: "BlindTransfer";
 	Result: "Fail" | "Invalid" | "Not Permitted" | "Success";
 	TransfererChannel: string;
@@ -1647,7 +1651,7 @@ export type BlindTransfer = {
  * - `BridgeName: string`
  * - `BridgeNumChannels: number`
  */
-export type BridgeCreate = {
+export type BridgeCreate = BaseEvent & {
 	Event: "BridgeCreate";
 	BridgeUniqueid: string;
 	BridgeType: string;
@@ -1673,7 +1677,7 @@ export type BridgeCreate = {
  * - `BridgeName: string`
  * - `BridgeNumChannels: number`
  */
-export type BridgeDestroy = {
+export type BridgeDestroy = BaseEvent & {
 	Event: "BridgeDestroy";
 	BridgeUniqueid: string;
 	BridgeType: string;
@@ -1700,7 +1704,7 @@ export type BridgeDestroy = {
  * - `Channel: string`
  * - `Uniqueid: string`
  */
-export type BridgeEnter = {
+export type BridgeEnter = BaseEvent & {
 	Event: "BridgeEnter";
 	BridgeUniqueid: string;
 	BridgeType: string;
@@ -1750,7 +1754,7 @@ export type BridgeEnter = {
  * - `Channel: string`
  * - `Uniqueid: string`
  */
-export type BridgeInfoChannel = {
+export type BridgeInfoChannel = BaseEvent & {
 	Event: "BridgeInfoChannel";
 	Channel: string;
 	ChannelState: number;
@@ -1789,7 +1793,7 @@ export type BridgeInfoChannel = {
  * - `BridgeUniqueid: string`
  * - `ListItems: number`
  */
-export type BridgeInfoComplete = {
+export type BridgeInfoComplete = BaseEvent & {
 	Event: "BridgeInfoComplete";
 	BridgeUniqueid: string;
 	BridgeType: string;
@@ -1816,7 +1820,7 @@ export type BridgeInfoComplete = {
  * - `Channel: string`
  * - `Uniqueid: string`
  */
-export type BridgeLeave = {
+export type BridgeLeave = BaseEvent & {
 	Event: "BridgeLeave";
 	BridgeUniqueid: string;
 	BridgeType: string;
@@ -1867,7 +1871,7 @@ export type BridgeLeave = {
  * - `BridgeName: string`
  * - `BridgeNumChannels: number`
  */
-export type BridgeMerge = {
+export type BridgeMerge = BaseEvent & {
 	Event: "BridgeMerge";
 	ToBridgeUniqueid: string;
 	ToBridgeType: string;
@@ -1899,7 +1903,7 @@ export type BridgeMerge = {
  * - `VideoSourceChannel: string`
  * - `VideoSourceUniqueid: string`
  */
-export type BridgeVideoSourceUpdate = {
+export type BridgeVideoSourceUpdate = BaseEvent & {
 	Event: "BridgeVideoSourceUpdate";
 	BridgeUniqueid: string;
 	BridgeType: string;
@@ -1937,7 +1941,7 @@ export type BridgeVideoSourceUpdate = {
  * - `Userfield: string`
  * - `Peer: string`
  */
-export type CEL = {
+export type CEL = BaseEvent & {
 	Event: "CEL";
 	EventName:
 		| "CHAN_START"
@@ -2033,7 +2037,7 @@ export type CEL = {
  * - `UniqueID: string`
  * - `UserField: string`
  */
-export type Cdr = {
+export type Cdr = BaseEvent & {
 	Event: "Cdr";
 	AccountCode: string;
 	Source: string;
@@ -2066,7 +2070,7 @@ export type Cdr = {
  * - `Peer: string`
  * - `Method: string`
  */
-export type ChallengeResponseFailed = {
+export type ChallengeResponseFailed = BaseEvent & {
 	Event: "ChallengeResponseFailed";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -2094,7 +2098,7 @@ export type ChallengeResponseFailed = {
  * - `Peer: string`
  * - `Method: string`
  */
-export type ChallengeSent = {
+export type ChallengeSent = BaseEvent & {
 	Event: "ChallengeSent";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -2109,7 +2113,7 @@ export type ChallengeSent = {
 	SessionTV?: string;
 };
 
-export type ChanSpyStart = {
+export type ChanSpyStart = BaseEvent & {
 	Event: "ChanSpyStart";
 	SpyerChannel: string;
 	SpyerChannelState: string;
@@ -2163,7 +2167,7 @@ export type ChanSpyStart = {
 	SpyeeLinkedid: string;
 };
 
-export type ChanSpyStop = {
+export type ChanSpyStop = BaseEvent & {
 	Event: "ChanSpyStop";
 	SpyerChannel: string;
 	SpyerChannelState: string;
@@ -2217,7 +2221,7 @@ export type ChanSpyStop = {
 	SpyeeLinkedid: string;
 };
 
-export type ChannelTalkingStart = {
+export type ChannelTalkingStart = BaseEvent & {
 	Event: "ChannelTalkingStart";
 	Channel: string;
 	ChannelState: string;
@@ -2246,7 +2250,7 @@ export type ChannelTalkingStart = {
 	Linkedid: string;
 };
 
-export type ChannelTalkingStop = {
+export type ChannelTalkingStop = BaseEvent & {
 	Event: "ChannelTalkingStop";
 	Channel: string;
 	ChannelState: string;
@@ -2276,7 +2280,7 @@ export type ChannelTalkingStop = {
 	Duration: string;
 };
 
-export type ConfbridgeEnd = {
+export type ConfbridgeEnd = BaseEvent & {
 	Event: "ConfbridgeEnd";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2289,7 +2293,7 @@ export type ConfbridgeEnd = {
 	BridgeVideoSource?: string;
 };
 
-export type ConfbridgeJoin = {
+export type ConfbridgeJoin = BaseEvent & {
 	Event: "ConfbridgeJoin";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2329,7 +2333,7 @@ export type ConfbridgeJoin = {
 	Muted: "Yes" | "No";
 };
 
-export type ConfbridgeLeave = {
+export type ConfbridgeLeave = BaseEvent & {
 	Event: "ConfbridgeLeave";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2368,7 +2372,7 @@ export type ConfbridgeLeave = {
 	Admin: "Yes" | "No";
 };
 
-export type ConfbridgeList = {
+export type ConfbridgeList = BaseEvent & {
 	Event: "ConfbridgeList";
 	Conference: string;
 	Admin: "Yes" | "No";
@@ -2419,7 +2423,7 @@ export type ConfbridgeList = {
  * - `Locked: "Yes" | "No"`
  * - `Muted: "Yes" | "No"`
  */
-export type ConfbridgeListRooms = {
+export type ConfbridgeListRooms = BaseEvent & {
 	Event: "ConfbridgeListRooms";
 	Conference: string;
 	Parties: string;
@@ -2428,7 +2432,7 @@ export type ConfbridgeListRooms = {
 	Muted: "Yes" | "No";
 };
 
-export type ConfbridgeMute = {
+export type ConfbridgeMute = BaseEvent & {
 	Event: "ConfbridgeMute";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2467,7 +2471,7 @@ export type ConfbridgeMute = {
 	Admin: "Yes" | "No";
 };
 
-export type ConfbridgeRecord = {
+export type ConfbridgeRecord = BaseEvent & {
 	Event: "ConfbridgeRecord";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2480,7 +2484,7 @@ export type ConfbridgeRecord = {
 	BridgeVideoSource?: string;
 };
 
-export type ConfbridgeStart = {
+export type ConfbridgeStart = BaseEvent & {
 	Event: "ConfbridgeStart";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2493,7 +2497,7 @@ export type ConfbridgeStart = {
 	BridgeVideoSource?: string;
 };
 
-export type ConfbridgeStopRecord = {
+export type ConfbridgeStopRecord = BaseEvent & {
 	Event: "ConfbridgeStopRecord";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2506,7 +2510,7 @@ export type ConfbridgeStopRecord = {
 	BridgeVideoSource?: string;
 };
 
-export type ConfbridgeTalking = {
+export type ConfbridgeTalking = BaseEvent & {
 	Event: "ConfbridgeTalking";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2546,7 +2550,7 @@ export type ConfbridgeTalking = {
 	Admin: "Yes" | "No";
 };
 
-export type ConfbridgeUnmute = {
+export type ConfbridgeUnmute = BaseEvent & {
 	Event: "ConfbridgeUnmute";
 	Conference: string;
 	BridgeUniqueid: string;
@@ -2585,7 +2589,7 @@ export type ConfbridgeUnmute = {
 	Admin: "Yes" | "No";
 };
 
-export type ContactList = {
+export type ContactList = BaseEvent & {
 	Event: "ContactList";
 	ObjectType: "contact";
 	ObjectName: string;
@@ -2617,13 +2621,13 @@ export type ContactList = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type ContactListComplete = {
+export type ContactListComplete = BaseEvent & {
 	Event: "ContactListComplete";
 	EventList: string;
 	ListItems: string;
 };
 
-export type ContactStatus = {
+export type ContactStatus = BaseEvent & {
 	Event: "ContactStatus";
 	URI: string;
 	ContactStatus:
@@ -2638,7 +2642,7 @@ export type ContactStatus = {
 	RoundtripUsec: string;
 };
 
-export type ContactStatusDetail = {
+export type ContactStatusDetail = BaseEvent & {
 	Event: "ContactStatusDetail";
 	AOR: string;
 	URI: string;
@@ -2657,7 +2661,7 @@ export type ContactStatusDetail = {
 	QualifyTimeout: string;
 };
 
-export type CoreShowChannel = {
+export type CoreShowChannel = BaseEvent & {
 	Event: "CoreShowChannel";
 	ActionID: string;
 	Channel: string;
@@ -2701,7 +2705,7 @@ export type CoreShowChannel = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type CoreShowChannelMapComplete = {
+export type CoreShowChannelMapComplete = BaseEvent & {
 	Event: "CoreShowChannelMapComplete";
 	EventList: string;
 	ListItems: string;
@@ -2718,14 +2722,14 @@ export type CoreShowChannelMapComplete = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type CoreShowChannelsComplete = {
+export type CoreShowChannelsComplete = BaseEvent & {
 	Event: "CoreShowChannelsComplete";
 	ActionID: string;
 	EventList: string;
 	ListItems: string;
 };
 
-export type DAHDIChannel = {
+export type DAHDIChannel = BaseEvent & {
 	Event: "DAHDIChannel";
 	Channel: string;
 	ChannelState: string;
@@ -2767,13 +2771,13 @@ export type DAHDIChannel = {
  * - `DAHDIChannel: string`
  * - `Status: "enabled" | "disabled"`
  */
-export type DNDState = {
+export type DNDState = BaseEvent & {
 	Event: "DNDState";
 	DAHDIChannel: string;
 	Status: "enabled" | "disabled";
 };
 
-export type DTMFBegin = {
+export type DTMFBegin = BaseEvent & {
 	Event: "DTMFBegin";
 	Channel: string;
 	ChannelState: string;
@@ -2804,7 +2808,7 @@ export type DTMFBegin = {
 	Direction: "Received" | "Sent";
 };
 
-export type DTMFEnd = {
+export type DTMFEnd = BaseEvent & {
 	Event: "DTMFEnd";
 	Channel: string;
 	ChannelState: string;
@@ -2845,7 +2849,7 @@ export type DTMFEnd = {
  * - `Event: "DeadlockStart"`
  * - `Mutex: string`
  */
-export type DeadlockStart = {
+export type DeadlockStart = BaseEvent & {
 	Event: "DeadlockStart";
 	Mutex: string;
 };
@@ -2860,7 +2864,7 @@ export type DeadlockStart = {
  * - `Device: string`
  * - `State: string`
  */
-export type DeviceStateChange = {
+export type DeviceStateChange = BaseEvent & {
 	Event: "DeviceStateChange";
 	Device: string;
 	State: string;
@@ -2876,13 +2880,13 @@ export type DeviceStateChange = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type DeviceStateListComplete = {
+export type DeviceStateListComplete = BaseEvent & {
 	Event: "DeviceStateListComplete";
 	EventList: string;
 	ListItems: string;
 };
 
-export type DialBegin = {
+export type DialBegin = BaseEvent & {
 	Event: "DialBegin";
 	Channel: string;
 	ChannelState: string;
@@ -2937,7 +2941,7 @@ export type DialBegin = {
 	DialString: string;
 };
 
-export type DialEnd = {
+export type DialEnd = BaseEvent & {
 	Event: "DialEnd";
 	Channel: string;
 	ChannelState: string;
@@ -3002,7 +3006,7 @@ export type DialEnd = {
 	Forward?: string;
 };
 
-export type DialState = {
+export type DialState = BaseEvent & {
 	Event: "DialState";
 	Channel: string;
 	ChannelState: string;
@@ -3058,7 +3062,7 @@ export type DialState = {
 	Forward?: string;
 };
 
-export type EndpointDetail = {
+export type EndpointDetail = BaseEvent & {
 	Event: "EndpointDetail";
 	ObjectType: "endpoint";
 	ObjectName: string;
@@ -3170,7 +3174,7 @@ export type EndpointDetail = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type EndpointDetailComplete = {
+export type EndpointDetailComplete = BaseEvent & {
 	Event: "EndpointDetailComplete";
 	EventList: string;
 	ListItems: string;
@@ -3192,7 +3196,7 @@ export type EndpointDetailComplete = {
  * - `DeviceState: string`
  * - `ActiveChannels: string`
  */
-export type EndpointList = {
+export type EndpointList = BaseEvent & {
 	Event: "EndpointList";
 	ObjectType: "endpoint";
 	ObjectName: string;
@@ -3214,7 +3218,7 @@ export type EndpointList = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type EndpointListComplete = {
+export type EndpointListComplete = BaseEvent & {
 	Event: "EndpointListComplete";
 	EventList: string;
 	ListItems: string;
@@ -3230,13 +3234,13 @@ export type EndpointListComplete = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type ExtensionStateListComplete = {
+export type ExtensionStateListComplete = BaseEvent & {
 	Event: "ExtensionStateListComplete";
 	EventList: string;
 	ListItems: string;
 };
 
-export type ExtensionStatus = {
+export type ExtensionStatus = BaseEvent & {
 	Event: "ExtensionStatus";
 	Exten: string;
 	Context: string;
@@ -3254,7 +3258,7 @@ export type ExtensionStatus = {
 		| "Unknown";
 };
 
-export type FAXSession = {
+export type FAXSession = BaseEvent & {
 	Event: "FAXSession";
 	ActionID?: string;
 	SessionNumber: string;
@@ -3278,13 +3282,13 @@ export type FAXSession = {
 	TotalBadLines?: string;
 };
 
-export type FAXSessionsComplete = {
+export type FAXSessionsComplete = BaseEvent & {
 	Event: "FAXSessionsComplete";
 	ActionID?: string;
 	Total: string;
 };
 
-export type FAXSessionsEntry = {
+export type FAXSessionsEntry = BaseEvent & {
 	Event: "FAXSessionsEntry";
 	ActionID?: string;
 	Channel: string;
@@ -3304,7 +3308,7 @@ export type FAXSessionsEntry = {
 	Files: string;
 };
 
-export type FAXStats = {
+export type FAXStats = BaseEvent & {
 	Event: "FAXStats";
 	ActionID?: string;
 	CurrentSessions: string;
@@ -3315,7 +3319,7 @@ export type FAXStats = {
 	FailedFAXes: string;
 };
 
-export type FAXStatus = {
+export type FAXStatus = BaseEvent & {
 	Event: "FAXStatus";
 	Channel: string;
 	ChannelState: string;
@@ -3348,7 +3352,7 @@ export type FAXStatus = {
 	FileName: string;
 };
 
-export type FailedACL = {
+export type FailedACL = BaseEvent & {
 	Event: "FailedACL";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -3363,7 +3367,7 @@ export type FailedACL = {
 	SessionTV?: string;
 };
 
-export type Flash = {
+export type Flash = BaseEvent & {
 	Event: "Flash";
 	Channel: string;
 	ChannelState: string;
@@ -3403,14 +3407,14 @@ export type Flash = {
  * - `Uptime: string`
  * - `LastReload: string`
  */
-export type FullyBooted = {
+export type FullyBooted = BaseEvent & {
 	Event: "FullyBooted";
 	Status: string;
 	Uptime: string;
 	LastReload: string;
 };
 
-export type Hangup = {
+export type Hangup = BaseEvent & {
 	Event: "Hangup";
 	Channel: string;
 	ChannelState: string;
@@ -3441,7 +3445,7 @@ export type Hangup = {
 	"Cause-txt": string;
 };
 
-export type HangupHandlerPop = {
+export type HangupHandlerPop = BaseEvent & {
 	Event: "HangupHandlerPop";
 	Channel: string;
 	ChannelState: string;
@@ -3471,7 +3475,7 @@ export type HangupHandlerPop = {
 	Handler: string;
 };
 
-export type HangupHandlerPush = {
+export type HangupHandlerPush = BaseEvent & {
 	Event: "HangupHandlerPush";
 	Channel: string;
 	ChannelState: string;
@@ -3501,7 +3505,7 @@ export type HangupHandlerPush = {
 	Handler: string;
 };
 
-export type HangupHandlerRun = {
+export type HangupHandlerRun = BaseEvent & {
 	Event: "HangupHandlerRun";
 	Channel: string;
 	ChannelState: string;
@@ -3531,7 +3535,7 @@ export type HangupHandlerRun = {
 	Handler: string;
 };
 
-export type HangupRequest = {
+export type HangupRequest = BaseEvent & {
 	Event: "HangupRequest";
 	Channel: string;
 	ChannelState: string;
@@ -3561,7 +3565,7 @@ export type HangupRequest = {
 	Cause: string;
 };
 
-export type Hold = {
+export type Hold = BaseEvent & {
 	Event: "Hold";
 	Channel: string;
 	ChannelState: string;
@@ -3606,7 +3610,7 @@ export type Hold = {
  * - `MatchHeader: string`
  * - `EndpointName: string`
  */
-export type IdentifyDetail = {
+export type IdentifyDetail = BaseEvent & {
 	Event: "IdentifyDetail";
 	ObjectType: "identify";
 	ObjectName: string;
@@ -3617,7 +3621,7 @@ export type IdentifyDetail = {
 	EndpointName: string;
 };
 
-export type InvalidAccountID = {
+export type InvalidAccountID = BaseEvent & {
 	Event: "InvalidAccountID";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -3631,7 +3635,7 @@ export type InvalidAccountID = {
 	SessionTV?: string;
 };
 
-export type InvalidPassword = {
+export type InvalidPassword = BaseEvent & {
 	Event: "InvalidPassword";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -3648,7 +3652,7 @@ export type InvalidPassword = {
 	ReceivedHash?: string;
 };
 
-export type InvalidTransport = {
+export type InvalidTransport = BaseEvent & {
 	Event: "InvalidTransport";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -3673,13 +3677,13 @@ export type InvalidTransport = {
  * - `Module: string`
  * - `Status: "Failure" | "Success" | "Decline"`
  */
-export type Load = {
+export type Load = BaseEvent & {
 	Event: "Load";
 	Module: string;
 	Status: "Failure" | "Success" | "Decline";
 };
 
-export type LoadAverageLimit = {
+export type LoadAverageLimit = BaseEvent & {
 	Event: "LoadAverageLimit";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -3693,7 +3697,7 @@ export type LoadAverageLimit = {
 	SessionTV?: string;
 };
 
-export type LocalBridge = {
+export type LocalBridge = BaseEvent & {
 	Event: "LocalBridge";
 	LocalOneChannel: string;
 	LocalOneChannelState: string;
@@ -3750,7 +3754,7 @@ export type LocalBridge = {
 	LocalOptimization: "Yes" | "No";
 };
 
-export type LocalOptimizationBegin = {
+export type LocalOptimizationBegin = BaseEvent & {
 	Event: "LocalOptimizationBegin";
 	LocalOneChannel: string;
 	LocalOneChannelState: string;
@@ -3831,7 +3835,7 @@ export type LocalOptimizationBegin = {
 	Id: string;
 };
 
-export type LocalOptimizationEnd = {
+export type LocalOptimizationEnd = BaseEvent & {
 	Event: "LocalOptimizationEnd";
 	LocalOneChannel: string;
 	LocalOneChannelState: string;
@@ -3887,14 +3891,14 @@ export type LocalOptimizationEnd = {
 	Id: string;
 };
 
-export type LogChannel = {
+export type LogChannel = BaseEvent & {
 	Event: "LogChannel";
 	Channel: string;
 	Enabled?: string;
 	Reason?: string;
 };
 
-export type MCID = {
+export type MCID = BaseEvent & {
 	Event: "MCID";
 	Channel: string;
 	ChannelState: string;
@@ -3949,7 +3953,7 @@ export type MCID = {
 	MConnectedIDPres: string;
 };
 
-export type MWIGet = {
+export type MWIGet = BaseEvent & {
 	Event: "MWIGet";
 	ActionID?: string;
 	Mailbox: string;
@@ -3957,7 +3961,7 @@ export type MWIGet = {
 	NewMessages: string;
 };
 
-export type MWIGetComplete = {
+export type MWIGetComplete = BaseEvent & {
 	Event: "MWIGetComplete";
 	ActionID?: string;
 	EventList: string;
@@ -3973,12 +3977,12 @@ export type MWIGetComplete = {
  * - `Event: "MeetmeEnd"`
  * - `Meetme: string`
  */
-export type MeetmeEnd = {
+export type MeetmeEnd = BaseEvent & {
 	Event: "MeetmeEnd";
 	Meetme: string;
 };
 
-export type MeetmeJoin = {
+export type MeetmeJoin = BaseEvent & {
 	Event: "MeetmeJoin";
 	Meetme: string;
 	User: string;
@@ -4009,7 +4013,7 @@ export type MeetmeJoin = {
 	Linkedid: string;
 };
 
-export type MeetmeLeave = {
+export type MeetmeLeave = BaseEvent & {
 	Event: "MeetmeLeave";
 	Meetme: string;
 	User: string;
@@ -4061,7 +4065,7 @@ export type MeetmeLeave = {
  * - `Muted: string`
  * - `Talking: string`
  */
-export type MeetmeList = {
+export type MeetmeList = BaseEvent & {
 	Event: "MeetmeList";
 	Conference: string;
 	UserNumber: string;
@@ -4091,7 +4095,7 @@ export type MeetmeList = {
  * - `Creation: "Dynamic" | "Static"`
  * - `Locked: string`
  */
-export type MeetmeListRooms = {
+export type MeetmeListRooms = BaseEvent & {
 	Event: "MeetmeListRooms";
 	Conference: string;
 	Parties: string;
@@ -4101,7 +4105,7 @@ export type MeetmeListRooms = {
 	Locked: string;
 };
 
-export type MeetmeMute = {
+export type MeetmeMute = BaseEvent & {
 	Event: "MeetmeMute";
 	Meetme: string;
 	User: string;
@@ -4134,7 +4138,7 @@ export type MeetmeMute = {
 	Status: "on" | "off";
 };
 
-export type MeetmeTalkRequest = {
+export type MeetmeTalkRequest = BaseEvent & {
 	Event: "MeetmeTalkRequest";
 	Meetme: string;
 	User: string;
@@ -4167,7 +4171,7 @@ export type MeetmeTalkRequest = {
 	Status: "on" | "off";
 };
 
-export type MeetmeTalking = {
+export type MeetmeTalking = BaseEvent & {
 	Event: "MeetmeTalking";
 	Meetme: string;
 	User: string;
@@ -4200,7 +4204,7 @@ export type MeetmeTalking = {
 	Status: "on" | "off";
 };
 
-export type MemoryLimit = {
+export type MemoryLimit = BaseEvent & {
 	Event: "MemoryLimit";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -4214,7 +4218,7 @@ export type MemoryLimit = {
 	SessionTV?: string;
 };
 
-export type MessageWaiting = {
+export type MessageWaiting = BaseEvent & {
 	Event: "MessageWaiting";
 	Channel?: string;
 	ChannelState?: string;
@@ -4247,7 +4251,7 @@ export type MessageWaiting = {
 	Old: string;
 };
 
-export type MiniVoiceMail = {
+export type MiniVoiceMail = BaseEvent & {
 	Event: "MiniVoiceMail";
 	Channel: string;
 	ChannelState: string;
@@ -4279,7 +4283,7 @@ export type MiniVoiceMail = {
 	Counter: string;
 };
 
-export type MixMonitorMute = {
+export type MixMonitorMute = BaseEvent & {
 	Event: "MixMonitorMute";
 	Channel: string;
 	ChannelState: string;
@@ -4310,7 +4314,7 @@ export type MixMonitorMute = {
 	State: 1 | 0; // 1 when muted, 0 when unmuted
 };
 
-export type MixMonitorStart = {
+export type MixMonitorStart = BaseEvent & {
 	Event: "MixMonitorStart";
 	Channel: string;
 	ChannelState: string;
@@ -4339,7 +4343,7 @@ export type MixMonitorStart = {
 	Linkedid: string;
 };
 
-export type MixMonitorStop = {
+export type MixMonitorStop = BaseEvent & {
 	Event: "MixMonitorStop";
 	Channel: string;
 	ChannelState: string;
@@ -4368,7 +4372,7 @@ export type MixMonitorStop = {
 	Linkedid: string;
 };
 
-export type MonitorStart = {
+export type MonitorStart = BaseEvent & {
 	Event: "MonitorStart";
 	Channel: string;
 	ChannelState: string;
@@ -4397,7 +4401,7 @@ export type MonitorStart = {
 	Linkedid: string;
 };
 
-export type MonitorStop = {
+export type MonitorStop = BaseEvent & {
 	Event: "MonitorStop";
 	Channel: string;
 	ChannelState: string;
@@ -4426,7 +4430,7 @@ export type MonitorStop = {
 	Linkedid: string;
 };
 
-export type MusicOnHoldStart = {
+export type MusicOnHoldStart = BaseEvent & {
 	Event: "MusicOnHoldStart";
 	Channel: string;
 	ChannelState: string;
@@ -4456,7 +4460,7 @@ export type MusicOnHoldStart = {
 	Class: string;
 };
 
-export type MusicOnHoldStop = {
+export type MusicOnHoldStop = BaseEvent & {
 	Event: "MusicOnHoldStop";
 	Channel: string;
 	ChannelState: string;
@@ -4485,7 +4489,7 @@ export type MusicOnHoldStop = {
 	Linkedid: string;
 };
 
-export type NewAccountCode = {
+export type NewAccountCode = BaseEvent & {
 	Event: "NewAccountCode";
 	Channel: string;
 	ChannelState: string;
@@ -4515,7 +4519,7 @@ export type NewAccountCode = {
 	OldAccountCode: string;
 };
 
-export type NewCallerid = {
+export type NewCallerid = BaseEvent & {
 	Event: "NewCallerid";
 	Channel: string;
 	ChannelState: string;
@@ -4545,7 +4549,7 @@ export type NewCallerid = {
 	"CID-CallingPres": string;
 };
 
-export type NewConnectedLine = {
+export type NewConnectedLine = BaseEvent & {
 	Event: "NewConnectedLine";
 	Channel: string;
 	ChannelState: string;
@@ -4574,7 +4578,7 @@ export type NewConnectedLine = {
 	Linkedid: string;
 };
 
-export type NewExten = {
+export type NewExten = BaseEvent & {
 	Event: "NewExten";
 	Channel: string;
 	ChannelState: string;
@@ -4606,7 +4610,7 @@ export type NewExten = {
 	AppData: string;
 };
 
-export type Newchannel = {
+export type Newchannel = BaseEvent & {
 	Event: "Newchannel";
 	Channel: string;
 	ChannelState: string;
@@ -4635,7 +4639,7 @@ export type Newchannel = {
 	Linkedid: string;
 };
 
-export type Newstate = {
+export type Newstate = BaseEvent & {
 	Event: "Newstate";
 	Channel: string;
 	ChannelState: string;
@@ -4664,7 +4668,7 @@ export type Newstate = {
 	Linkedid: string;
 };
 
-export type OriginateResponse = {
+export type OriginateResponse = BaseEvent & {
 	Event: "OriginateResponse";
 	ActionID?: string;
 	Response: "Failure" | "Success";
@@ -4679,7 +4683,7 @@ export type OriginateResponse = {
 	CallerIDName: string;
 };
 
-export type ParkedCall = {
+export type ParkedCall = BaseEvent & {
 	Event: "ParkedCall";
 	ParkeeChannel: string;
 	ParkeeChannelState: string;
@@ -4713,7 +4717,7 @@ export type ParkedCall = {
 	ParkingDuration: string;
 };
 
-export type ParkedCallGiveUp = {
+export type ParkedCallGiveUp = BaseEvent & {
 	Event: "ParkedCallGiveUp";
 	ParkeeChannel: string;
 	ParkeeChannelState: string;
@@ -4772,7 +4776,7 @@ export type ParkedCallGiveUp = {
 	ParkingDuration: string;
 };
 
-export type ParkedCallSwap = {
+export type ParkedCallSwap = BaseEvent & {
 	Event: "ParkedCallSwap";
 	ParkeeChannel: string;
 	ParkeeChannelState: string;
@@ -4831,7 +4835,7 @@ export type ParkedCallSwap = {
 	ParkingDuration: string;
 };
 
-export type ParkedCallTimeOut = {
+export type ParkedCallTimeOut = BaseEvent & {
 	Event: "ParkedCallTimeOut";
 	ParkeeChannel: string;
 	ParkeeChannelState: string;
@@ -4905,7 +4909,7 @@ export type ParkedCallTimeOut = {
  * - `Port: string`
  * - `Time: string`
  */
-export type PeerStatus = {
+export type PeerStatus = BaseEvent & {
 	Event: "PeerStatus";
 	ChannelType: string;
 	Peer: string;
@@ -4916,7 +4920,7 @@ export type PeerStatus = {
 	Time: string;
 };
 
-export type Pickup = {
+export type Pickup = BaseEvent & {
 	Event: "Pickup";
 	Channel: string;
 	ChannelState: string;
@@ -4982,7 +4986,7 @@ export type Pickup = {
  * - `Subtype: string`
  * - `Message: string`
  */
-export type PresenceStateChange = {
+export type PresenceStateChange = BaseEvent & {
 	Event: "PresenceStateChange";
 	Presentity: string;
 	Status: string;
@@ -5000,7 +5004,7 @@ export type PresenceStateChange = {
  * - `EventList: string`
  * - `ListItems: string`
  */
-export type PresenceStateListComplete = {
+export type PresenceStateListComplete = BaseEvent & {
 	Event: "PresenceStateListComplete";
 	EventList: string;
 	ListItems: string;
@@ -5020,7 +5024,7 @@ export type PresenceStateListComplete = {
  * - `Subtype: string`
  * - `Message: string`
  */
-export type PresenceStatus = {
+export type PresenceStatus = BaseEvent & {
 	Event: "PresenceStatus";
 	Exten: string;
 	Context: string;
@@ -5030,7 +5034,7 @@ export type PresenceStatus = {
 	Message: string;
 };
 
-export type QueueCallerAbandon = {
+export type QueueCallerAbandon = BaseEvent & {
 	Event: "QueueCallerAbandon";
 	Channel: string;
 	ChannelState: string;
@@ -5063,7 +5067,7 @@ export type QueueCallerAbandon = {
 	HoldTime: string;
 };
 
-export type QueueCallerJoin = {
+export type QueueCallerJoin = BaseEvent & {
 	Event: "QueueCallerJoin";
 	Channel: string;
 	ChannelState: string;
@@ -5095,7 +5099,7 @@ export type QueueCallerJoin = {
 	Count: string;
 };
 
-export type QueueCallerLeave = {
+export type QueueCallerLeave = BaseEvent & {
 	Event: "QueueCallerLeave";
 	Channel: string;
 	ChannelState: string;
@@ -5145,7 +5149,7 @@ export type QueueCallerLeave = {
  * - `Wait: string`
  * - `Priority: string`
  */
-export type QueueEntry = {
+export type QueueEntry = BaseEvent & {
 	Event: "QueueEntry";
 	Queue: string;
 	Position: string;
@@ -5159,7 +5163,7 @@ export type QueueEntry = {
 	Priority: string;
 };
 
-export type QueueMemberAdded = {
+export type QueueMemberAdded = BaseEvent & {
 	Event: "QueueMemberAdded";
 	Queue: string;
 	MemberName: string;
@@ -5179,7 +5183,7 @@ export type QueueMemberAdded = {
 	Wrapuptime: string;
 };
 
-export type QueueMemberPause = {
+export type QueueMemberPause = BaseEvent & {
 	Event: "QueueMemberPause";
 	Queue: string;
 	MemberName: string;
@@ -5199,7 +5203,7 @@ export type QueueMemberPause = {
 	Wrapuptime: string;
 };
 
-export type QueueMemberPenalty = {
+export type QueueMemberPenalty = BaseEvent & {
 	Event: "QueueMemberPenalty";
 	Queue: string;
 	MemberName: string;
@@ -5219,7 +5223,7 @@ export type QueueMemberPenalty = {
 	Wrapuptime: string;
 };
 
-export type QueueMemberRemoved = {
+export type QueueMemberRemoved = BaseEvent & {
 	Event: "QueueMemberRemoved";
 	Queue: string;
 	MemberName: string;
@@ -5239,7 +5243,7 @@ export type QueueMemberRemoved = {
 	Wrapuptime: string;
 };
 
-export type QueueMemberRinginuse = {
+export type QueueMemberRinginuse = BaseEvent & {
 	Event: "QueueMemberRinginuse";
 	Queue: string;
 	MemberName: string;
@@ -5259,7 +5263,7 @@ export type QueueMemberRinginuse = {
 	Wrapuptime: string;
 };
 
-export type QueueMemberStatus = {
+export type QueueMemberStatus = BaseEvent & {
 	Event: "QueueMemberStatus";
 	Queue: string;
 	MemberName: string;
@@ -5296,7 +5300,7 @@ export type QueueMemberStatus = {
  * - `ServiceLevelPerf: string`
  * - `ServiceLevelPerf2: string`
  */
-export type QueueParams = {
+export type QueueParams = BaseEvent & {
 	Event: "QueueParams";
 	Max: string;
 	Strategy: string;
@@ -5309,7 +5313,7 @@ export type QueueParams = {
 	ServiceLevelPerf2: string;
 };
 
-export type RTCPReceived = {
+export type RTCPReceived = BaseEvent & {
 	Event: "RTCPReceived";
 	Channel: string;
 	ChannelState: string;
@@ -5355,7 +5359,7 @@ export type RTCPReceived = {
 	ReportXDLSR: string;
 };
 
-export type RTCPSent = {
+export type RTCPSent = BaseEvent & {
 	Event: "RTCPSent";
 	Channel: string;
 	ChannelState: string;
@@ -5417,7 +5421,7 @@ export type RTCPSent = {
  * - `TransferRate: string`
  * - `FileName: string`
  */
-export type ReceiveFAX = {
+export type ReceiveFAX = BaseEvent & {
 	Event: "ReceiveFAX";
 	Channel: string;
 	ChannelState: string;
@@ -5441,7 +5445,7 @@ export type ReceiveFAX = {
 	FileName: string;
 };
 
-export type Registry = {
+export type Registry = BaseEvent & {
 	Event: "Registry";
 	ChannelType: string;
 	Username: string;
@@ -5460,7 +5464,7 @@ export type Registry = {
  * - `Module: string`
  * - `Status: "0" | "1" | "2" | "3" | "4" | "5" | "6"`
  */
-export type Reload = {
+export type Reload = BaseEvent & {
 	Event: "Reload";
 	Module: string;
 	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6";
@@ -5488,7 +5492,7 @@ export type Reload = {
  * - `Uniqueid: string`
  * - `Linkedid: string`
  */
-export type Rename = {
+export type Rename = BaseEvent & {
 	Event: "Rename";
 	Channel: string;
 	ChannelState: string;
@@ -5506,7 +5510,7 @@ export type Rename = {
 	Linkedid: string;
 };
 
-export type RequestBadFormat = {
+export type RequestBadFormat = BaseEvent & {
 	Event: "RequestBadFormat";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -5522,7 +5526,7 @@ export type RequestBadFormat = {
 	RequestParams?: string;
 };
 
-export type RequestNotAllowed = {
+export type RequestNotAllowed = BaseEvent & {
 	Event: "RequestNotAllowed";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -5538,7 +5542,7 @@ export type RequestNotAllowed = {
 	RequestParams?: string;
 };
 
-export type RequestNotSupported = {
+export type RequestNotSupported = BaseEvent & {
 	Event: "RequestNotSupported";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -5553,7 +5557,7 @@ export type RequestNotSupported = {
 	SessionTV?: string;
 };
 
-export type SIPQualifyPeerDone = {
+export type SIPQualifyPeerDone = BaseEvent & {
 	Event: "SIPQualifyPeerDone";
 	Peer: string;
 	ActionID?: string;
@@ -5587,7 +5591,7 @@ export type SIPQualifyPeerDone = {
  * - `TransferRate: string`
  * - `FileName: string`
  */
-export type SendFAX = {
+export type SendFAX = BaseEvent & {
 	Event: "SendFAX";
 	Channel: string;
 	ChannelState: string;
@@ -5611,7 +5615,7 @@ export type SendFAX = {
 	FileName: string;
 };
 
-export type SessionLimit = {
+export type SessionLimit = BaseEvent & {
 	Event: "SessionLimit";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -5648,7 +5652,7 @@ export type SessionLimit = {
  * - `Linkedid: string`
  * - `Source: "RTPTimeout" | "SIPSessionTimer"`
  */
-export type SessionTimeout = {
+export type SessionTimeout = BaseEvent & {
 	Event: "SessionTimeout";
 	Channel: string;
 	ChannelState: string;
@@ -5677,7 +5681,7 @@ export type SessionTimeout = {
  * - `Shutdown: "Uncleanly" | "Cleanly"`
  * - `Restart: "True" | "False"`
  */
-export type Shutdown = {
+export type Shutdown = BaseEvent & {
 	Event: "Shutdown";
 	Shutdown: "Uncleanly" | "Cleanly";
 	Restart: "True" | "False";
@@ -5706,7 +5710,7 @@ export type Shutdown = {
  * - `Linkedid: string`
  * - `Cause: string`
  */
-export type SoftHangupRequest = {
+export type SoftHangupRequest = BaseEvent & {
 	Event: "SoftHangupRequest";
 	Channel: string;
 	ChannelState: string;
@@ -5735,7 +5739,7 @@ export type SoftHangupRequest = {
  * - `Span: string`
  * - `Alarm: string`
  */
-export type SpanAlarm = {
+export type SpanAlarm = BaseEvent & {
 	Event: "SpanAlarm";
 	Span: string;
 	Alarm: string;
@@ -5750,12 +5754,12 @@ export type SpanAlarm = {
  * - `Event: "SpanAlarmClear"`
  * - `Span: string`
  */
-export type SpanAlarmClear = {
+export type SpanAlarmClear = BaseEvent & {
 	Event: "SpanAlarmClear";
 	Span: string;
 };
 
-export type Status = {
+export type Status = BaseEvent & {
 	Event: "Status";
 	ActionID?: string;
 	Channel: string;
@@ -5799,12 +5803,12 @@ export type Status = {
  * - `Event: "StatusComplete"`
  * - `Items: string`
  */
-export type StatusComplete = {
+export type StatusComplete = BaseEvent & {
 	Event: "StatusComplete";
 	Items: string;
 };
 
-export type SuccessfulAuth = {
+export type SuccessfulAuth = BaseEvent & {
 	Event: "SuccessfulAuth";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -5819,7 +5823,7 @@ export type SuccessfulAuth = {
 	SessionTV?: string;
 };
 
-export type TransportDetail = {
+export type TransportDetail = BaseEvent & {
 	Event: "TransportDetail";
 	ObjectType: string; // Always 'transport'
 	ObjectName: string;
@@ -5902,7 +5906,7 @@ export type TransportDetail = {
  * - `RetrieverUniqueid: string`
  * - `RetrieverLinkedid: string`
  */
-export type UnParkedCall = {
+export type UnParkedCall = BaseEvent & {
 	Event: "UnParkedCall";
 	ParkeeChannel: string;
 	ParkeeChannelState: string;
@@ -5953,7 +5957,7 @@ export type UnParkedCall = {
 	RetrieverLinkedid: string;
 };
 
-export type UnexpectedAddress = {
+export type UnexpectedAddress = BaseEvent & {
 	Event: "UnexpectedAddress";
 	EventTV: string;
 	Severity: "Informational" | "Error";
@@ -5990,7 +5994,7 @@ export type UnexpectedAddress = {
  * - `Uniqueid: string`
  * - `Linkedid: string`
  */
-export type Unhold = {
+export type Unhold = BaseEvent & {
 	Event: "Unhold";
 	Channel: string;
 	ChannelState: string;
@@ -6018,7 +6022,7 @@ export type Unhold = {
  * - `Module: string`
  * - `Status: "Success"`
  */
-export type Unload = {
+export type Unload = BaseEvent & {
 	Event: "Unload";
 	Module: string;
 	Status: "Success";
@@ -6047,7 +6051,7 @@ export type Unload = {
  * - `Linkedid: string`
  * - `UserEvent: string`
  */
-export type UserEvent = {
+export type UserEvent = BaseEvent & {
 	Event: "UserEvent";
 	Channel: string;
 	ChannelState: string;
@@ -6090,7 +6094,7 @@ export type UserEvent = {
  * - `Variable: string`
  * - `Value: string`
  */
-export type VarSet = {
+export type VarSet = BaseEvent & {
 	Event: "VarSet";
 	Channel: string;
 	ChannelState: string;
@@ -6121,7 +6125,7 @@ export type VarSet = {
  * - `Mailbox: string`
  * - `NewPassword: string`
  */
-export type VoicemailPasswordChange = {
+export type VoicemailPasswordChange = BaseEvent & {
 	Event: "VoicemailPasswordChange";
 	Context: string;
 	Mailbox: string;
@@ -6150,7 +6154,7 @@ export type VoicemailPasswordChange = {
  * - `Uniqueid: string`
  * - `Linkedid: string`
  */
-export type Wink = {
+export type Wink = BaseEvent & {
 	Event: "Wink";
 	Channel: string;
 	ChannelState: string;
