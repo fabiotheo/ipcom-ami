@@ -1810,7 +1810,7 @@ declare namespace asterisk_ami {
 
         /**
          *
-         * @param actionID
+         * @param actionIDQueueStatus
          * @returns {boolean}
          */
         public removeRequest( actionID: unknown ): boolean;

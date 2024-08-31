@@ -5208,7 +5208,6 @@ export type QueueMember = BaseEvent & {
 	PausedReason: number;
 	Wrapuptime: number;
 	ActionID: number;
-	Request: { Action: "QueueStatus"; Queue: "Suporte"; ActionID: number };
 };
 
 export type QueueMemberAdded = BaseEvent & {
