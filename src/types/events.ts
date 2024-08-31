@@ -5170,17 +5170,17 @@ export type QueueMemberAdded = BaseEvent & {
 	Interface: string;
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
-	Penalty: string;
+	Penalty: number;
 	CallsTaken: string;
-	LastCall: string;
-	LastPause: string;
-	LoginTime: string;
-	InCall: "0" | "1";
-	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8";
-	Paused: "0" | "1";
+	LastCall: number;
+	LastPause: number;
+	LoginTime: number;
+	InCall: 0 | 1;
+	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+	Paused: 0 | 1;
 	PausedReason?: string;
-	Ringinuse: "0" | "1";
-	Wrapuptime: string;
+	Ringinuse: 0 | 1;
+	Wrapuptime: number;
 };
 
 export type QueueMemberPause = BaseEvent & {
@@ -5190,17 +5190,17 @@ export type QueueMemberPause = BaseEvent & {
 	Interface: string;
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
-	Penalty: string;
+	Penalty: number;
 	CallsTaken: string;
-	LastCall: string;
-	LastPause: string;
-	LoginTime: string;
-	InCall: "0" | "1";
-	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8";
-	Paused: "0" | "1";
+	LastCall: number;
+	LastPause: number;
+	LoginTime: number;
+	InCall: 0 | 1;
+	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+	Paused: 0 | 1;
 	PausedReason?: string;
-	Ringinuse: "0" | "1";
-	Wrapuptime: string;
+	Ringinuse: 0 | 1;
+	Wrapuptime: number;
 };
 
 export type QueueMemberPenalty = BaseEvent & {
@@ -5210,17 +5210,17 @@ export type QueueMemberPenalty = BaseEvent & {
 	Interface: string;
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
-	Penalty: string;
+	Penalty: number;
 	CallsTaken: string;
-	LastCall: string;
-	LastPause: string;
-	LoginTime: string;
-	InCall: "0" | "1";
-	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8";
-	Paused: "0" | "1";
+	LastCall: number;
+	LastPause: number;
+	LoginTime: number;
+	InCall: 0 | 1;
+	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+	Paused: 0 | 1;
 	PausedReason?: string;
-	Ringinuse: "0" | "1";
-	Wrapuptime: string;
+	Ringinuse: 0 | 1;
+	Wrapuptime: number;
 };
 
 export type QueueMemberRemoved = BaseEvent & {
@@ -5230,17 +5230,17 @@ export type QueueMemberRemoved = BaseEvent & {
 	Interface: string;
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
-	Penalty: string;
+	Penalty: number;
 	CallsTaken: string;
-	LastCall: string;
-	LastPause: string;
-	LoginTime: string;
-	InCall: "0" | "1";
-	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8";
-	Paused: "0" | "1";
+	LastCall: number;
+	LastPause: number;
+	LoginTime: number;
+	InCall: 0 | 1;
+	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+	Paused: 0 | 1;
 	PausedReason?: string;
-	Ringinuse: "0" | "1";
-	Wrapuptime: string;
+	Ringinuse: 0 | 1;
+	Wrapuptime: number;
 };
 
 export type QueueMemberRinginuse = BaseEvent & {
@@ -5250,17 +5250,17 @@ export type QueueMemberRinginuse = BaseEvent & {
 	Interface: string;
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
-	Penalty: string;
+	Penalty: number;
 	CallsTaken: string;
-	LastCall: string;
-	LastPause: string;
-	LoginTime: string;
-	InCall: "0" | "1";
-	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8";
-	Paused: "0" | "1";
+	LastCall: number;
+	LastPause: number;
+	LoginTime: number;
+	InCall: 0 | 1;
+	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+	Paused: 0 | 1;
 	PausedReason?: string;
-	Ringinuse: "0" | "1";
-	Wrapuptime: string;
+	Ringinuse: 0 | 1;
+	Wrapuptime: number;
 };
 
 export type QueueMemberStatus = BaseEvent & {
@@ -5270,17 +5270,17 @@ export type QueueMemberStatus = BaseEvent & {
 	Interface: string;
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
-	Penalty: string;
+	Penalty: number;
 	CallsTaken: string;
-	LastCall: string;
-	LastPause: string;
-	LoginTime: string;
-	InCall: "0" | "1";
-	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8";
-	Paused: "0" | "1";
+	LastCall: number;
+	LastPause: number;
+	LoginTime: number;
+	InCall: 0 | 1;
+	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+	Paused: 0 | 1;
 	PausedReason?: string;
-	Ringinuse: "0" | "1";
-	Wrapuptime: string;
+	Ringinuse: 0 | 1;
+	Wrapuptime: number;
 };
 
 /**
