@@ -1,5 +1,12 @@
+type Request = {
+	Action: string;
+	Queue?: string;
+	ActionID: number;
+};
+
 type BaseEvent = {
 	TimeEvent: number;
+	Request?: Request;
 };
 
 /**
@@ -964,7 +971,7 @@ export type Agents = BaseEvent & {
 	Priority?: string;
 	Uniqueid?: string;
 	Linkedid?: string;
-	ActionID: string;
+	ActionID: number;
 };
 
 /**
@@ -983,11 +990,11 @@ export type Agents = BaseEvent & {
  *
  * **Syntax**:
  * - `Event: "AgentsComplete"`
- * - `ActionID: string`
+ * - `ActionID: number`
  */
 export type AgentsComplete = BaseEvent & {
 	Event: "AgentsComplete";
-	ActionID: string;
+	ActionID: number;
 };
 
 /**
@@ -1063,7 +1070,7 @@ export type AlarmClear = BaseEvent & {
  * - `MinimumExpiration: string`
  * - `MaximumExpiration: string`
  * - `DefaultExpiration: string`
- * - `QualifyFrequency: string`
+ * - `QualifyFrequency: number`
  * - `AuthenticateQualify: string`
  * - `MaxContacts: string`
  * - `RemoveExisting: string`
@@ -1082,7 +1089,7 @@ export type AorDetail = BaseEvent & {
 	MinimumExpiration: string;
 	MaximumExpiration: string;
 	DefaultExpiration: string;
-	QualifyFrequency: string;
+	QualifyFrequency: number;
 	AuthenticateQualify: string;
 	MaxContacts: string;
 	RemoveExisting: string;
@@ -1118,7 +1125,7 @@ export type AorDetail = BaseEvent & {
  * - `MinimumExpiration: string`
  * - `MaximumExpiration: string`
  * - `DefaultExpiration: string`
- * - `QualifyFrequency: string`
+ * - `QualifyFrequency: number`
  * - `AuthenticateQualify: string`
  * - `MaxContacts: string`
  * - `RemoveExisting: string`
@@ -1134,7 +1141,7 @@ export type AorList = BaseEvent & {
 	MinimumExpiration: string;
 	MaximumExpiration: string;
 	DefaultExpiration: string;
-	QualifyFrequency: string;
+	QualifyFrequency: number;
 	AuthenticateQualify: string;
 	MaxContacts: string;
 	RemoveExisting: string;
@@ -1161,12 +1168,12 @@ export type AorList = BaseEvent & {
  * **Syntax**:
  * - `Event: "AorListComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type AorListComplete = BaseEvent & {
 	Event: "AorListComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 /**
@@ -1519,12 +1526,12 @@ export type AuthList = BaseEvent & {
  * **Syntax**:
  * - `Event: "AuthListComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type AuthListComplete = BaseEvent & {
 	Event: "AuthListComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 /**
@@ -2594,21 +2601,21 @@ export type ContactList = BaseEvent & {
 	ObjectType: "contact";
 	ObjectName: string;
 	ViaAddr?: string;
-	ViaPort?: string;
-	QualifyTimeout: string;
+	ViaPort?: number;
+	QualifyTimeout: number;
 	CallId?: string;
-	RegServer: string;
+	RegServer: number;
 	PruneOnBoot: boolean;
 	Path: string;
-	Endpoint: string;
+	Endpoint: string | number;
 	AuthenticateQualify: boolean;
 	Uri: string;
-	QualifyFrequency: string;
+	QualifyFrequency: number;
 	UserAgent: string;
-	ExpirationTime: string;
+	ExpirationTime: number;
 	OutboundProxy: string;
 	Status: "Reachable" | "Unreachable" | "NonQualified" | "Unknown";
-	RoundtripUsec: string;
+	RoundtripUsec: number;
 };
 
 /**
@@ -2619,12 +2626,12 @@ export type ContactList = BaseEvent & {
  * **Syntax**:
  * - `Event: "ContactListComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type ContactListComplete = BaseEvent & {
 	Event: "ContactListComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 export type ContactStatus = BaseEvent & {
@@ -2639,7 +2646,7 @@ export type ContactStatus = BaseEvent & {
 		| "Updated";
 	AOR: string;
 	EndpointName: string;
-	RoundtripUsec: string;
+	RoundtripUsec: number;
 };
 
 export type ContactStatusDetail = BaseEvent & {
@@ -2647,7 +2654,7 @@ export type ContactStatusDetail = BaseEvent & {
 	AOR: string;
 	URI: string;
 	Status: "Reachable" | "Unreachable" | "NonQualified" | "Unknown";
-	RoundtripUsec: string;
+	RoundtripUsec: number;
 	EndpointName: string;
 	UserAgent: string;
 	RegExpire: string;
@@ -2657,13 +2664,13 @@ export type ContactStatusDetail = BaseEvent & {
 	AuthenticateQualify: boolean;
 	OutboundProxy: string;
 	Path: string;
-	QualifyFrequency: string;
-	QualifyTimeout: string;
+	QualifyFrequency: number;
+	QualifyTimeout: number;
 };
 
 export type CoreShowChannel = BaseEvent & {
 	Event: "CoreShowChannel";
-	ActionID: string;
+	ActionID: number;
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc:
@@ -2703,12 +2710,12 @@ export type CoreShowChannel = BaseEvent & {
  * **Syntax**:
  * - `Event: "CoreShowChannelMapComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type CoreShowChannelMapComplete = BaseEvent & {
 	Event: "CoreShowChannelMapComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 /**
@@ -2718,15 +2725,15 @@ export type CoreShowChannelMapComplete = BaseEvent & {
  *
  * **Syntax**:
  * - `Event: "CoreShowChannelsComplete"`
- * - `ActionID: string`
+ * - `ActionID: number`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type CoreShowChannelsComplete = BaseEvent & {
 	Event: "CoreShowChannelsComplete";
-	ActionID: string;
+	ActionID: number;
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 export type DAHDIChannel = BaseEvent & {
@@ -2878,12 +2885,12 @@ export type DeviceStateChange = BaseEvent & {
  * **Syntax**:
  * - `Event: "DeviceStateListComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type DeviceStateListComplete = BaseEvent & {
 	Event: "DeviceStateListComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 export type DialBegin = BaseEvent & {
@@ -3172,12 +3179,12 @@ export type EndpointDetail = BaseEvent & {
  * **Syntax**:
  * - `Event: "EndpointDetailComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type EndpointDetailComplete = BaseEvent & {
 	Event: "EndpointDetailComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 /**
@@ -3216,12 +3223,12 @@ export type EndpointList = BaseEvent & {
  * **Syntax**:
  * - `Event: "EndpointListComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type EndpointListComplete = BaseEvent & {
 	Event: "EndpointListComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 /**
@@ -3232,12 +3239,12 @@ export type EndpointListComplete = BaseEvent & {
  * **Syntax**:
  * - `Event: "ExtensionStateListComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type ExtensionStateListComplete = BaseEvent & {
 	Event: "ExtensionStateListComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 export type ExtensionStatus = BaseEvent & {
@@ -3260,7 +3267,7 @@ export type ExtensionStatus = BaseEvent & {
 
 export type FAXSession = BaseEvent & {
 	Event: "FAXSession";
-	ActionID?: string;
+	ActionID?: number;
 	SessionNumber: string;
 	Operation: "gateway" | "V.21" | "send" | "receive" | "none";
 	State:
@@ -3284,13 +3291,13 @@ export type FAXSession = BaseEvent & {
 
 export type FAXSessionsComplete = BaseEvent & {
 	Event: "FAXSessionsComplete";
-	ActionID?: string;
+	ActionID?: number;
 	Total: string;
 };
 
 export type FAXSessionsEntry = BaseEvent & {
 	Event: "FAXSessionsEntry";
-	ActionID?: string;
+	ActionID?: number;
 	Channel: string;
 	Technology: string;
 	SessionNumber: string;
@@ -3310,7 +3317,7 @@ export type FAXSessionsEntry = BaseEvent & {
 
 export type FAXStats = BaseEvent & {
 	Event: "FAXStats";
-	ActionID?: string;
+	ActionID?: number;
 	CurrentSessions: string;
 	ReservedSessions: string;
 	TransmitAttempts: string;
@@ -3604,7 +3611,7 @@ export type Hold = BaseEvent & {
  * - `Event: "IdentifyDetail"`
  * - `ObjectType: "identify"`
  * - `ObjectName: string`
- * - `Endpoint: string`
+ * - `Endpoint: string | number`
  * - `SrvLookups: string`
  * - `Match: string`
  * - `MatchHeader: string`
@@ -3614,7 +3621,7 @@ export type IdentifyDetail = BaseEvent & {
 	Event: "IdentifyDetail";
 	ObjectType: "identify";
 	ObjectName: string;
-	Endpoint: string;
+	Endpoint: string | number;
 	SrvLookups: string;
 	Match: string;
 	MatchHeader: string;
@@ -3955,7 +3962,7 @@ export type MCID = BaseEvent & {
 
 export type MWIGet = BaseEvent & {
 	Event: "MWIGet";
-	ActionID?: string;
+	ActionID?: number;
 	Mailbox: string;
 	OldMessages: string;
 	NewMessages: string;
@@ -3963,9 +3970,9 @@ export type MWIGet = BaseEvent & {
 
 export type MWIGetComplete = BaseEvent & {
 	Event: "MWIGetComplete";
-	ActionID?: string;
+	ActionID?: number;
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 /**
@@ -4670,7 +4677,7 @@ export type Newstate = BaseEvent & {
 
 export type OriginateResponse = BaseEvent & {
 	Event: "OriginateResponse";
-	ActionID?: string;
+	ActionID?: number;
 	Response: "Failure" | "Success";
 	Channel: string;
 	Context: string;
@@ -5002,12 +5009,12 @@ export type PresenceStateChange = BaseEvent & {
  * **Syntax**:
  * - `Event: "PresenceStateListComplete"`
  * - `EventList: string`
- * - `ListItems: string`
+ * - `ListItems: number`
  */
 export type PresenceStateListComplete = BaseEvent & {
 	Event: "PresenceStateListComplete";
 	EventList: string;
-	ListItems: string;
+	ListItems: number;
 };
 
 /**
@@ -5161,6 +5168,47 @@ export type QueueEntry = BaseEvent & {
 	ConnectedLineName: string;
 	Wait: string;
 	Priority: string;
+};
+
+export type QueueSummary = BaseEvent & {
+	Event: "QueueSummary";
+	Queue: string;
+	LoggedIn: number;
+	Available: number;
+	Callers: number;
+	HoldTime: number;
+	TalkTime: number;
+	LongestHoldTime: number;
+	ActionID: number;
+	TimeEvent: number;
+};
+
+export type QueueSummaryComplete = BaseEvent & {
+	Event: "QueueSummaryComplete";
+	ActionID: number;
+	EventList: string;
+	ListItems: number;
+};
+
+export type QueueMember = BaseEvent & {
+	Event: "QueueMember";
+	Queue: string;
+	Name: string;
+	Location: string;
+	StateInterface: string;
+	Membership: "dynamic" | "realtime" | "static";
+	Penalty: number;
+	CallsTaken: number;
+	LastCall: number;
+	LastPause: number;
+	LoginTime: number;
+	InCall: number;
+	Status: number;
+	Paused: number;
+	PausedReason: number;
+	Wrapuptime: number;
+	ActionID: number;
+	Request: { Action: "QueueStatus"; Queue: "Suporte"; ActionID: number };
 };
 
 export type QueueMemberAdded = BaseEvent & {
@@ -5560,7 +5608,7 @@ export type RequestNotSupported = BaseEvent & {
 export type SIPQualifyPeerDone = BaseEvent & {
 	Event: "SIPQualifyPeerDone";
 	Peer: string;
-	ActionID?: string;
+	ActionID?: number;
 };
 
 /**
@@ -5761,7 +5809,7 @@ export type SpanAlarmClear = BaseEvent & {
 
 export type Status = BaseEvent & {
 	Event: "Status";
-	ActionID?: string;
+	ActionID?: number;
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
@@ -6312,6 +6360,9 @@ export type AMIEvent =
 	| PresenceStateChange
 	| PresenceStateListComplete
 	| PresenceStatus
+	| QueueSummary
+	| QueueSummaryComplete
+	| QueueMember
 	| QueueCallerAbandon
 	| QueueCallerJoin
 	| QueueCallerLeave

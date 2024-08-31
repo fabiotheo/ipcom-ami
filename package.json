@@ -1,6 +1,6 @@
 {
 	"name": "@ipcom/asterisk-ami",
-	"version": "0.0.20",
+	"version": "0.0.22",
 	"type": "module",
 	"main": "./dist/cjs/index.cjs",
 	"module": "./dist/esm/index.js",

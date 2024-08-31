@@ -143,6 +143,9 @@ import {
     PresenceStateChange,
     PresenceStateListComplete,
     PresenceStatus,
+    QueueMember,
+    QueueSummary,
+    QueueSummaryComplete,
     QueueCallerAbandon,
     QueueCallerJoin,
     QueueCallerLeave,
@@ -328,6 +331,9 @@ declare namespace asterisk_ami {
     export type PresenceStateChange = PresenceStateChange;
     export type PresenceStateListComplete = PresenceStateListComplete;
     export type PresenceStatus = PresenceStatus;
+    export type QueueSummary = QueueSummary;
+    export type QueueSummaryComplete = QueueSummaryComplete;
+    export type QueueMember = QueueMember;
     export type QueueCallerAbandon = QueueCallerAbandon;
     export type QueueCallerJoin = QueueCallerJoin;
     export type QueueCallerLeave = QueueCallerLeave;

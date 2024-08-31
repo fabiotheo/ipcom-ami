@@ -145,6 +145,7 @@ import type {
 	QueueCallerJoin,
 	QueueCallerLeave,
 	QueueEntry,
+	QueueMember,
 	QueueMemberAdded,
 	QueueMemberPause,
 	QueueMemberPenalty,
@@ -152,6 +153,8 @@ import type {
 	QueueMemberRinginuse,
 	QueueMemberStatus,
 	QueueParams,
+	QueueSummary,
+	QueueSummaryComplete,
 	RTCPReceived,
 	RTCPSent,
 	ReceiveFAX,
@@ -775,6 +778,20 @@ export function isPresenceStateListComplete(
 
 export function isPresenceStatus(evt: AMIEvent): evt is PresenceStatus {
 	return evt.Event === "PresenceStatus";
+}
+
+export function isQueueSummary(evt: AMIEvent): evt is QueueSummary {
+	return evt.Event === "QueueSummary";
+}
+
+export function isQueueSummaryComplete(
+	evt: AMIEvent,
+): evt is QueueSummaryComplete {
+	return evt.Event === "QueueSummaryComplete";
+}
+
+export function isQueueMember(evt: AMIEvent): evt is QueueMember {
+	return evt.Event === "QueueMember";
 }
 
 export function isQueueCallerAbandon(evt: AMIEvent): evt is QueueCallerAbandon {
