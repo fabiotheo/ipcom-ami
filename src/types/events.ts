@@ -60,8 +60,8 @@ export type AGIExecEnd = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Command: string;
 	CommandId: string;
 	ResultCode: string;
@@ -117,8 +117,8 @@ export type AGIExecStart = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Command: string;
 	CommandId: string;
 };
@@ -180,8 +180,8 @@ export type AOCD = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Charge: string;
 	Type: string;
 	BillingID: string;
@@ -256,8 +256,8 @@ export type AOCE = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	ChargingAssociation: string;
 	Number: string;
 	Plan: string;
@@ -334,8 +334,8 @@ export type AOCS = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Chargeable: string;
 	RateType: string;
 	Currency: string;
@@ -417,8 +417,8 @@ export type AgentCalled = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
@@ -431,8 +431,8 @@ export type AgentCalled = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	Queue: string;
 	MemberName: string;
 	Interface: string;
@@ -508,8 +508,8 @@ export type AgentComplete = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
@@ -522,13 +522,13 @@ export type AgentComplete = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	Queue: string;
 	MemberName: string;
 	Interface: string;
-	HoldTime: string;
-	TalkTime: string;
+	HoldTime: number;
+	TalkTime: number;
 	Reason: string;
 };
 
@@ -628,8 +628,8 @@ export type AgentConnect = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
@@ -642,8 +642,8 @@ export type AgentConnect = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	Queue: string;
 	MemberName: string;
 	Interface: string;
@@ -743,8 +743,8 @@ export type AgentDump = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
@@ -757,8 +757,8 @@ export type AgentDump = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	Queue: string;
 	MemberName: string;
 	Interface: string;
@@ -813,8 +813,8 @@ export type AgentLogin = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Agent: string;
 };
 
@@ -914,8 +914,8 @@ export type AgentRingNoAnswer = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
@@ -928,8 +928,8 @@ export type AgentRingNoAnswer = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	Queue: string;
 	MemberName: string;
 	Interface: string;
@@ -1223,8 +1223,8 @@ export type AsyncAGIEnd = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 /**
@@ -1252,8 +1252,8 @@ export type AsyncAGIExec = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	CommandID?: string;
 	Result: string;
 };
@@ -1306,8 +1306,8 @@ export type AsyncAGIStart = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Env: string;
 };
 
@@ -1319,14 +1319,14 @@ export type AsyncAGIStart = BaseEvent & {
  * **Syntax**:
  * - `Event: AttendedTransfer`
  * - `TransfererChannel: string`
- * - `TransfererUniqueid: string`
+ * - `TransfererUniqueid: number | string`
  * - `TransfereeChannel: string`
- * - `TransfereeUniqueid: string`
+ * - `TransfereeUniqueid: number | string`
  * - `TransferTargetChannel: string`
  * - `TransferTargetUniqueid: string`
  * - `TransfererContext: string`
- * - `TransfererExten: string`
- * - `TransfererPriority: number`
+ * - `TransfererExten: number | string`
+ * - `TransfererPriority: number | number`
  * - `TransferTargetContext: string`
  * - `TransferTargetExten: string`
  * - `TransferTargetPriority: number`
@@ -1336,47 +1336,47 @@ export type AttendedTransfer = BaseEvent & {
 	Event: "AttendedTransfer";
 	Result: "Fail" | "Invalid" | "Not Permitted" | "Success";
 	OrigTransfererChannel: string;
-	OrigTransfererChannelState: string;
+	OrigTransfererChannelState: number;
 	OrigTransfererChannelStateDesc: string;
-	OrigTransfererCallerIDNum: string;
+	OrigTransfererCallerIDNum: number | string;
 	OrigTransfererCallerIDName: string;
-	OrigTransfererConnectedLineNum: string;
+	OrigTransfererConnectedLineNum: number | string;
 	OrigTransfererConnectedLineName: string;
 	OrigTransfererLanguage: string;
-	OrigTransfererAccountCode: string;
+	OrigTransfererAccountCode: number | string;
 	OrigTransfererContext: string;
-	OrigTransfererExten: string;
-	OrigTransfererPriority: string;
-	OrigTransfererUniqueid: string;
-	OrigTransfererLinkedid: string;
-	OrigBridgeUniqueid: string;
+	OrigTransfererExten: number | string;
+	OrigTransfererPriority: number;
+	OrigTransfererUniqueid: number | string;
+	OrigTransfererLinkedid: number | string;
+	OrigBridgeUniqueid: string | number;
 	OrigBridgeType: string;
 	OrigBridgeTechnology: string;
 	OrigBridgeCreator: string;
 	OrigBridgeName: string;
-	OrigBridgeNumChannels: string;
+	OrigBridgeNumChannels: number;
 	OrigBridgeVideoSourceMode: "none" | "talker" | "single";
 	OrigBridgeVideoSource?: string;
 	SecondTransfererChannel: string;
-	SecondTransfererChannelState: string;
+	SecondTransfererChannelState: number;
 	SecondTransfererChannelStateDesc: string;
-	SecondTransfererCallerIDNum: string;
+	SecondTransfererCallerIDNum: number | string;
 	SecondTransfererCallerIDName: string;
-	SecondTransfererConnectedLineNum: string;
+	SecondTransfererConnectedLineNum: number | string;
 	SecondTransfererConnectedLineName: string;
 	SecondTransfererLanguage: string;
-	SecondTransfererAccountCode: string;
+	SecondTransfererAccountCode: number | string;
 	SecondTransfererContext: string;
-	SecondTransfererExten: string;
-	SecondTransfererPriority: string;
-	SecondTransfererUniqueid: string;
-	SecondTransfererLinkedid: string;
-	SecondBridgeUniqueid: string;
+	SecondTransfererExten: number | string;
+	SecondTransfererPriority: number;
+	SecondTransfererUniqueid: number | string;
+	SecondTransfererLinkedid: number | string;
+	SecondBridgeUniqueid: string | number;
 	SecondBridgeType: string;
 	SecondBridgeTechnology: string;
 	SecondBridgeCreator: string;
 	SecondBridgeName: string;
-	SecondBridgeNumChannels: string;
+	SecondBridgeNumChannels: number;
 	SecondBridgeVideoSourceMode: "none" | "talker" | "single";
 	SecondBridgeVideoSource?: string;
 	DestType: "Bridge" | "App" | "Link" | "Threeway" | "Fail";
@@ -1394,8 +1394,8 @@ export type AttendedTransfer = BaseEvent & {
 	LocalOneContext: string;
 	LocalOneExten: string;
 	LocalOnePriority: string;
-	LocalOneUniqueid: string;
-	LocalOneLinkedid: string;
+	LocalOneUniqueid: string | number;
+	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
 	LocalTwoChannelState: string;
 	LocalTwoChannelStateDesc: string;
@@ -1408,23 +1408,47 @@ export type AttendedTransfer = BaseEvent & {
 	LocalTwoContext: string;
 	LocalTwoExten: string;
 	LocalTwoPriority: string;
-	LocalTwoUniqueid: string;
-	LocalTwoLinkedid: string;
+	LocalTwoUniqueid: string | number;
+	LocalTwoLinkedid: number | string;
 	DestTransfererChannel?: string;
 	TransfereeChannel: string;
-	TransfereeChannelState: string;
-	TransfereeChannelStateDesc: string;
-	TransfereeCallerIDNum: string;
+	TransfereeChannelState: number;
+	TransfereeChannelStateDesc:
+		| "Down"
+		| "Rsrvd"
+		| "OffHook"
+		| "Dialing"
+		| "Ring"
+		| "Ringing"
+		| "Up"
+		| "Busy"
+		| "Dialing Offhook"
+		| "Pre-ring"
+		| "Unknown";
+	TransfereeCallerIDNum: number | string;
 	TransfereeCallerIDName: string;
-	TransfereeConnectedLineNum: string;
+	TransfereeConnectedLineNum: number | string;
 	TransfereeConnectedLineName: string;
 	TransfereeLanguage: string;
-	TransfereeAccountCode: string;
+	TransfereeAccountCode: number | string;
 	TransfereeContext: string;
-	TransfereeExten: string;
-	TransfereePriority: string;
-	TransfereeUniqueid: string;
-	TransfereeLinkedid: string;
+	TransfereeExten: number | string;
+	TransfereePriority: number;
+	TransfereeUniqueid: number | string;
+	TransfereeLinkedid: number | string;
+	TransferTargetChannel: string;
+	TransferTargetChannelState: number;
+	TransferTargetChannelStateDesc: string;
+	TransferTargetCallerIDNum: string | number;
+	TransferTargetCallerIDName: string;
+	TransferTargetConnectedLineName: string;
+	TransferTargetAccountCode: string | number;
+	TransferTargetContext: string;
+	TransferTargetExten: number | string;
+	TransferTargetPriority: number;
+	TransferTargetUniqueid: string | number;
+	TransferTargetLinkedid: string | number;
+	IsExternal: string;
 };
 
 /**
@@ -1567,14 +1591,14 @@ export type AuthMethodNotAllowed = BaseEvent & {
  * **Syntax**:
  * - `Event: BlindTransfer`
  * - `TransfererChannel: string`
- * - `TransfererUniqueid: string`
+ * - `TransfererUniqueid: number | string`
  * - `TransfereeChannel: string`
- * - `TransfereeUniqueid: string`
+ * - `TransfereeUniqueid: number | string`
  * - `TransfererContext: string`
- * - `TransfererExten: string`
- * - `TransfererPriority: number`
+ * - `TransfererExten: number | string`
+ * - `TransfererPriority: number | number`
  * - `TransfereeContext: string`
- * - `TransfereeExten: string`
+ * - `TransfereeExten: number | string`
  * - `TransfereePriority: number`
  * - `Result: string`
  */
@@ -1595,17 +1619,17 @@ export type BlindTransfer = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	TransfererCallerIDNum: string;
+	TransfererCallerIDNum: number | string;
 	TransfererCallerIDName: string;
-	TransfererConnectedLineNum: string;
+	TransfererConnectedLineNum: number | string;
 	TransfererConnectedLineName: string;
 	TransfererLanguage: string;
-	TransfererAccountCode: string;
+	TransfererAccountCode: number | string;
 	TransfererContext: string;
-	TransfererExten: string;
-	TransfererPriority: string;
-	TransfererUniqueid: string;
-	TransfererLinkedid: string;
+	TransfererExten: number | string;
+	TransfererPriority: number | string;
+	TransfererUniqueid: number | string;
+	TransfererLinkedid: number | string;
 	TransfereeChannel: string;
 	TransfereeChannelState: number;
 	TransfereeChannelStateDesc:
@@ -1620,18 +1644,18 @@ export type BlindTransfer = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	TransfereeCallerIDNum: string;
+	TransfereeCallerIDNum: number | string;
 	TransfereeCallerIDName: string;
-	TransfereeConnectedLineNum: string;
+	TransfereeConnectedLineNum: number | string;
 	TransfereeConnectedLineName: string;
 	TransfereeLanguage: string;
-	TransfereeAccountCode: string;
+	TransfereeAccountCode: number | string;
 	TransfereeContext: string;
-	TransfereeExten: string;
-	TransfereePriority: string;
-	TransfereeUniqueid: string;
-	TransfereeLinkedid: string;
-	BridgeUniqueid: string;
+	TransfereeExten: number | string;
+	TransfereePriority: number;
+	TransfereeUniqueid: number | string;
+	TransfereeLinkedid: number | string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -1641,7 +1665,7 @@ export type BlindTransfer = BaseEvent & {
 	BridgeVideoSource?: string;
 	IsExternal: "Yes" | "No";
 	Context: string;
-	Extension: string;
+	Extension: string | number;
 };
 
 /**
@@ -1660,7 +1684,7 @@ export type BlindTransfer = BaseEvent & {
  */
 export type BridgeCreate = BaseEvent & {
 	Event: "BridgeCreate";
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -1686,7 +1710,7 @@ export type BridgeCreate = BaseEvent & {
  */
 export type BridgeDestroy = BaseEvent & {
 	Event: "BridgeDestroy";
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -1713,7 +1737,7 @@ export type BridgeDestroy = BaseEvent & {
  */
 export type BridgeEnter = BaseEvent & {
 	Event: "BridgeEnter";
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -1744,8 +1768,8 @@ export type BridgeEnter = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	SwapUniqueid?: string;
 };
 
@@ -1786,8 +1810,8 @@ export type BridgeInfoChannel = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 /**
@@ -1802,7 +1826,7 @@ export type BridgeInfoChannel = BaseEvent & {
  */
 export type BridgeInfoComplete = BaseEvent & {
 	Event: "BridgeInfoComplete";
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -1829,7 +1853,7 @@ export type BridgeInfoComplete = BaseEvent & {
  */
 export type BridgeLeave = BaseEvent & {
 	Event: "BridgeLeave";
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -1860,8 +1884,8 @@ export type BridgeLeave = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 /**
@@ -1880,7 +1904,7 @@ export type BridgeLeave = BaseEvent & {
  */
 export type BridgeMerge = BaseEvent & {
 	Event: "BridgeMerge";
-	ToBridgeUniqueid: string;
+	ToBridgeUniqueid: string | number;
 	ToBridgeType: string;
 	ToBridgeTechnology: string;
 	ToBridgeCreator: string;
@@ -1888,7 +1912,7 @@ export type BridgeMerge = BaseEvent & {
 	ToBridgeNumChannels: number;
 	ToBridgeVideoSourceMode: "none" | "talker" | "single";
 	ToBridgeVideoSource?: string;
-	FromBridgeUniqueid: string;
+	FromBridgeUniqueid: string | number;
 	FromBridgeType: string;
 	FromBridgeTechnology: string;
 	FromBridgeCreator: string;
@@ -1912,7 +1936,7 @@ export type BridgeMerge = BaseEvent & {
  */
 export type BridgeVideoSourceUpdate = BaseEvent & {
 	Event: "BridgeVideoSourceUpdate";
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -1980,8 +2004,8 @@ export type CEL = BaseEvent & {
 	AppData: string;
 	EventTime: string;
 	AMAFlags: "OMIT" | "BILLING" | "DOCUMENTATION";
-	UniqueID: string;
-	LinkedID: string;
+	UniqueID: string | number;
+	LinkedID: number | string;
 	UserField: string;
 	Peer: string;
 	PeerAccount: string;
@@ -2062,7 +2086,7 @@ export type Cdr = BaseEvent & {
 	BillableSeconds: string;
 	Disposition: "NO ANSWER" | "FAILED" | "BUSY" | "ANSWERED" | "CONGESTION";
 	AMAFlags: "OMIT" | "BILLING" | "DOCUMENTATION";
-	UniqueID: string;
+	UniqueID: string | number;
 	UserField: string;
 };
 
@@ -2145,8 +2169,8 @@ export type ChanSpyStart = BaseEvent & {
 	SpyerContext: string;
 	SpyerExten: string;
 	SpyerPriority: string;
-	SpyerUniqueid: string;
-	SpyerLinkedid: string;
+	SpyerUniqueid: string | number;
+	SpyerLinkedid: number | string;
 	SpyeeChannel: string;
 	SpyeeChannelState: string;
 	SpyeeChannelStateDesc:
@@ -2170,8 +2194,8 @@ export type ChanSpyStart = BaseEvent & {
 	SpyeeContext: string;
 	SpyeeExten: string;
 	SpyeePriority: string;
-	SpyeeUniqueid: string;
-	SpyeeLinkedid: string;
+	SpyeeUniqueid: string | number;
+	SpyeeLinkedid: number | string;
 };
 
 export type ChanSpyStop = BaseEvent & {
@@ -2199,8 +2223,8 @@ export type ChanSpyStop = BaseEvent & {
 	SpyerContext: string;
 	SpyerExten: string;
 	SpyerPriority: string;
-	SpyerUniqueid: string;
-	SpyerLinkedid: string;
+	SpyerUniqueid: string | number;
+	SpyerLinkedid: number | string;
 	SpyeeChannel: string;
 	SpyeeChannelState: string;
 	SpyeeChannelStateDesc:
@@ -2224,8 +2248,8 @@ export type ChanSpyStop = BaseEvent & {
 	SpyeeContext: string;
 	SpyeeExten: string;
 	SpyeePriority: string;
-	SpyeeUniqueid: string;
-	SpyeeLinkedid: string;
+	SpyeeUniqueid: string | number;
+	SpyeeLinkedid: number | string;
 };
 
 export type ChannelTalkingStart = BaseEvent & {
@@ -2253,8 +2277,8 @@ export type ChannelTalkingStart = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type ChannelTalkingStop = BaseEvent & {
@@ -2282,15 +2306,15 @@ export type ChannelTalkingStop = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Duration: string;
 };
 
 export type ConfbridgeEnd = BaseEvent & {
 	Event: "ConfbridgeEnd";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2303,7 +2327,7 @@ export type ConfbridgeEnd = BaseEvent & {
 export type ConfbridgeJoin = BaseEvent & {
 	Event: "ConfbridgeJoin";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2334,8 +2358,8 @@ export type ConfbridgeJoin = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Admin: "Yes" | "No";
 	Muted: "Yes" | "No";
 };
@@ -2343,7 +2367,7 @@ export type ConfbridgeJoin = BaseEvent & {
 export type ConfbridgeLeave = BaseEvent & {
 	Event: "ConfbridgeLeave";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2374,8 +2398,8 @@ export type ConfbridgeLeave = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Admin: "Yes" | "No";
 };
 
@@ -2413,8 +2437,8 @@ export type ConfbridgeList = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 /**
@@ -2442,7 +2466,7 @@ export type ConfbridgeListRooms = BaseEvent & {
 export type ConfbridgeMute = BaseEvent & {
 	Event: "ConfbridgeMute";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2473,15 +2497,15 @@ export type ConfbridgeMute = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Admin: "Yes" | "No";
 };
 
 export type ConfbridgeRecord = BaseEvent & {
 	Event: "ConfbridgeRecord";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2494,7 +2518,7 @@ export type ConfbridgeRecord = BaseEvent & {
 export type ConfbridgeStart = BaseEvent & {
 	Event: "ConfbridgeStart";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2507,7 +2531,7 @@ export type ConfbridgeStart = BaseEvent & {
 export type ConfbridgeStopRecord = BaseEvent & {
 	Event: "ConfbridgeStopRecord";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2520,7 +2544,7 @@ export type ConfbridgeStopRecord = BaseEvent & {
 export type ConfbridgeTalking = BaseEvent & {
 	Event: "ConfbridgeTalking";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2551,8 +2575,8 @@ export type ConfbridgeTalking = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	TalkingStatus: "on" | "off";
 	Admin: "Yes" | "No";
 };
@@ -2560,7 +2584,7 @@ export type ConfbridgeTalking = BaseEvent & {
 export type ConfbridgeUnmute = BaseEvent & {
 	Event: "ConfbridgeUnmute";
 	Conference: string;
-	BridgeUniqueid: string;
+	BridgeUniqueid: string | number;
 	BridgeType: string;
 	BridgeTechnology: string;
 	BridgeCreator: string;
@@ -2591,8 +2615,8 @@ export type ConfbridgeUnmute = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Admin: "Yes" | "No";
 };
 
@@ -2694,8 +2718,8 @@ export type CoreShowChannel = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	BridgeId?: string;
 	Application: string;
 	ApplicationData: string;
@@ -2761,8 +2785,8 @@ export type DAHDIChannel = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DAHDIGroup: string;
 	DAHDISpan: string;
 	DAHDIChannel: string;
@@ -2809,8 +2833,8 @@ export type DTMFBegin = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Digit: string; // Assuming string here because DTMF digits include characters like # and *
 	Direction: "Received" | "Sent";
 };
@@ -2840,8 +2864,8 @@ export type DTMFEnd = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Digit: string;
 	DurationMs: string;
 	Direction: "Received" | "Sent";
@@ -2918,8 +2942,8 @@ export type DialBegin = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: string;
 	DestChannelStateDesc:
@@ -2943,8 +2967,8 @@ export type DialBegin = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	DialString: string;
 };
 
@@ -2973,8 +2997,8 @@ export type DialEnd = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: string;
 	DestChannelStateDesc:
@@ -2998,8 +3022,8 @@ export type DialEnd = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	DialStatus:
 		| "ABORT"
 		| "ANSWER"
@@ -3038,8 +3062,8 @@ export type DialState = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: string;
 	DestChannelStateDesc:
@@ -3063,8 +3087,8 @@ export type DialState = BaseEvent & {
 	DestContext: string;
 	DestExten: string;
 	DestPriority: string;
-	DestUniqueid: string;
-	DestLinkedid: string;
+	DestUniqueid: string | number;
+	DestLinkedid: number | string;
 	DialStatus: "RINGING" | "PROCEEDING" | "PROGRESS";
 	Forward?: string;
 };
@@ -3351,8 +3375,8 @@ export type FAXStatus = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Operation: "gateway" | "receive" | "send";
 	Status: string;
 	LocalStationID: string;
@@ -3399,8 +3423,8 @@ export type Flash = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 /**
@@ -3446,8 +3470,8 @@ export type Hangup = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Cause: string;
 	"Cause-txt": string;
 };
@@ -3477,8 +3501,8 @@ export type HangupHandlerPop = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Handler: string;
 };
 
@@ -3507,8 +3531,8 @@ export type HangupHandlerPush = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Handler: string;
 };
 
@@ -3537,8 +3561,8 @@ export type HangupHandlerRun = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Handler: string;
 };
 
@@ -3567,8 +3591,8 @@ export type HangupRequest = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Cause: string;
 };
 
@@ -3597,8 +3621,8 @@ export type Hold = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	MusicClass: string;
 };
 
@@ -3729,8 +3753,8 @@ export type LocalBridge = BaseEvent & {
 	LocalOneContext: string;
 	LocalOneExten: string;
 	LocalOnePriority: string;
-	LocalOneUniqueid: string;
-	LocalOneLinkedid: string;
+	LocalOneUniqueid: string | number;
+	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
 	LocalTwoChannelState: string;
 	LocalTwoChannelStateDesc:
@@ -3754,8 +3778,8 @@ export type LocalBridge = BaseEvent & {
 	LocalTwoContext: string;
 	LocalTwoExten: string;
 	LocalTwoPriority: string;
-	LocalTwoUniqueid: string;
-	LocalTwoLinkedid: string;
+	LocalTwoUniqueid: string | number;
+	LocalTwoLinkedid: number | string;
 	Context: string;
 	Exten: string;
 	LocalOptimization: "Yes" | "No";
@@ -3786,8 +3810,8 @@ export type LocalOptimizationBegin = BaseEvent & {
 	LocalOneContext: string;
 	LocalOneExten: string;
 	LocalOnePriority: string;
-	LocalOneUniqueid: string;
-	LocalOneLinkedid: string;
+	LocalOneUniqueid: string | number;
+	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
 	LocalTwoChannelState: string;
 	LocalTwoChannelStateDesc:
@@ -3811,8 +3835,8 @@ export type LocalOptimizationBegin = BaseEvent & {
 	LocalTwoContext: string;
 	LocalTwoExten: string;
 	LocalTwoPriority: string;
-	LocalTwoUniqueid: string;
-	LocalTwoLinkedid: string;
+	LocalTwoUniqueid: string | number;
+	LocalTwoLinkedid: number | string;
 	SourceChannel: string;
 	SourceChannelState: string;
 	SourceChannelStateDesc:
@@ -3836,9 +3860,9 @@ export type LocalOptimizationBegin = BaseEvent & {
 	SourceContext: string;
 	SourceExten: string;
 	SourcePriority: string;
-	SourceUniqueid: string;
-	SourceLinkedid: string;
-	DestUniqueId: string;
+	SourceUniqueid: string | number;
+	SourceLinkedid: number | string;
+	DestUniqueId: string | number;
 	Id: string;
 };
 
@@ -3867,8 +3891,8 @@ export type LocalOptimizationEnd = BaseEvent & {
 	LocalOneContext: string;
 	LocalOneExten: string;
 	LocalOnePriority: string;
-	LocalOneUniqueid: string;
-	LocalOneLinkedid: string;
+	LocalOneUniqueid: string | number;
+	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
 	LocalTwoChannelState: string;
 	LocalTwoChannelStateDesc:
@@ -3892,8 +3916,8 @@ export type LocalOptimizationEnd = BaseEvent & {
 	LocalTwoContext: string;
 	LocalTwoExten: string;
 	LocalTwoPriority: string;
-	LocalTwoUniqueid: string;
-	LocalTwoLinkedid: string;
+	LocalTwoUniqueid: string | number;
+	LocalTwoLinkedid: number | string;
 	Success: string;
 	Id: string;
 };
@@ -3930,8 +3954,8 @@ export type MCID = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	MCallerIDNumValid: string;
 	MCallerIDNum: string;
 	MCallerIDton: string;
@@ -4016,8 +4040,8 @@ export type MeetmeJoin = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type MeetmeLeave = BaseEvent & {
@@ -4047,8 +4071,8 @@ export type MeetmeLeave = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Duration: string;
 };
 
@@ -4139,8 +4163,8 @@ export type MeetmeMute = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Duration: string;
 	Status: "on" | "off";
 };
@@ -4172,8 +4196,8 @@ export type MeetmeTalkRequest = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Duration: string;
 	Status: "on" | "off";
 };
@@ -4205,8 +4229,8 @@ export type MeetmeTalking = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Duration: string;
 	Status: "on" | "off";
 };
@@ -4283,8 +4307,8 @@ export type MiniVoiceMail = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Action: "SentNotification";
 	Mailbox: string;
 	Counter: string;
@@ -4315,8 +4339,8 @@ export type MixMonitorMute = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Direction: "read" | "write" | "both";
 	State: 1 | 0; // 1 when muted, 0 when unmuted
 };
@@ -4346,8 +4370,8 @@ export type MixMonitorStart = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type MixMonitorStop = BaseEvent & {
@@ -4375,8 +4399,8 @@ export type MixMonitorStop = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type MonitorStart = BaseEvent & {
@@ -4404,8 +4428,8 @@ export type MonitorStart = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type MonitorStop = BaseEvent & {
@@ -4433,8 +4457,8 @@ export type MonitorStop = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type MusicOnHoldStart = BaseEvent & {
@@ -4462,8 +4486,8 @@ export type MusicOnHoldStart = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Class: string;
 };
 
@@ -4492,8 +4516,8 @@ export type MusicOnHoldStop = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type NewAccountCode = BaseEvent & {
@@ -4521,8 +4545,8 @@ export type NewAccountCode = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	OldAccountCode: string;
 };
 
@@ -4551,8 +4575,8 @@ export type NewCallerid = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	"CID-CallingPres": string;
 };
 
@@ -4581,8 +4605,8 @@ export type NewConnectedLine = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type NewExten = BaseEvent & {
@@ -4610,9 +4634,9 @@ export type NewExten = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
-	Extension: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
+	Extension: string | number;
 	Application: string;
 	AppData: string;
 };
@@ -4642,8 +4666,8 @@ export type Newchannel = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type Newstate = BaseEvent & {
@@ -4671,8 +4695,8 @@ export type Newstate = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type OriginateResponse = BaseEvent & {
@@ -4685,7 +4709,7 @@ export type OriginateResponse = BaseEvent & {
 	Application: string;
 	Data: string;
 	Reason: string;
-	Uniqueid: string;
+	Uniqueid: string | number;
 	CallerIDNum: string;
 	CallerIDName: string;
 };
@@ -4715,8 +4739,8 @@ export type ParkedCall = BaseEvent & {
 	ParkeeContext: string;
 	ParkeeExten: string;
 	ParkeePriority: string;
-	ParkeeUniqueid: string;
-	ParkeeLinkedid: string;
+	ParkeeUniqueid: string | number;
+	ParkeeLinkedid: number | string;
 	ParkerDialString: string;
 	Parkinglot: string;
 	ParkingSpace: string;
@@ -4749,8 +4773,8 @@ export type ParkedCallGiveUp = BaseEvent & {
 	ParkeeContext: string;
 	ParkeeExten: string;
 	ParkeePriority: string;
-	ParkeeUniqueid: string;
-	ParkeeLinkedid: string;
+	ParkeeUniqueid: string | number;
+	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
 	ParkerChannelState: string;
 	ParkerChannelStateDesc:
@@ -4774,8 +4798,8 @@ export type ParkedCallGiveUp = BaseEvent & {
 	ParkerContext: string;
 	ParkerExten: string;
 	ParkerPriority: string;
-	ParkerUniqueid: string;
-	ParkerLinkedid: string;
+	ParkerUniqueid: string | number;
+	ParkerLinkedid: number | string;
 	ParkerDialString: string;
 	Parkinglot: string;
 	ParkingSpace: string;
@@ -4808,8 +4832,8 @@ export type ParkedCallSwap = BaseEvent & {
 	ParkeeContext: string;
 	ParkeeExten: string;
 	ParkeePriority: string;
-	ParkeeUniqueid: string;
-	ParkeeLinkedid: string;
+	ParkeeUniqueid: string | number;
+	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
 	ParkerChannelState: string;
 	ParkerChannelStateDesc:
@@ -4833,8 +4857,8 @@ export type ParkedCallSwap = BaseEvent & {
 	ParkerContext: string;
 	ParkerExten: string;
 	ParkerPriority: string;
-	ParkerUniqueid: string;
-	ParkerLinkedid: string;
+	ParkerUniqueid: string | number;
+	ParkerLinkedid: number | string;
 	ParkerDialString: string;
 	Parkinglot: string;
 	ParkingSpace: string;
@@ -4867,8 +4891,8 @@ export type ParkedCallTimeOut = BaseEvent & {
 	ParkeeContext: string;
 	ParkeeExten: string;
 	ParkeePriority: string;
-	ParkeeUniqueid: string;
-	ParkeeLinkedid: string;
+	ParkeeUniqueid: string | number;
+	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
 	ParkerChannelState: string;
 	ParkerChannelStateDesc:
@@ -4892,8 +4916,8 @@ export type ParkedCallTimeOut = BaseEvent & {
 	ParkerContext: string;
 	ParkerExten: string;
 	ParkerPriority: string;
-	ParkerUniqueid: string;
-	ParkerLinkedid: string;
+	ParkerUniqueid: string | number;
+	ParkerLinkedid: number | string;
 	ParkerDialString: string;
 	Parkinglot: string;
 	ParkingSpace: string;
@@ -4952,8 +4976,8 @@ export type Pickup = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	TargetChannel: string;
 	TargetChannelState: string;
 	TargetChannelStateDesc:
@@ -4977,8 +5001,8 @@ export type Pickup = BaseEvent & {
 	TargetContext: string;
 	TargetExten: string;
 	TargetPriority: string;
-	TargetUniqueid: string;
-	TargetLinkedid: string;
+	TargetUniqueid: string | number;
+	TargetLinkedid: number | string;
 };
 
 /**
@@ -5066,12 +5090,12 @@ export type QueueCallerAbandon = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Queue: string;
 	Position: string;
 	OriginalPosition: string;
-	HoldTime: string;
+	HoldTime: number;
 };
 
 export type QueueCallerJoin = BaseEvent & {
@@ -5099,8 +5123,8 @@ export type QueueCallerJoin = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Queue: string;
 	Position: string;
 	Count: string;
@@ -5131,8 +5155,8 @@ export type QueueCallerLeave = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Queue: string;
 	Count: string;
 	Position: string;
@@ -5161,7 +5185,7 @@ export type QueueEntry = BaseEvent & {
 	Queue: string;
 	Position: string;
 	Channel: string;
-	Uniqueid: string;
+	Uniqueid: string | number;
 	CallerIDNum: string;
 	CallerIDName: string;
 	ConnectedLineNum: string;
@@ -5351,13 +5375,13 @@ export type QueueParams = BaseEvent & {
 	Event: "QueueParams";
 	Max: string;
 	Strategy: string;
-	Calls: string;
-	Holdtime: string;
-	TalkTime: string;
-	Completed: string;
-	Abandoned: string;
-	ServiceLevelPerf: string;
-	ServiceLevelPerf2: string;
+	Calls: number;
+	Holdtime: number;
+	TalkTime: number;
+	Completed: number;
+	Abandoned: number;
+	ServiceLevelPerf: number;
+	ServiceLevelPerf2: number;
 };
 
 export type RTCPReceived = BaseEvent & {
@@ -5385,8 +5409,8 @@ export type RTCPReceived = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	SSRC: string;
 	PT: "200(SR)" | "201(RR)";
 	From: string;
@@ -5420,8 +5444,8 @@ export type RTCPSent = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	SSRC: string;
 	PT: "200(SR)" | "201(RR)";
 	To: string;
@@ -5482,8 +5506,8 @@ export type ReceiveFAX = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	LocalStationID: string;
 	RemoteStationID: string;
 	PagesTransferred: string;
@@ -5553,8 +5577,8 @@ export type Rename = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type RequestBadFormat = BaseEvent & {
@@ -5652,8 +5676,8 @@ export type SendFAX = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	LocalStationID: string;
 	RemoteStationID: string;
 	PagesTransferred: string;
@@ -5713,8 +5737,8 @@ export type SessionTimeout = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Source: "RTPTimeout" | "SIPSessionTimer";
 };
 
@@ -5771,8 +5795,8 @@ export type SoftHangupRequest = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Cause: string;
 };
 
@@ -5821,8 +5845,8 @@ export type Status = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Type: string;
 	DNID: string;
 	EffectiveConnectedLineNum: string;
@@ -5967,8 +5991,8 @@ export type UnParkedCall = BaseEvent & {
 	ParkeeContext: string;
 	ParkeeExten: string;
 	ParkeePriority: string;
-	ParkeeUniqueid: string;
-	ParkeeLinkedid: string;
+	ParkeeUniqueid: string | number;
+	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
 	ParkerChannelState: string;
 	ParkerChannelStateDesc: string;
@@ -5981,8 +6005,8 @@ export type UnParkedCall = BaseEvent & {
 	ParkerContext: string;
 	ParkerExten: string;
 	ParkerPriority: string;
-	ParkerUniqueid: string;
-	ParkerLinkedid: string;
+	ParkerUniqueid: string | number;
+	ParkerLinkedid: number | string;
 	ParkerDialString: string;
 	Parkinglot: string;
 	ParkingSpace: string;
@@ -6000,8 +6024,8 @@ export type UnParkedCall = BaseEvent & {
 	RetrieverContext: string;
 	RetrieverExten: string;
 	RetrieverPriority: string;
-	RetrieverUniqueid: string;
-	RetrieverLinkedid: string;
+	RetrieverUniqueid: string | number;
+	RetrieverLinkedid: number | string;
 };
 
 export type UnexpectedAddress = BaseEvent & {
@@ -6055,8 +6079,8 @@ export type Unhold = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 /**
@@ -6112,8 +6136,8 @@ export type UserEvent = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	UserEvent: string;
 };
 
@@ -6155,8 +6179,8 @@ export type VarSet = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 	Variable: string;
 	Value: string;
 };
@@ -6215,8 +6239,8 @@ export type Wink = BaseEvent & {
 	Context: string;
 	Exten: string;
 	Priority: string;
-	Uniqueid: string;
-	Linkedid: string;
+	Uniqueid: string | number;
+	Linkedid: number | string;
 };
 
 export type AMIEvent =
