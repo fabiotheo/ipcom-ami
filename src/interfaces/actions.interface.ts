@@ -229,7 +229,7 @@ export interface I_ActionQueuePause extends I_Request {
 	Paused: boolean;
 	//The name of the queue in which to pause or unpause this member.
 	// If not specified, the member will be paused or unpaused in all the queues it is a member of.
-	Queue: string;
+	Queue?: string;
 	//Text description, returned in the event QueueMemberPaused.
 	Reason?: string;
 }

@@ -131,7 +131,7 @@ export interface I_ActionQueuePause extends I_Request {
     ActionID?: number | string;
     Interface: string;
     Paused: boolean;
-    Queue: string;
+    Queue?: string;
     Reason?: string;
 }
 export interface I_ActionSIPpeers {

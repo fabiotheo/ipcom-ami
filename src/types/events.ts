@@ -51,15 +51,15 @@ export type AGIExecEnd = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Command: string;
@@ -108,15 +108,15 @@ export type AGIExecStart = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Command: string;
@@ -171,15 +171,15 @@ export type AOCD = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Charge: string;
@@ -247,15 +247,15 @@ export type AOCE = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	ChargingAssociation: string;
@@ -325,15 +325,15 @@ export type AOCS = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Chargeable: string;
@@ -390,13 +390,13 @@ export type AOCS = BaseEvent & {
  * - `DestChannelStateDesc: string`
  * - `DestCallerIDNum: string`
  * - `DestCallerIDName: string`
- * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineNum: number | string`
  * - `DestConnectedLineName: string`
  * - `DestLanguage: string`
- * - `DestAccountCode: string`
+ * - `DestAccountCode: number | string`
  * - `DestContext: string`
  * - `DestExten: string`
- * - `DestPriority: string`
+ * - `DestPriority: number`
  * - `DestUniqueid: string`
  * - `DestLinkedid: string`
  * - `Queue: string`
@@ -408,29 +408,29 @@ export type AgentCalled = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	Queue: string;
@@ -478,13 +478,13 @@ export type AgentCalled = BaseEvent & {
  * - `DestChannelStateDesc: string`
  * - `DestCallerIDNum: string`
  * - `DestCallerIDName: string`
- * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineNum: number | string`
  * - `DestConnectedLineName: string`
  * - `DestLanguage: string`
- * - `DestAccountCode: string`
+ * - `DestAccountCode: number | string`
  * - `DestContext: string`
  * - `DestExten: string`
- * - `DestPriority: string`
+ * - `DestPriority: number`
  * - `DestUniqueid: string`
  * - `DestLinkedid: string`
  * - `Queue: string`
@@ -499,29 +499,29 @@ export type AgentComplete = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	Queue: string;
@@ -558,10 +558,10 @@ export type AgentComplete = BaseEvent & {
  * - `DestChannelStateDesc: string`
  * - `DestCallerIDNum: string`
  * - `DestCallerIDName: string`
- * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineNum: number | string`
  * - `DestConnectedLineName: string`
  * - `DestLanguage: string`
- * - `DestAccountCode: string`
+ * - `DestAccountCode: number | string`
  * - `DestContext: string`
  * - `DestExten: string`
  * - `DestPriority: number`
@@ -599,13 +599,13 @@ export type AgentComplete = BaseEvent & {
  * - `DestChannelStateDesc: string`
  * - `DestCallerIDNum: string`
  * - `DestCallerIDName: string`
- * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineNum: number | string`
  * - `DestConnectedLineName: string`
  * - `DestLanguage: string`
- * - `DestAccountCode: string`
+ * - `DestAccountCode: number | string`
  * - `DestContext: string`
  * - `DestExten: string`
- * - `DestPriority: string`
+ * - `DestPriority: number`
  * - `DestUniqueid: string`
  * - `DestLinkedid: string`
  * - `Queue: string`
@@ -619,29 +619,29 @@ export type AgentConnect = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	Queue: string;
@@ -677,10 +677,10 @@ export type AgentConnect = BaseEvent & {
  * - `DestChannelStateDesc: string`
  * - `DestCallerIDNum: string`
  * - `DestCallerIDName: string`
- * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineNum: number | string`
  * - `DestConnectedLineName: string`
  * - `DestLanguage: string`
- * - `DestAccountCode: string`
+ * - `DestAccountCode: number | string`
  * - `DestContext: string`
  * - `DestExten: string`
  * - `DestPriority: number`
@@ -716,13 +716,13 @@ export type AgentConnect = BaseEvent & {
  * - `DestChannelStateDesc: string`
  * - `DestCallerIDNum: string`
  * - `DestCallerIDName: string`
- * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineNum: number | string`
  * - `DestConnectedLineName: string`
  * - `DestLanguage: string`
- * - `DestAccountCode: string`
+ * - `DestAccountCode: number | string`
  * - `DestContext: string`
  * - `DestExten: string`
- * - `DestPriority: string`
+ * - `DestPriority: number`
  * - `DestUniqueid: string`
  * - `DestLinkedid: string`
  * - `Queue: string`
@@ -734,29 +734,29 @@ export type AgentDump = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	Queue: string;
@@ -804,15 +804,15 @@ export type AgentLogin = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Agent: string;
@@ -886,13 +886,13 @@ export type AgentLogoff = BaseEvent & {
  * - `DestChannelStateDesc: string`
  * - `DestCallerIDNum: string`
  * - `DestCallerIDName: string`
- * - `DestConnectedLineNum: string`
+ * - `DestConnectedLineNum: number | string`
  * - `DestConnectedLineName: string`
  * - `DestLanguage: string`
- * - `DestAccountCode: string`
+ * - `DestAccountCode: number | string`
  * - `DestContext: string`
  * - `DestExten: string`
- * - `DestPriority: string`
+ * - `DestPriority: number`
  * - `DestUniqueid: string`
  * - `DestLinkedid: string`
  * - `Queue: string`
@@ -905,29 +905,29 @@ export type AgentRingNoAnswer = BaseEvent & {
 	Channel: string;
 	ChannelState: number;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
 	DestChannelState: number;
 	DestChannelStateDesc: string;
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	Queue: string;
@@ -1214,15 +1214,15 @@ export type AsyncAGIEnd = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -1243,15 +1243,15 @@ export type AsyncAGIExec = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	CommandID?: string;
@@ -1297,15 +1297,15 @@ export type AsyncAGIStart = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Env: string;
@@ -1385,29 +1385,29 @@ export type AttendedTransfer = BaseEvent & {
 	LocalOneChannel: string;
 	LocalOneChannelState: string;
 	LocalOneChannelStateDesc: string;
-	LocalOneCallerIDNum: string;
+	LocalOneCallerIDNum: string | number;
 	LocalOneCallerIDName: string;
 	LocalOneConnectedLineNum: string;
 	LocalOneConnectedLineName: string;
 	LocalOneLanguage: string;
 	LocalOneAccountCode: string;
 	LocalOneContext: string;
-	LocalOneExten: string;
-	LocalOnePriority: string;
+	LocalOneExten: string | number;
+	LocalOnePriority: number;
 	LocalOneUniqueid: string | number;
 	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
 	LocalTwoChannelState: string;
 	LocalTwoChannelStateDesc: string;
-	LocalTwoCallerIDNum: string;
+	LocalTwoCallerIDNum: string | number;
 	LocalTwoCallerIDName: string;
 	LocalTwoConnectedLineNum: string;
 	LocalTwoConnectedLineName: string;
 	LocalTwoLanguage: string;
 	LocalTwoAccountCode: string;
 	LocalTwoContext: string;
-	LocalTwoExten: string;
-	LocalTwoPriority: string;
+	LocalTwoExten: string | number;
+	LocalTwoPriority: number;
 	LocalTwoUniqueid: string | number;
 	LocalTwoLinkedid: number | string;
 	DestTransfererChannel?: string;
@@ -1759,15 +1759,15 @@ export type BridgeEnter = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	SwapUniqueid?: string;
@@ -1801,15 +1801,15 @@ export type BridgeInfoChannel = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -1875,15 +1875,15 @@ export type BridgeLeave = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -1993,12 +1993,12 @@ export type CEL = BaseEvent & {
 		| "LOCAL_OPTIMIZE"
 		| "USER_DEFINED";
 	AccountCode: string;
-	CallerIDnum: string;
+	CallerIDnum: string | number;
 	CallerIDname: string;
 	CallerIDani: string;
 	CallerIDrdnis: string;
 	CallerIDdnid: string;
-	Exten: string;
+	Exten: string | number;
 	Context: string;
 	Application: string;
 	AppData: string;
@@ -2160,15 +2160,15 @@ export type ChanSpyStart = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	SpyerCallerIDNum: string;
+	SpyerCallerIDNum: string | number;
 	SpyerCallerIDName: string;
 	SpyerConnectedLineNum: string;
 	SpyerConnectedLineName: string;
 	SpyerLanguage: string;
 	SpyerAccountCode: string;
 	SpyerContext: string;
-	SpyerExten: string;
-	SpyerPriority: string;
+	SpyerExten: string | number;
+	SpyerPriority: number;
 	SpyerUniqueid: string | number;
 	SpyerLinkedid: number | string;
 	SpyeeChannel: string;
@@ -2185,15 +2185,15 @@ export type ChanSpyStart = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	SpyeeCallerIDNum: string;
+	SpyeeCallerIDNum: string | number;
 	SpyeeCallerIDName: string;
 	SpyeeConnectedLineNum: string;
 	SpyeeConnectedLineName: string;
 	SpyeeLanguage: string;
 	SpyeeAccountCode: string;
 	SpyeeContext: string;
-	SpyeeExten: string;
-	SpyeePriority: string;
+	SpyeeExten: string | number;
+	SpyeePriority: number;
 	SpyeeUniqueid: string | number;
 	SpyeeLinkedid: number | string;
 };
@@ -2214,15 +2214,15 @@ export type ChanSpyStop = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	SpyerCallerIDNum: string;
+	SpyerCallerIDNum: string | number;
 	SpyerCallerIDName: string;
 	SpyerConnectedLineNum: string;
 	SpyerConnectedLineName: string;
 	SpyerLanguage: string;
 	SpyerAccountCode: string;
 	SpyerContext: string;
-	SpyerExten: string;
-	SpyerPriority: string;
+	SpyerExten: string | number;
+	SpyerPriority: number;
 	SpyerUniqueid: string | number;
 	SpyerLinkedid: number | string;
 	SpyeeChannel: string;
@@ -2239,15 +2239,15 @@ export type ChanSpyStop = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	SpyeeCallerIDNum: string;
+	SpyeeCallerIDNum: string | number;
 	SpyeeCallerIDName: string;
 	SpyeeConnectedLineNum: string;
 	SpyeeConnectedLineName: string;
 	SpyeeLanguage: string;
 	SpyeeAccountCode: string;
 	SpyeeContext: string;
-	SpyeeExten: string;
-	SpyeePriority: string;
+	SpyeeExten: string | number;
+	SpyeePriority: number;
 	SpyeeUniqueid: string | number;
 	SpyeeLinkedid: number | string;
 };
@@ -2268,15 +2268,15 @@ export type ChannelTalkingStart = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -2297,15 +2297,15 @@ export type ChannelTalkingStop = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Duration: string;
@@ -2349,15 +2349,15 @@ export type ConfbridgeJoin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Admin: "Yes" | "No";
@@ -2389,15 +2389,15 @@ export type ConfbridgeLeave = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Admin: "Yes" | "No";
@@ -2428,15 +2428,15 @@ export type ConfbridgeList = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -2488,15 +2488,15 @@ export type ConfbridgeMute = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Admin: "Yes" | "No";
@@ -2566,15 +2566,15 @@ export type ConfbridgeTalking = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	TalkingStatus: "on" | "off";
@@ -2606,15 +2606,15 @@ export type ConfbridgeUnmute = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Admin: "Yes" | "No";
@@ -2709,15 +2709,15 @@ export type CoreShowChannel = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	BridgeId?: string;
@@ -2776,15 +2776,15 @@ export type DAHDIChannel = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DAHDIGroup: string;
@@ -2824,15 +2824,15 @@ export type DTMFBegin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Digit: string; // Assuming string here because DTMF digits include characters like # and *
@@ -2855,15 +2855,15 @@ export type DTMFEnd = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Digit: string;
@@ -2933,15 +2933,15 @@ export type DialBegin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
@@ -2958,15 +2958,15 @@ export type DialBegin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	DialString: string;
@@ -2988,15 +2988,15 @@ export type DialEnd = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
@@ -3013,15 +3013,15 @@ export type DialEnd = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	DialStatus:
@@ -3053,15 +3053,15 @@ export type DialState = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	DestChannel: string;
@@ -3078,15 +3078,15 @@ export type DialState = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	DestCallerIDNum: string;
+	DestCallerIDNum: string | number;
 	DestCallerIDName: string;
-	DestConnectedLineNum: string;
+	DestConnectedLineNum: number | string;
 	DestConnectedLineName: string;
 	DestLanguage: string;
-	DestAccountCode: string;
+	DestAccountCode: number | string;
 	DestContext: string;
-	DestExten: string;
-	DestPriority: string;
+	DestExten: string | number;
+	DestPriority: number;
 	DestUniqueid: string | number;
 	DestLinkedid: number | string;
 	DialStatus: "RINGING" | "PROCEEDING" | "PROGRESS";
@@ -3273,7 +3273,7 @@ export type ExtensionStateListComplete = BaseEvent & {
 
 export type ExtensionStatus = BaseEvent & {
 	Event: "ExtensionStatus";
-	Exten: string;
+	Exten: string | number;
 	Context: string;
 	Hint: string;
 	Status: -2 | -1 | 0 | 1 | 2 | 4 | 8 | 9 | 16 | 17;
@@ -3366,15 +3366,15 @@ export type FAXStatus = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Operation: "gateway" | "receive" | "send";
@@ -3414,15 +3414,15 @@ export type Flash = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -3461,15 +3461,15 @@ export type Hangup = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Cause: string;
@@ -3492,15 +3492,15 @@ export type HangupHandlerPop = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Handler: string;
@@ -3522,15 +3522,15 @@ export type HangupHandlerPush = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Handler: string;
@@ -3552,15 +3552,15 @@ export type HangupHandlerRun = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Handler: string;
@@ -3582,15 +3582,15 @@ export type HangupRequest = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Cause: string;
@@ -3612,15 +3612,15 @@ export type Hold = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	MusicClass: string;
@@ -3744,15 +3744,15 @@ export type LocalBridge = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	LocalOneCallerIDNum: string;
+	LocalOneCallerIDNum: string | number;
 	LocalOneCallerIDName: string;
 	LocalOneConnectedLineNum: string;
 	LocalOneConnectedLineName: string;
 	LocalOneLanguage: string;
 	LocalOneAccountCode: string;
 	LocalOneContext: string;
-	LocalOneExten: string;
-	LocalOnePriority: string;
+	LocalOneExten: string | number;
+	LocalOnePriority: number;
 	LocalOneUniqueid: string | number;
 	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
@@ -3769,19 +3769,19 @@ export type LocalBridge = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	LocalTwoCallerIDNum: string;
+	LocalTwoCallerIDNum: string | number;
 	LocalTwoCallerIDName: string;
 	LocalTwoConnectedLineNum: string;
 	LocalTwoConnectedLineName: string;
 	LocalTwoLanguage: string;
 	LocalTwoAccountCode: string;
 	LocalTwoContext: string;
-	LocalTwoExten: string;
-	LocalTwoPriority: string;
+	LocalTwoExten: string | number;
+	LocalTwoPriority: number;
 	LocalTwoUniqueid: string | number;
 	LocalTwoLinkedid: number | string;
 	Context: string;
-	Exten: string;
+	Exten: string | number;
 	LocalOptimization: "Yes" | "No";
 };
 
@@ -3801,15 +3801,15 @@ export type LocalOptimizationBegin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	LocalOneCallerIDNum: string;
+	LocalOneCallerIDNum: string | number;
 	LocalOneCallerIDName: string;
 	LocalOneConnectedLineNum: string;
 	LocalOneConnectedLineName: string;
 	LocalOneLanguage: string;
 	LocalOneAccountCode: string;
 	LocalOneContext: string;
-	LocalOneExten: string;
-	LocalOnePriority: string;
+	LocalOneExten: string | number;
+	LocalOnePriority: number;
 	LocalOneUniqueid: string | number;
 	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
@@ -3826,15 +3826,15 @@ export type LocalOptimizationBegin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	LocalTwoCallerIDNum: string;
+	LocalTwoCallerIDNum: string | number;
 	LocalTwoCallerIDName: string;
 	LocalTwoConnectedLineNum: string;
 	LocalTwoConnectedLineName: string;
 	LocalTwoLanguage: string;
 	LocalTwoAccountCode: string;
 	LocalTwoContext: string;
-	LocalTwoExten: string;
-	LocalTwoPriority: string;
+	LocalTwoExten: string | number;
+	LocalTwoPriority: number;
 	LocalTwoUniqueid: string | number;
 	LocalTwoLinkedid: number | string;
 	SourceChannel: string;
@@ -3851,15 +3851,15 @@ export type LocalOptimizationBegin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	SourceCallerIDNum: string;
+	SourceCallerIDNum: string | number;
 	SourceCallerIDName: string;
 	SourceConnectedLineNum: string;
 	SourceConnectedLineName: string;
 	SourceLanguage: string;
 	SourceAccountCode: string;
 	SourceContext: string;
-	SourceExten: string;
-	SourcePriority: string;
+	SourceExten: string | number;
+	SourcePriority: number;
 	SourceUniqueid: string | number;
 	SourceLinkedid: number | string;
 	DestUniqueId: string | number;
@@ -3882,15 +3882,15 @@ export type LocalOptimizationEnd = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	LocalOneCallerIDNum: string;
+	LocalOneCallerIDNum: string | number;
 	LocalOneCallerIDName: string;
 	LocalOneConnectedLineNum: string;
 	LocalOneConnectedLineName: string;
 	LocalOneLanguage: string;
 	LocalOneAccountCode: string;
 	LocalOneContext: string;
-	LocalOneExten: string;
-	LocalOnePriority: string;
+	LocalOneExten: string | number;
+	LocalOnePriority: number;
 	LocalOneUniqueid: string | number;
 	LocalOneLinkedid: number | string;
 	LocalTwoChannel: string;
@@ -3907,15 +3907,15 @@ export type LocalOptimizationEnd = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	LocalTwoCallerIDNum: string;
+	LocalTwoCallerIDNum: string | number;
 	LocalTwoCallerIDName: string;
 	LocalTwoConnectedLineNum: string;
 	LocalTwoConnectedLineName: string;
 	LocalTwoLanguage: string;
 	LocalTwoAccountCode: string;
 	LocalTwoContext: string;
-	LocalTwoExten: string;
-	LocalTwoPriority: string;
+	LocalTwoExten: string | number;
+	LocalTwoPriority: number;
 	LocalTwoUniqueid: string | number;
 	LocalTwoLinkedid: number | string;
 	Success: string;
@@ -3945,19 +3945,19 @@ export type MCID = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	MCallerIDNumValid: string;
-	MCallerIDNum: string;
+	MCallerIDNum: string | number;
 	MCallerIDton: string;
 	MCallerIDNumPlan: string;
 	MCallerIDNumPres: string;
@@ -4031,15 +4031,15 @@ export type MeetmeJoin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4062,15 +4062,15 @@ export type MeetmeLeave = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Duration: string;
@@ -4100,7 +4100,7 @@ export type MeetmeList = BaseEvent & {
 	Event: "MeetmeList";
 	Conference: string;
 	UserNumber: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
@@ -4154,15 +4154,15 @@ export type MeetmeMute = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Duration: string;
@@ -4187,15 +4187,15 @@ export type MeetmeTalkRequest = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Duration: string;
@@ -4220,15 +4220,15 @@ export type MeetmeTalking = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Duration: string;
@@ -4298,15 +4298,15 @@ export type MiniVoiceMail = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Action: "SentNotification";
@@ -4330,15 +4330,15 @@ export type MixMonitorMute = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Direction: "read" | "write" | "both";
@@ -4361,15 +4361,15 @@ export type MixMonitorStart = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4390,15 +4390,15 @@ export type MixMonitorStop = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4419,15 +4419,15 @@ export type MonitorStart = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4448,15 +4448,15 @@ export type MonitorStop = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4477,15 +4477,15 @@ export type MusicOnHoldStart = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Class: string;
@@ -4507,15 +4507,15 @@ export type MusicOnHoldStop = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4536,15 +4536,15 @@ export type NewAccountCode = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	OldAccountCode: string;
@@ -4566,15 +4566,15 @@ export type NewCallerid = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	"CID-CallingPres": string;
@@ -4596,15 +4596,15 @@ export type NewConnectedLine = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4625,15 +4625,15 @@ export type NewExten = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Extension: string | number;
@@ -4657,15 +4657,15 @@ export type Newchannel = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4686,15 +4686,15 @@ export type Newstate = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -4705,12 +4705,12 @@ export type OriginateResponse = BaseEvent & {
 	Response: "Failure" | "Success";
 	Channel: string;
 	Context: string;
-	Exten: string;
+	Exten: string | number;
 	Application: string;
 	Data: string;
 	Reason: string;
 	Uniqueid: string | number;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 };
 
@@ -4730,15 +4730,15 @@ export type ParkedCall = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	ParkeeCallerIDNum: string;
+	ParkeeCallerIDNum: string | number;
 	ParkeeCallerIDName: string;
 	ParkeeConnectedLineNum: string;
 	ParkeeConnectedLineName: string;
 	ParkeeLanguage: string;
 	ParkeeAccountCode: string;
 	ParkeeContext: string;
-	ParkeeExten: string;
-	ParkeePriority: string;
+	ParkeeExten: string | number;
+	ParkeePriority: number;
 	ParkeeUniqueid: string | number;
 	ParkeeLinkedid: number | string;
 	ParkerDialString: string;
@@ -4764,15 +4764,15 @@ export type ParkedCallGiveUp = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	ParkeeCallerIDNum: string;
+	ParkeeCallerIDNum: string | number;
 	ParkeeCallerIDName: string;
 	ParkeeConnectedLineNum: string;
 	ParkeeConnectedLineName: string;
 	ParkeeLanguage: string;
 	ParkeeAccountCode: string;
 	ParkeeContext: string;
-	ParkeeExten: string;
-	ParkeePriority: string;
+	ParkeeExten: string | number;
+	ParkeePriority: number;
 	ParkeeUniqueid: string | number;
 	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
@@ -4789,15 +4789,15 @@ export type ParkedCallGiveUp = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	ParkerCallerIDNum: string;
+	ParkerCallerIDNum: string | number;
 	ParkerCallerIDName: string;
 	ParkerConnectedLineNum: string;
 	ParkerConnectedLineName: string;
 	ParkerLanguage: string;
 	ParkerAccountCode: string;
 	ParkerContext: string;
-	ParkerExten: string;
-	ParkerPriority: string;
+	ParkerExten: string | number;
+	ParkerPriority: number;
 	ParkerUniqueid: string | number;
 	ParkerLinkedid: number | string;
 	ParkerDialString: string;
@@ -4823,15 +4823,15 @@ export type ParkedCallSwap = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	ParkeeCallerIDNum: string;
+	ParkeeCallerIDNum: string | number;
 	ParkeeCallerIDName: string;
 	ParkeeConnectedLineNum: string;
 	ParkeeConnectedLineName: string;
 	ParkeeLanguage: string;
 	ParkeeAccountCode: string;
 	ParkeeContext: string;
-	ParkeeExten: string;
-	ParkeePriority: string;
+	ParkeeExten: string | number;
+	ParkeePriority: number;
 	ParkeeUniqueid: string | number;
 	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
@@ -4848,15 +4848,15 @@ export type ParkedCallSwap = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	ParkerCallerIDNum: string;
+	ParkerCallerIDNum: string | number;
 	ParkerCallerIDName: string;
 	ParkerConnectedLineNum: string;
 	ParkerConnectedLineName: string;
 	ParkerLanguage: string;
 	ParkerAccountCode: string;
 	ParkerContext: string;
-	ParkerExten: string;
-	ParkerPriority: string;
+	ParkerExten: string | number;
+	ParkerPriority: number;
 	ParkerUniqueid: string | number;
 	ParkerLinkedid: number | string;
 	ParkerDialString: string;
@@ -4882,15 +4882,15 @@ export type ParkedCallTimeOut = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	ParkeeCallerIDNum: string;
+	ParkeeCallerIDNum: string | number;
 	ParkeeCallerIDName: string;
 	ParkeeConnectedLineNum: string;
 	ParkeeConnectedLineName: string;
 	ParkeeLanguage: string;
 	ParkeeAccountCode: string;
 	ParkeeContext: string;
-	ParkeeExten: string;
-	ParkeePriority: string;
+	ParkeeExten: string | number;
+	ParkeePriority: number;
 	ParkeeUniqueid: string | number;
 	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
@@ -4907,15 +4907,15 @@ export type ParkedCallTimeOut = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	ParkerCallerIDNum: string;
+	ParkerCallerIDNum: string | number;
 	ParkerCallerIDName: string;
 	ParkerConnectedLineNum: string;
 	ParkerConnectedLineName: string;
 	ParkerLanguage: string;
 	ParkerAccountCode: string;
 	ParkerContext: string;
-	ParkerExten: string;
-	ParkerPriority: string;
+	ParkerExten: string | number;
+	ParkerPriority: number;
 	ParkerUniqueid: string | number;
 	ParkerLinkedid: number | string;
 	ParkerDialString: string;
@@ -4967,15 +4967,15 @@ export type Pickup = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	TargetChannel: string;
@@ -4992,15 +4992,15 @@ export type Pickup = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	TargetCallerIDNum: string;
+	TargetCallerIDNum: string | number;
 	TargetCallerIDName: string;
 	TargetConnectedLineNum: string;
 	TargetConnectedLineName: string;
 	TargetLanguage: string;
 	TargetAccountCode: string;
 	TargetContext: string;
-	TargetExten: string;
-	TargetPriority: string;
+	TargetExten: string | number;
+	TargetPriority: number;
 	TargetUniqueid: string | number;
 	TargetLinkedid: number | string;
 };
@@ -5057,7 +5057,7 @@ export type PresenceStateListComplete = BaseEvent & {
  */
 export type PresenceStatus = BaseEvent & {
 	Event: "PresenceStatus";
-	Exten: string;
+	Exten: string | number;
 	Context: string;
 	Hint: string;
 	Status: string;
@@ -5081,15 +5081,15 @@ export type QueueCallerAbandon = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Queue: string;
@@ -5114,15 +5114,15 @@ export type QueueCallerJoin = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Queue: string;
@@ -5146,15 +5146,15 @@ export type QueueCallerLeave = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Queue: string;
@@ -5186,12 +5186,12 @@ export type QueueEntry = BaseEvent & {
 	Position: string;
 	Channel: string;
 	Uniqueid: string | number;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Wait: string;
-	Priority: string;
+	Priority: number;
 };
 
 export type QueueSummary = BaseEvent & {
@@ -5229,7 +5229,7 @@ export type QueueMember = BaseEvent & {
 	InCall: number;
 	Status: number;
 	Paused: number;
-	PausedReason: number;
+	PausedReason?: string | number;
 	Wrapuptime: number;
 	ActionID: number;
 };
@@ -5242,14 +5242,14 @@ export type QueueMemberAdded = BaseEvent & {
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
 	Penalty: number;
-	CallsTaken: string;
+	CallsTaken: number;
 	LastCall: number;
 	LastPause: number;
 	LoginTime: number;
 	InCall: 0 | 1;
 	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 	Paused: 0 | 1;
-	PausedReason?: string;
+	PausedReason?: string | number;
 	Ringinuse: 0 | 1;
 	Wrapuptime: number;
 };
@@ -5262,14 +5262,14 @@ export type QueueMemberPause = BaseEvent & {
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
 	Penalty: number;
-	CallsTaken: string;
+	CallsTaken: number;
 	LastCall: number;
 	LastPause: number;
 	LoginTime: number;
 	InCall: 0 | 1;
 	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 	Paused: 0 | 1;
-	PausedReason?: string;
+	PausedReason?: string | number;
 	Ringinuse: 0 | 1;
 	Wrapuptime: number;
 };
@@ -5282,14 +5282,14 @@ export type QueueMemberPenalty = BaseEvent & {
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
 	Penalty: number;
-	CallsTaken: string;
+	CallsTaken: number;
 	LastCall: number;
 	LastPause: number;
 	LoginTime: number;
 	InCall: 0 | 1;
 	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 	Paused: 0 | 1;
-	PausedReason?: string;
+	PausedReason?: string | number;
 	Ringinuse: 0 | 1;
 	Wrapuptime: number;
 };
@@ -5302,14 +5302,14 @@ export type QueueMemberRemoved = BaseEvent & {
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
 	Penalty: number;
-	CallsTaken: string;
+	CallsTaken: number;
 	LastCall: number;
 	LastPause: number;
 	LoginTime: number;
 	InCall: 0 | 1;
 	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 	Paused: 0 | 1;
-	PausedReason?: string;
+	PausedReason?: string | number;
 	Ringinuse: 0 | 1;
 	Wrapuptime: number;
 };
@@ -5322,14 +5322,14 @@ export type QueueMemberRinginuse = BaseEvent & {
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
 	Penalty: number;
-	CallsTaken: string;
+	CallsTaken: number;
 	LastCall: number;
 	LastPause: number;
 	LoginTime: number;
 	InCall: 0 | 1;
 	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 	Paused: 0 | 1;
-	PausedReason?: string;
+	PausedReason?: string | number;
 	Ringinuse: 0 | 1;
 	Wrapuptime: number;
 };
@@ -5342,14 +5342,14 @@ export type QueueMemberStatus = BaseEvent & {
 	StateInterface: string;
 	Membership: "dynamic" | "realtime" | "static";
 	Penalty: number;
-	CallsTaken: string;
+	CallsTaken: number;
 	LastCall: number;
 	LastPause: number;
 	LoginTime: number;
 	InCall: 0 | 1;
 	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 	Paused: 0 | 1;
-	PausedReason?: string;
+	PausedReason?: string | number;
 	Ringinuse: 0 | 1;
 	Wrapuptime: number;
 };
@@ -5400,15 +5400,15 @@ export type RTCPReceived = BaseEvent & {
 		| "Dialing Offhook"
 		| "Pre-ring"
 		| "Unknown";
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	SSRC: string;
@@ -5435,15 +5435,15 @@ export type RTCPSent = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	SSRC: string;
@@ -5497,15 +5497,15 @@ export type ReceiveFAX = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	LocalStationID: string;
@@ -5568,15 +5568,15 @@ export type Rename = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -5667,15 +5667,15 @@ export type SendFAX = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	LocalStationID: string;
@@ -5728,15 +5728,15 @@ export type SessionTimeout = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Source: "RTPTimeout" | "SIPSessionTimer";
@@ -5786,15 +5786,15 @@ export type SoftHangupRequest = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Cause: string;
@@ -5836,15 +5836,15 @@ export type Status = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Type: string;
@@ -5982,29 +5982,29 @@ export type UnParkedCall = BaseEvent & {
 	ParkeeChannel: string;
 	ParkeeChannelState: string;
 	ParkeeChannelStateDesc: string;
-	ParkeeCallerIDNum: string;
+	ParkeeCallerIDNum: string | number;
 	ParkeeCallerIDName: string;
 	ParkeeConnectedLineNum: string;
 	ParkeeConnectedLineName: string;
 	ParkeeLanguage: string;
 	ParkeeAccountCode: string;
 	ParkeeContext: string;
-	ParkeeExten: string;
-	ParkeePriority: string;
+	ParkeeExten: string | number;
+	ParkeePriority: number;
 	ParkeeUniqueid: string | number;
 	ParkeeLinkedid: number | string;
 	ParkerChannel: string;
 	ParkerChannelState: string;
 	ParkerChannelStateDesc: string;
-	ParkerCallerIDNum: string;
+	ParkerCallerIDNum: string | number;
 	ParkerCallerIDName: string;
 	ParkerConnectedLineNum: string;
 	ParkerConnectedLineName: string;
 	ParkerLanguage: string;
 	ParkerAccountCode: string;
 	ParkerContext: string;
-	ParkerExten: string;
-	ParkerPriority: string;
+	ParkerExten: string | number;
+	ParkerPriority: number;
 	ParkerUniqueid: string | number;
 	ParkerLinkedid: number | string;
 	ParkerDialString: string;
@@ -6015,15 +6015,15 @@ export type UnParkedCall = BaseEvent & {
 	RetrieverChannel: string;
 	RetrieverChannelState: string;
 	RetrieverChannelStateDesc: string;
-	RetrieverCallerIDNum: string;
+	RetrieverCallerIDNum: string | number;
 	RetrieverCallerIDName: string;
 	RetrieverConnectedLineNum: string;
 	RetrieverConnectedLineName: string;
 	RetrieverLanguage: string;
 	RetrieverAccountCode: string;
 	RetrieverContext: string;
-	RetrieverExten: string;
-	RetrieverPriority: string;
+	RetrieverExten: string | number;
+	RetrieverPriority: number;
 	RetrieverUniqueid: string | number;
 	RetrieverLinkedid: number | string;
 };
@@ -6070,15 +6070,15 @@ export type Unhold = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };
@@ -6127,15 +6127,15 @@ export type UserEvent = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	UserEvent: string;
@@ -6170,15 +6170,15 @@ export type VarSet = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 	Variable: string;
@@ -6230,15 +6230,15 @@ export type Wink = BaseEvent & {
 	Channel: string;
 	ChannelState: string;
 	ChannelStateDesc: string;
-	CallerIDNum: string;
+	CallerIDNum: string | number;
 	CallerIDName: string;
 	ConnectedLineNum: string;
 	ConnectedLineName: string;
 	Language: string;
 	AccountCode: string;
 	Context: string;
-	Exten: string;
-	Priority: string;
+	Exten: string | number;
+	Priority: number;
 	Uniqueid: string | number;
 	Linkedid: number | string;
 };

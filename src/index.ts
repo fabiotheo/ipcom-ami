@@ -479,32 +479,44 @@ export class eAmi {
 				}
 
 				_request.Completed = true;
+
+				// Limpar timeout anterior se existir
+				if (_request.timeOutHandler) {
+					clearTimeout(_request.timeOutHandler as Timer);
+				}
+
 				_request.timeOutHandler = setTimeout(async () => {
+					if (_request.Completed) {
+						if (this.debug)
+							console.log(
+								`Action ${_request.ActionID} already completed, skipping resend.`,
+							);
+						return;
+					}
+
 					if (!writed) {
 						reject("Timeout write to socket...");
 						return;
 					}
 
-					if (_request.Completed === true) {
-						try {
-							await this.action(request);
-						} catch (error) {
-							if (this.debug)
-								console.log("Error resend action", _request.Action, error);
-							reject(`Error resend action${_request.Action}${error}`);
-						}
-
-						this._errorBitsByInterval++;
+					try {
+						await this.action(request);
+					} catch (error) {
 						if (this.debug)
-							console.log(`resend ActionID_${actionID}`, _request.Action);
-						return;
+							console.log("Error resend action", _request.Action, error);
+						reject(`Error resend action${_request.Action}${error}`);
 					}
 
+					this._errorBitsByInterval++;
+					if (this.debug)
+						console.log(`Resend ActionID_${actionID}`, _request.Action);
+
+					// Limpar timeout após completar o envio
 					clearTimeout(_request.timeOutHandler as Timer);
 					this.removeRequest(actionID);
 					this.events.removeAllListeners(String(actionID));
 					this.events.removeAllListeners(`Action_${actionID}`);
-					if (this.debug) console.log(`complete ${actionID}`, _request.Action);
+					if (this.debug) console.log(`Complete ${actionID}`, _request.Action);
 				}, 3000);
 			}
 
