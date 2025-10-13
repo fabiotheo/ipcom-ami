@@ -77,7 +77,8 @@ export class eAmiActions {
 				);
 
 				setTimeout(() => {
-					reject(`Timeout to '${options.Action}' action, try again later...`);
+					removeListener(); // ✅ Cleanup antes de rejeitar
+					reject(new Error(`Timeout to '${options.Action}' action, try again later...`));
 				}, this.timeOutAction);
 
 				try {
@@ -144,6 +145,7 @@ export class eAmiActions {
 				this.eAmi.events.on(AMI_EVENTS.BRIDGE_LIST_ITEM, onBRIDGE_LIST_ITEM);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -218,6 +220,7 @@ export class eAmiActions {
 				this.eAmi.events.on(AMI_EVENTS.CORE_SHOW_CHANNEL, onCORE_SHOW_CHANNEL);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -278,6 +281,7 @@ export class eAmiActions {
 				this.eAmi.events.once(AMI_EVENTS.HANGUP_REQUEST, onHANGUP_REQUEST);
 
 				setTimeout(() => {
+					removeListeners(); // ✅ Cleanup antes de rejeitar (múltiplos listeners)
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -405,6 +409,7 @@ export class eAmiActions {
 				this.eAmi.events.once(`Action_${options.ActionID}`, onActionID);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -491,6 +496,7 @@ export class eAmiActions {
 				this.eAmi.events.once(AMI_EVENTS.Q_MEMBER_ADDED, onQ_MEMBER_ADDED);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -538,6 +544,7 @@ export class eAmiActions {
 				this.eAmi.events.once(AMI_EVENTS.Q_MEMBER_REMOVED, onQ_MEMBER_REMOVED);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -586,6 +593,7 @@ export class eAmiActions {
 				this.eAmi.events.once(AMI_EVENTS.Q_MEMBER_PENALTY, onQ_MEMBER_PENALTY);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -634,6 +642,7 @@ export class eAmiActions {
 				this.eAmi.events.once(AMI_EVENTS.Q_MEMBER_PAUSE, onQ_MEMBER_PAUSE);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -684,13 +693,13 @@ export class eAmiActions {
 				this.eAmi.events.on(AMI_EVENTS.Q_MEMBER, onQ_MEMBER);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup ANTES de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
 						),
 					);
-					removeListener();
-					this.QueueStatus(options);
+					// ✅ Recursão REMOVIDA - cliente decide se tenta novamente
 				}, this.timeOutAction);
 
 				try {
@@ -767,6 +776,7 @@ export class eAmiActions {
 				this.eAmi.events.once(AMI_EVENTS.Q_SUMMARY, onQ_SUMMARY);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
@@ -811,6 +821,7 @@ export class eAmiActions {
 				this.eAmi.events.once(AMI_EVENTS.STATUS, onSTATUS);
 
 				setTimeout(() => {
+					removeListener(); // ✅ Cleanup antes de rejeitar
 					reject(
 						new Error(
 							`Timeout to '${options.Action}' action, try again later...`,
