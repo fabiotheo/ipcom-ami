@@ -122,7 +122,19 @@ export class eAmi {
 		this.internalListeners();
 	}
 
+	/**
+	 * Configura listeners internos necessários para o funcionamento da biblioteca.
+	 *
+	 * Listeners criados:
+	 * - RE_LOGIN: Listener permanente para retry automático de autenticação.
+	 *   Este listener é intencional e necessário, sendo removido apenas quando
+	 *   cleanup() é chamado.
+	 *
+	 * @private
+	 */
 	private internalListeners() {
+		// RE_LOGIN: Listener permanente para retry de autenticação
+		// Dispara quando autenticação falha, tentando novamente até maxAuthCount
 		this.events.on(eAMI_EVENTS.RE_LOGIN, () => {
 			if (this._authCount < this._maxAuthCount) {
 				setTimeout(async () => {
@@ -181,12 +193,45 @@ export class eAmi {
 
 	public destroySocket(): void {
 		if (this._socketHandler) {
+			this._socketHandler.removeAllListeners(); // ✅ Limpa listeners do socket antes de destruir
 			this._socketHandler.destroy();
 			if (this.debug) console.log(`${CRLF}Socket connection destroyed`);
 		} else {
 			if (this.debug)
 				console.log("Socket handler is undefined, cannot destroy socket.");
 		}
+
+		// ✅ Limpar heartbeat timeout
+		if (this._heartbeatHandler) {
+			clearTimeout(this._heartbeatHandler as Timer);
+			this._heartbeatHandler = undefined;
+		}
+	}
+
+	/**
+	 * Limpa todos os listeners internos do EventEmitter.
+	 *
+	 * Remove:
+	 * - Todos os listeners adicionados pelo código cliente
+	 * - Listeners internos da biblioteca (incluindo RE_LOGIN)
+	 * - Listeners de ações pendentes
+	 *
+	 * Use antes de descartar a instância ou em situações de emergência.
+	 *
+	 * ⚠️ ATENÇÃO: Isso removerá também listeners adicionados pelo código cliente!
+	 * Após chamar cleanup(), a instância não deve ser reutilizada.
+	 *
+	 * @example
+	 * ```typescript
+	 * // Descartar instância completamente
+	 * ami.cleanup();       // Remove todos os listeners
+	 * ami.destroySocket(); // Fecha conexão
+	 * ami = null;          // Permite GC
+	 * ```
+	 */
+	public cleanup(): void {
+		this.events.removeAllListeners();
+		if (this.debug) console.log('All event listeners removed');
 	}
 
 	private addRequest(request: I_Request): void {
@@ -234,7 +279,7 @@ export class eAmi {
 	}
 
 	private keepConnection(): void {
-		clearInterval(this._heartbeatHandler as Timer);
+		clearTimeout(this._heartbeatHandler as Timer); // ✅ CORRETO: clearTimeout para setTimeout
 
 		const sendPing = async () => {
 			try {
@@ -436,10 +481,17 @@ export class eAmi {
 
 			const _request = this.getRequest(actionID);
 
+			// ✅ ADICIONAR: Função de cleanup centralizada
+			const cleanupListeners = () => {
+				this.events.removeAllListeners(String(actionID));
+				this.events.removeAllListeners(`Action_${actionID}`);
+			};
+
 			// handlers for resolve
 			if (_request !== null && _request !== undefined) {
 				this.events.once(`Action_${actionID}`, (response: R) => {
 					_request.Completed = true;
+					cleanupListeners(); // ✅ ADICIONAR (PATH 1)
 
 					if (this.debug)
 						console.log("response", _request.ActionID, _request.Action);
@@ -448,6 +500,7 @@ export class eAmi {
 				});
 			} else {
 				this.events.once(`Action_${actionID}`, (response: R) => {
+					cleanupListeners(); // ✅ ADICIONAR (PATH 1)
 					resolve(response);
 				});
 			}
@@ -458,6 +511,7 @@ export class eAmi {
 					if (_request !== null && _request !== undefined) {
 						_request.Completed = true;
 					}
+					cleanupListeners(); // ✅ ADICIONAR (PATH 1 alternativo)
 					resolve(response);
 				});
 			}
@@ -495,6 +549,7 @@ export class eAmi {
 					}
 
 					if (!writed) {
+						cleanupListeners(); // ✅ ADICIONAR (PATH 3)
 						reject("Timeout write to socket...");
 						return;
 					}
@@ -504,7 +559,9 @@ export class eAmi {
 					} catch (error) {
 						if (this.debug)
 							console.log("Error resend action", _request.Action, error);
+						cleanupListeners(); // ✅ ADICIONAR (PATH 4)
 						reject(`Error resend action${_request.Action}${error}`);
+						return;
 					}
 
 					this._errorBitsByInterval++;
@@ -514,8 +571,7 @@ export class eAmi {
 					// Limpar timeout após completar o envio
 					clearTimeout(_request.timeOutHandler as Timer);
 					this.removeRequest(actionID);
-					this.events.removeAllListeners(String(actionID));
-					this.events.removeAllListeners(`Action_${actionID}`);
+					cleanupListeners(); // ✅ JÁ EXISTIA (PATH 5)
 					if (this.debug) console.log(`Complete ${actionID}`, _request.Action);
 				}, 3000);
 			}
@@ -526,6 +582,7 @@ export class eAmi {
 
 			if (write === false) {
 				if (this.debug) console.log("Data in the sending queue");
+				cleanupListeners(); // ✅ ADICIONAR (PATH 2)
 				reject("Data in the sending queue");
 			}
 		});

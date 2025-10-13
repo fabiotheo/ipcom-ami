@@ -107,6 +107,16 @@ export declare class eAmi {
      * @param {number} [allOptions.additionalOptions.maxReconnectCount=5] - Maximum number of reconnection attempts before giving up.
      */
     constructor(allOptions: IeAmiOptions);
+    /**
+     * Configura listeners internos necessários para o funcionamento da biblioteca.
+     *
+     * Listeners criados:
+     * - RE_LOGIN: Listener permanente para retry automático de autenticação.
+     *   Este listener é intencional e necessário, sendo removido apenas quando
+     *   cleanup() é chamado.
+     *
+     * @private
+     */
     private internalListeners;
     get excludeEvents(): string[];
     set excludeEvents(events: string[]);
@@ -116,6 +126,28 @@ export declare class eAmi {
     get queueRequest(): I_Request[];
     private addSocketListeners;
     destroySocket(): void;
+    /**
+     * Limpa todos os listeners internos do EventEmitter.
+     *
+     * Remove:
+     * - Todos os listeners adicionados pelo código cliente
+     * - Listeners internos da biblioteca (incluindo RE_LOGIN)
+     * - Listeners de ações pendentes
+     *
+     * Use antes de descartar a instância ou em situações de emergência.
+     *
+     * ⚠️ ATENÇÃO: Isso removerá também listeners adicionados pelo código cliente!
+     * Após chamar cleanup(), a instância não deve ser reutilizada.
+     *
+     * @example
+     * ```typescript
+     * // Descartar instância completamente
+     * ami.cleanup();       // Remove todos os listeners
+     * ami.destroySocket(); // Fecha conexão
+     * ami = null;          // Permite GC
+     * ```
+     */
+    cleanup(): void;
     private addRequest;
     private removeRequest;
     getRequest(actionID: unknown): I_Request | null;
