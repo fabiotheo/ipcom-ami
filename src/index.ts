@@ -481,17 +481,33 @@ export class eAmi {
 
 			const _request = this.getRequest(actionID);
 
-			// ✅ ADICIONAR: Função de cleanup centralizada
+			// ✅ Função de cleanup centralizada
 			const cleanupListeners = () => {
 				this.events.removeAllListeners(String(actionID));
 				this.events.removeAllListeners(`Action_${actionID}`);
+			};
+
+			// ✅ FIX #2: Timeout de fallback configurável + margem de segurança
+			// Usa _resendTimeOut da instância + 5s de margem para ações legítimas lentas
+			const fallbackTimeout = setTimeout(() => {
+				cleanupListeners();
+				if (this.debug) {
+					console.log(`[Fallback Cleanup] Action_${actionID} timed out after fallback period`);
+				}
+				reject(new Error(`Action_${actionID} timed out after fallback period`));
+			}, this._resendTimeOut + 5000); // Configurável + 5s de margem
+
+			// Wrapper para cleanup que também cancela o fallback
+			const cleanupAll = () => {
+				clearTimeout(fallbackTimeout);
+				cleanupListeners();
 			};
 
 			// handlers for resolve
 			if (_request !== null && _request !== undefined) {
 				this.events.once(`Action_${actionID}`, (response: R) => {
 					_request.Completed = true;
-					cleanupListeners(); // ✅ ADICIONAR (PATH 1)
+					cleanupAll();
 
 					if (this.debug)
 						console.log("response", _request.ActionID, _request.Action);
@@ -500,7 +516,7 @@ export class eAmi {
 				});
 			} else {
 				this.events.once(`Action_${actionID}`, (response: R) => {
-					cleanupListeners(); // ✅ ADICIONAR (PATH 1)
+					cleanupAll();
 					resolve(response);
 				});
 			}
@@ -511,7 +527,7 @@ export class eAmi {
 					if (_request !== null && _request !== undefined) {
 						_request.Completed = true;
 					}
-					cleanupListeners(); // ✅ ADICIONAR (PATH 1 alternativo)
+					cleanupAll();
 					resolve(response);
 				});
 			}
@@ -532,7 +548,8 @@ export class eAmi {
 					_request.ActionID = undefined;
 				}
 
-				_request.Completed = true;
+				// ✅ FIX #3: NÃO marcar como completed aqui - só marcar quando resposta chegar
+				// _request.Completed = true; ← REMOVIDO
 
 				// Limpar timeout anterior se existir
 				if (_request.timeOutHandler) {
@@ -545,23 +562,23 @@ export class eAmi {
 							console.log(
 								`Action ${_request.ActionID} already completed, skipping resend.`,
 							);
-						cleanupListeners(); // ✅ FIX BUG #1: Limpar listeners antes de retornar
+						cleanupAll();
 						return;
 					}
 
 					if (!writed) {
-						cleanupListeners(); // ✅ ADICIONAR (PATH 3)
+						cleanupAll();
 						reject("Timeout write to socket...");
 						return;
 					}
 
 					try {
-						cleanupListeners(); // ✅ FIX BUG #2: Limpar listeners antigos antes da recursão
+						cleanupAll(); // Limpa listeners antigos antes da recursão
 						await this.action(request);
 					} catch (error) {
 						if (this.debug)
 							console.log("Error resend action", _request.Action, error);
-						cleanupListeners(); // ✅ ADICIONAR (PATH 4)
+						cleanupAll();
 						reject(`Error resend action${_request.Action}${error}`);
 						return;
 					}
@@ -573,7 +590,7 @@ export class eAmi {
 					// Limpar timeout após completar o envio
 					clearTimeout(_request.timeOutHandler as Timer);
 					this.removeRequest(actionID);
-					cleanupListeners(); // ✅ JÁ EXISTIA (PATH 5)
+					cleanupAll();
 					if (this.debug) console.log(`Complete ${actionID}`, _request.Action);
 				}, 3000);
 			}
@@ -584,7 +601,7 @@ export class eAmi {
 
 			if (write === false) {
 				if (this.debug) console.log("Data in the sending queue");
-				cleanupListeners(); // ✅ ADICIONAR (PATH 2)
+				cleanupAll();
 				reject("Data in the sending queue");
 			}
 		});
@@ -654,11 +671,10 @@ export class eAmi {
 			const request = this.getRequest(dataObject.ActionID);
 			dataObject.Request = request !== null ? request : undefined;
 
-			const actionIDNumber = _toNumber(dataObject.ActionID);
-			if (actionIDNumber !== undefined && _isFinite(actionIDNumber)) {
-				this.events.emit(`Action_${actionIDNumber}`, dataObject);
-			} else if (typeof dataObject.ActionID === "string") {
-				this.events.emit(dataObject.ActionID, dataObject);
+			// ✅ FIX #1: Padronizar emissão para SEMPRE usar prefixo 'Action_'
+			// Garante que listeners criados com Action_${actionID} sejam sempre acionados
+			if (dataObject.ActionID !== undefined && dataObject.ActionID !== null) {
+				this.events.emit(`Action_${dataObject.ActionID}`, dataObject);
 			}
 
 			switch (typeResponse) {
