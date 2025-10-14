@@ -545,6 +545,7 @@ export class eAmi {
 							console.log(
 								`Action ${_request.ActionID} already completed, skipping resend.`,
 							);
+						cleanupListeners(); // ✅ FIX BUG #1: Limpar listeners antes de retornar
 						return;
 					}
 
@@ -555,6 +556,7 @@ export class eAmi {
 					}
 
 					try {
+						cleanupListeners(); // ✅ FIX BUG #2: Limpar listeners antigos antes da recursão
 						await this.action(request);
 					} catch (error) {
 						if (this.debug)
