@@ -130,3 +130,6 @@ out
 
 .idea
 
+/README.md.backup
+/pnpm-workspace.yaml
+/pnpm-lock.yaml

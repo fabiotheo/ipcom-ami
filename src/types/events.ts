@@ -1,12 +1,12 @@
 type Request = {
-	Action: string;
-	Queue?: string;
-	ActionID: number;
+  Action: string;
+  Queue?: string;
+  ActionID: number;
 };
 
 type BaseEvent = {
-	TimeEvent: number;
-	Request?: Request;
+  TimeEvent: number;
+  Request?: Request;
 };
 
 /**
@@ -47,25 +47,25 @@ type BaseEvent = {
  * - `Result: string`
  */
 export type AGIExecEnd = BaseEvent & {
-	Event: "AGIExecEnd";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Command: string;
-	CommandId: string;
-	ResultCode: string;
-	Result: string;
+  Event: 'AGIExecEnd';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Command: string;
+  CommandId: string;
+  ResultCode: string;
+  Result: string;
 };
 
 /**
@@ -104,23 +104,23 @@ export type AGIExecEnd = BaseEvent & {
  * - `CommandId: string`
  */
 export type AGIExecStart = BaseEvent & {
-	Event: "AGIExecStart";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Command: string;
-	CommandId: string;
+  Event: 'AGIExecStart';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Command: string;
+  CommandId: string;
 };
 
 /**
@@ -167,32 +167,32 @@ export type AGIExecStart = BaseEvent & {
  * - `TypeOf: string`
  */
 export type AOCD = BaseEvent & {
-	Event: "AOC-D";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Charge: string;
-	Type: string;
-	BillingID: string;
-	TotalType: string;
-	Currency: string;
-	Name: string;
-	Cost: string;
-	Multiplier: string;
-	Units: string;
-	NumberOf: string;
-	TypeOf: string;
+  Event: 'AOC-D';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Charge: string;
+  Type: string;
+  BillingID: string;
+  TotalType: string;
+  Currency: string;
+  Name: string;
+  Cost: string;
+  Multiplier: string;
+  Units: string;
+  NumberOf: string;
+  TypeOf: string;
 };
 
 /**
@@ -243,36 +243,36 @@ export type AOCD = BaseEvent & {
  * - `TypeOf: string`
  */
 export type AOCE = BaseEvent & {
-	Event: "AOC-E";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	ChargingAssociation: string;
-	Number: string;
-	Plan: string;
-	ID: string;
-	Charge: string;
-	Type: string;
-	BillingID: string;
-	TotalType: string;
-	Currency: string;
-	Name: string;
-	Cost: string;
-	Multiplier: string;
-	Units: string;
-	NumberOf: string;
-	TypeOf: string;
+  Event: 'AOC-E';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  ChargingAssociation: string;
+  Number: string;
+  Plan: string;
+  ID: string;
+  Charge: string;
+  Type: string;
+  BillingID: string;
+  TotalType: string;
+  Currency: string;
+  Name: string;
+  Cost: string;
+  Multiplier: string;
+  Units: string;
+  NumberOf: string;
+  TypeOf: string;
 };
 
 /**
@@ -321,34 +321,34 @@ export type AOCE = BaseEvent & {
  * - `SpecialCode: string`
  */
 export type AOCS = BaseEvent & {
-	Event: "AOC-S";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Chargeable: string;
-	RateType: string;
-	Currency: string;
-	Name: string;
-	Cost: string;
-	Multiplier: string;
-	ChargingType: string;
-	StepFunction: string;
-	Granularity: string;
-	Length: string;
-	Scale: string;
-	Unit: string;
-	SpecialCode: string;
+  Event: 'AOC-S';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Chargeable: string;
+  RateType: string;
+  Currency: string;
+  Name: string;
+  Cost: string;
+  Multiplier: string;
+  ChargingType: string;
+  StepFunction: string;
+  Granularity: string;
+  Length: string;
+  Scale: string;
+  Unit: string;
+  SpecialCode: string;
 };
 
 /**
@@ -404,38 +404,38 @@ export type AOCS = BaseEvent & {
  * - `Interface: string`
  */
 export type AgentCalled = BaseEvent & {
-	Event: "AgentCalled";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: number;
-	DestChannelStateDesc: string;
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	Queue: string;
-	MemberName: string;
-	Interface: string;
+  Event: 'AgentCalled';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: number;
+  DestChannelStateDesc: string;
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  Queue: string;
+  MemberName: string;
+  Interface: string;
 };
 
 /**
@@ -495,41 +495,41 @@ export type AgentCalled = BaseEvent & {
  * - `Reason: string`
  */
 export type AgentComplete = BaseEvent & {
-	Event: "AgentComplete";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: number;
-	DestChannelStateDesc: string;
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	HoldTime: number;
-	TalkTime: number;
-	Reason: string;
+  Event: 'AgentComplete';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: number;
+  DestChannelStateDesc: string;
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  HoldTime: number;
+  TalkTime: number;
+  Reason: string;
 };
 
 /**
@@ -615,40 +615,40 @@ export type AgentComplete = BaseEvent & {
  * - `HoldTime: number`
  */
 export type AgentConnect = BaseEvent & {
-	Event: "AgentConnect";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: number;
-	DestChannelStateDesc: string;
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	RingTime: number;
-	HoldTime: number;
+  Event: 'AgentConnect';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: number;
+  DestChannelStateDesc: string;
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  RingTime: number;
+  HoldTime: number;
 };
 
 /**
@@ -730,38 +730,38 @@ export type AgentConnect = BaseEvent & {
  * - `Interface: string`
  */
 export type AgentDump = BaseEvent & {
-	Event: "AgentDump";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: number;
-	DestChannelStateDesc: string;
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	Queue: string;
-	MemberName: string;
-	Interface: string;
+  Event: 'AgentDump';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: number;
+  DestChannelStateDesc: string;
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  Queue: string;
+  MemberName: string;
+  Interface: string;
 };
 
 /**
@@ -800,22 +800,22 @@ export type AgentDump = BaseEvent & {
  * - `Agent: string`
  */
 export type AgentLogin = BaseEvent & {
-	Event: "AgentLogin";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Agent: string;
+  Event: 'AgentLogin';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Agent: string;
 };
 
 /**
@@ -842,9 +842,9 @@ export type AgentLogin = BaseEvent & {
  * - `Logintime: number`
  */
 export type AgentLogoff = BaseEvent & {
-	Event: "AgentLogoff";
-	Agent: string;
-	Logintime: number;
+  Event: 'AgentLogoff';
+  Agent: string;
+  Logintime: number;
 };
 
 /**
@@ -901,39 +901,39 @@ export type AgentLogoff = BaseEvent & {
  * - `RingTime: number`
  */
 export type AgentRingNoAnswer = BaseEvent & {
-	Event: "AgentRingNoAnswer";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: number;
-	DestChannelStateDesc: string;
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	RingTime: number;
+  Event: 'AgentRingNoAnswer';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: number;
+  DestChannelStateDesc: string;
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  RingTime: number;
 };
 
 /**
@@ -950,28 +950,28 @@ export type AgentRingNoAnswer = BaseEvent & {
  * - `TalkingTo: string`
  */
 export type Agents = BaseEvent & {
-	Event: "Agents";
-	Agent: string;
-	Name: string;
-	Status: string;
-	TalkingToChan?: string;
-	CallStarted?: number;
-	LoggedInTime?: number;
-	Channel?: string;
-	ChannelState?: number;
-	ChannelStateDesc?: string;
-	CallerIDNum?: string;
-	CallerIDName?: string;
-	ConnectedLineNum?: string;
-	ConnectedLineName?: string;
-	Language?: string;
-	AccountCode?: string;
-	Context?: string;
-	Exten?: string;
-	Priority?: string;
-	Uniqueid?: string;
-	Linkedid?: string;
-	ActionID: number;
+  Event: 'Agents';
+  Agent: string;
+  Name: string;
+  Status: string;
+  TalkingToChan?: string;
+  CallStarted?: number;
+  LoggedInTime?: number;
+  Channel?: string;
+  ChannelState?: number;
+  ChannelStateDesc?: string;
+  CallerIDNum?: string;
+  CallerIDName?: string;
+  ConnectedLineNum?: string;
+  ConnectedLineName?: string;
+  Language?: string;
+  AccountCode?: string;
+  Context?: string;
+  Exten?: string;
+  Priority?: string;
+  Uniqueid?: string;
+  Linkedid?: string;
+  ActionID: number;
 };
 
 /**
@@ -993,8 +993,8 @@ export type Agents = BaseEvent & {
  * - `ActionID: number`
  */
 export type AgentsComplete = BaseEvent & {
-	Event: "AgentsComplete";
-	ActionID: number;
+  Event: 'AgentsComplete';
+  ActionID: number;
 };
 
 /**
@@ -1018,9 +1018,9 @@ export type AgentsComplete = BaseEvent & {
  * - `Alarm: string`
  */
 export type Alarm = BaseEvent & {
-	Event: "Alarm";
-	DAHDIChannel: string;
-	Alarm: string;
+  Event: 'Alarm';
+  DAHDIChannel: string;
+  Alarm: string;
 };
 
 /**
@@ -1043,8 +1043,8 @@ export type Alarm = BaseEvent & {
  * - `DAHDIChannel: string`
  */
 export type AlarmClear = BaseEvent & {
-	Event: "AlarmClear";
-	DAHDIChannel: string;
+  Event: 'AlarmClear';
+  DAHDIChannel: string;
 };
 
 /**
@@ -1083,23 +1083,23 @@ export type AlarmClear = BaseEvent & {
  * - `EndpointName: string`
  */
 export type AorDetail = BaseEvent & {
-	Event: "AorDetail";
-	ObjectType: "aor";
-	ObjectName: string;
-	MinimumExpiration: string;
-	MaximumExpiration: string;
-	DefaultExpiration: string;
-	QualifyFrequency: number;
-	AuthenticateQualify: string;
-	MaxContacts: string;
-	RemoveExisting: string;
-	RemoveUnavailable: string;
-	Mailboxes: string;
-	OutboundProxy: string;
-	SupportPath: string;
-	TotalContacts: string;
-	ContactsRegistered: string;
-	EndpointName: string;
+  Event: 'AorDetail';
+  ObjectType: 'aor';
+  ObjectName: string;
+  MinimumExpiration: string;
+  MaximumExpiration: string;
+  DefaultExpiration: string;
+  QualifyFrequency: number;
+  AuthenticateQualify: string;
+  MaxContacts: string;
+  RemoveExisting: string;
+  RemoveUnavailable: string;
+  Mailboxes: string;
+  OutboundProxy: string;
+  SupportPath: string;
+  TotalContacts: string;
+  ContactsRegistered: string;
+  EndpointName: string;
 };
 
 /**
@@ -1135,20 +1135,20 @@ export type AorDetail = BaseEvent & {
  * - `SupportPath: string`
  */
 export type AorList = BaseEvent & {
-	Event: "AorList";
-	ObjectType: "aor";
-	ObjectName: string;
-	MinimumExpiration: string;
-	MaximumExpiration: string;
-	DefaultExpiration: string;
-	QualifyFrequency: number;
-	AuthenticateQualify: string;
-	MaxContacts: string;
-	RemoveExisting: string;
-	RemoveUnavailable: string;
-	Mailboxes: string;
-	OutboundProxy: string;
-	SupportPath: string;
+  Event: 'AorList';
+  ObjectType: 'aor';
+  ObjectName: string;
+  MinimumExpiration: string;
+  MaximumExpiration: string;
+  DefaultExpiration: string;
+  QualifyFrequency: number;
+  AuthenticateQualify: string;
+  MaxContacts: string;
+  RemoveExisting: string;
+  RemoveUnavailable: string;
+  Mailboxes: string;
+  OutboundProxy: string;
+  SupportPath: string;
 };
 
 /**
@@ -1171,9 +1171,9 @@ export type AorList = BaseEvent & {
  * - `ListItems: number`
  */
 export type AorListComplete = BaseEvent & {
-	Event: "AorListComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'AorListComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 /**
@@ -1210,21 +1210,21 @@ export type AorListComplete = BaseEvent & {
  * - `Linkedid: string`
  */
 export type AsyncAGIEnd = BaseEvent & {
-	Event: "AsyncAGIEnd";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'AsyncAGIEnd';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 /**
@@ -1239,23 +1239,23 @@ export type AsyncAGIEnd = BaseEvent & {
  * - `Command: string`
  */
 export type AsyncAGIExec = BaseEvent & {
-	Event: "AsyncAGIExec";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	CommandID?: string;
-	Result: string;
+  Event: 'AsyncAGIExec';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  CommandID?: string;
+  Result: string;
 };
 
 /**
@@ -1293,22 +1293,22 @@ export type AsyncAGIExec = BaseEvent & {
  * - `Env: string`
  */
 export type AsyncAGIStart = BaseEvent & {
-	Event: "AsyncAGIStart";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Env: string;
+  Event: 'AsyncAGIStart';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Env: string;
 };
 
 /**
@@ -1333,122 +1333,122 @@ export type AsyncAGIStart = BaseEvent & {
  * - `Result: string`
  */
 export type AttendedTransfer = BaseEvent & {
-	Event: "AttendedTransfer";
-	Result: "Fail" | "Invalid" | "Not Permitted" | "Success";
-	OrigTransfererChannel: string;
-	OrigTransfererChannelState: number;
-	OrigTransfererChannelStateDesc: string;
-	OrigTransfererCallerIDNum: number | string;
-	OrigTransfererCallerIDName: string;
-	OrigTransfererConnectedLineNum: number | string;
-	OrigTransfererConnectedLineName: string;
-	OrigTransfererLanguage: string;
-	OrigTransfererAccountCode: number | string;
-	OrigTransfererContext: string;
-	OrigTransfererExten: number | string;
-	OrigTransfererPriority: number;
-	OrigTransfererUniqueid: number | string;
-	OrigTransfererLinkedid: number | string;
-	OrigBridgeUniqueid: string | number;
-	OrigBridgeType: string;
-	OrigBridgeTechnology: string;
-	OrigBridgeCreator: string;
-	OrigBridgeName: string;
-	OrigBridgeNumChannels: number;
-	OrigBridgeVideoSourceMode: "none" | "talker" | "single";
-	OrigBridgeVideoSource?: string;
-	SecondTransfererChannel: string;
-	SecondTransfererChannelState: number;
-	SecondTransfererChannelStateDesc: string;
-	SecondTransfererCallerIDNum: number | string;
-	SecondTransfererCallerIDName: string;
-	SecondTransfererConnectedLineNum: number | string;
-	SecondTransfererConnectedLineName: string;
-	SecondTransfererLanguage: string;
-	SecondTransfererAccountCode: number | string;
-	SecondTransfererContext: string;
-	SecondTransfererExten: number | string;
-	SecondTransfererPriority: number;
-	SecondTransfererUniqueid: number | string;
-	SecondTransfererLinkedid: number | string;
-	SecondBridgeUniqueid: string | number;
-	SecondBridgeType: string;
-	SecondBridgeTechnology: string;
-	SecondBridgeCreator: string;
-	SecondBridgeName: string;
-	SecondBridgeNumChannels: number;
-	SecondBridgeVideoSourceMode: "none" | "talker" | "single";
-	SecondBridgeVideoSource?: string;
-	DestType: "Bridge" | "App" | "Link" | "Threeway" | "Fail";
-	DestBridgeUniqueid?: string;
-	DestApp?: string;
-	LocalOneChannel: string;
-	LocalOneChannelState: string;
-	LocalOneChannelStateDesc: string;
-	LocalOneCallerIDNum: string | number;
-	LocalOneCallerIDName: string;
-	LocalOneConnectedLineNum: string;
-	LocalOneConnectedLineName: string;
-	LocalOneLanguage: string;
-	LocalOneAccountCode: string;
-	LocalOneContext: string;
-	LocalOneExten: string | number;
-	LocalOnePriority: number;
-	LocalOneUniqueid: string | number;
-	LocalOneLinkedid: number | string;
-	LocalTwoChannel: string;
-	LocalTwoChannelState: string;
-	LocalTwoChannelStateDesc: string;
-	LocalTwoCallerIDNum: string | number;
-	LocalTwoCallerIDName: string;
-	LocalTwoConnectedLineNum: string;
-	LocalTwoConnectedLineName: string;
-	LocalTwoLanguage: string;
-	LocalTwoAccountCode: string;
-	LocalTwoContext: string;
-	LocalTwoExten: string | number;
-	LocalTwoPriority: number;
-	LocalTwoUniqueid: string | number;
-	LocalTwoLinkedid: number | string;
-	DestTransfererChannel?: string;
-	TransfereeChannel: string;
-	TransfereeChannelState: number;
-	TransfereeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	TransfereeCallerIDNum: number | string;
-	TransfereeCallerIDName: string;
-	TransfereeConnectedLineNum: number | string;
-	TransfereeConnectedLineName: string;
-	TransfereeLanguage: string;
-	TransfereeAccountCode: number | string;
-	TransfereeContext: string;
-	TransfereeExten: number | string;
-	TransfereePriority: number;
-	TransfereeUniqueid: number | string;
-	TransfereeLinkedid: number | string;
-	TransferTargetChannel: string;
-	TransferTargetChannelState: number;
-	TransferTargetChannelStateDesc: string;
-	TransferTargetCallerIDNum: string | number;
-	TransferTargetCallerIDName: string;
-	TransferTargetConnectedLineName: string;
-	TransferTargetAccountCode: string | number;
-	TransferTargetContext: string;
-	TransferTargetExten: number | string;
-	TransferTargetPriority: number;
-	TransferTargetUniqueid: string | number;
-	TransferTargetLinkedid: string | number;
-	IsExternal: string;
+  Event: 'AttendedTransfer';
+  Result: 'Fail' | 'Invalid' | 'Not Permitted' | 'Success';
+  OrigTransfererChannel: string;
+  OrigTransfererChannelState: number;
+  OrigTransfererChannelStateDesc: string;
+  OrigTransfererCallerIDNum: number | string;
+  OrigTransfererCallerIDName: string;
+  OrigTransfererConnectedLineNum: number | string;
+  OrigTransfererConnectedLineName: string;
+  OrigTransfererLanguage: string;
+  OrigTransfererAccountCode: number | string;
+  OrigTransfererContext: string;
+  OrigTransfererExten: number | string;
+  OrigTransfererPriority: number;
+  OrigTransfererUniqueid: number | string;
+  OrigTransfererLinkedid: number | string;
+  OrigBridgeUniqueid: string | number;
+  OrigBridgeType: string;
+  OrigBridgeTechnology: string;
+  OrigBridgeCreator: string;
+  OrigBridgeName: string;
+  OrigBridgeNumChannels: number;
+  OrigBridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  OrigBridgeVideoSource?: string;
+  SecondTransfererChannel: string;
+  SecondTransfererChannelState: number;
+  SecondTransfererChannelStateDesc: string;
+  SecondTransfererCallerIDNum: number | string;
+  SecondTransfererCallerIDName: string;
+  SecondTransfererConnectedLineNum: number | string;
+  SecondTransfererConnectedLineName: string;
+  SecondTransfererLanguage: string;
+  SecondTransfererAccountCode: number | string;
+  SecondTransfererContext: string;
+  SecondTransfererExten: number | string;
+  SecondTransfererPriority: number;
+  SecondTransfererUniqueid: number | string;
+  SecondTransfererLinkedid: number | string;
+  SecondBridgeUniqueid: string | number;
+  SecondBridgeType: string;
+  SecondBridgeTechnology: string;
+  SecondBridgeCreator: string;
+  SecondBridgeName: string;
+  SecondBridgeNumChannels: number;
+  SecondBridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  SecondBridgeVideoSource?: string;
+  DestType: 'Bridge' | 'App' | 'Link' | 'Threeway' | 'Fail';
+  DestBridgeUniqueid?: string;
+  DestApp?: string;
+  LocalOneChannel: string;
+  LocalOneChannelState: string;
+  LocalOneChannelStateDesc: string;
+  LocalOneCallerIDNum: string | number;
+  LocalOneCallerIDName: string;
+  LocalOneConnectedLineNum: string;
+  LocalOneConnectedLineName: string;
+  LocalOneLanguage: string;
+  LocalOneAccountCode: string;
+  LocalOneContext: string;
+  LocalOneExten: string | number;
+  LocalOnePriority: number;
+  LocalOneUniqueid: string | number;
+  LocalOneLinkedid: number | string;
+  LocalTwoChannel: string;
+  LocalTwoChannelState: string;
+  LocalTwoChannelStateDesc: string;
+  LocalTwoCallerIDNum: string | number;
+  LocalTwoCallerIDName: string;
+  LocalTwoConnectedLineNum: string;
+  LocalTwoConnectedLineName: string;
+  LocalTwoLanguage: string;
+  LocalTwoAccountCode: string;
+  LocalTwoContext: string;
+  LocalTwoExten: string | number;
+  LocalTwoPriority: number;
+  LocalTwoUniqueid: string | number;
+  LocalTwoLinkedid: number | string;
+  DestTransfererChannel?: string;
+  TransfereeChannel: string;
+  TransfereeChannelState: number;
+  TransfereeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  TransfereeCallerIDNum: number | string;
+  TransfereeCallerIDName: string;
+  TransfereeConnectedLineNum: number | string;
+  TransfereeConnectedLineName: string;
+  TransfereeLanguage: string;
+  TransfereeAccountCode: number | string;
+  TransfereeContext: string;
+  TransfereeExten: number | string;
+  TransfereePriority: number;
+  TransfereeUniqueid: number | string;
+  TransfereeLinkedid: number | string;
+  TransferTargetChannel: string;
+  TransferTargetChannelState: number;
+  TransferTargetChannelStateDesc: string;
+  TransferTargetCallerIDNum: string | number;
+  TransferTargetCallerIDName: string;
+  TransferTargetConnectedLineName: string;
+  TransferTargetAccountCode: string | number;
+  TransferTargetContext: string;
+  TransferTargetExten: number | string;
+  TransferTargetPriority: number;
+  TransferTargetUniqueid: string | number;
+  TransferTargetLinkedid: string | number;
+  IsExternal: string;
 };
 
 /**
@@ -1482,16 +1482,16 @@ export type AttendedTransfer = BaseEvent & {
  * - `EndpointName: string`
  */
 export type AuthDetail = BaseEvent & {
-	Event: "AuthDetail";
-	ObjectType: "auth";
-	ObjectName: string;
-	Username: string;
-	Password: string;
-	Md5Cred: string;
-	Realm: string;
-	NonceLifetime: string;
-	AuthType: string;
-	EndpointName: string;
+  Event: 'AuthDetail';
+  ObjectType: 'auth';
+  ObjectName: string;
+  Username: string;
+  Password: string;
+  Md5Cred: string;
+  Realm: string;
+  NonceLifetime: string;
+  AuthType: string;
+  EndpointName: string;
 };
 
 /**
@@ -1522,15 +1522,15 @@ export type AuthDetail = BaseEvent & {
  * - `NonceLifetime: string`
  */
 export type AuthList = BaseEvent & {
-	Event: "AuthList";
-	ObjectType: "auth";
-	ObjectName: string;
-	Username: string;
-	Md5Cred: string;
-	Realm: string;
-	AuthType: string;
-	Password: string;
-	NonceLifetime: string;
+  Event: 'AuthList';
+  ObjectType: 'auth';
+  ObjectName: string;
+  Username: string;
+  Md5Cred: string;
+  Realm: string;
+  AuthType: string;
+  Password: string;
+  NonceLifetime: string;
 };
 
 /**
@@ -1553,9 +1553,9 @@ export type AuthList = BaseEvent & {
  * - `ListItems: number`
  */
 export type AuthListComplete = BaseEvent & {
-	Event: "AuthListComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'AuthListComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 /**
@@ -1569,18 +1569,18 @@ export type AuthListComplete = BaseEvent & {
  * - `Method: string`
  */
 export type AuthMethodNotAllowed = BaseEvent & {
-	Event: "AuthMethodNotAllowed";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	AuthMethod: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'AuthMethodNotAllowed';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  AuthMethod: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 /**
@@ -1603,69 +1603,69 @@ export type AuthMethodNotAllowed = BaseEvent & {
  * - `Result: string`
  */
 export type BlindTransfer = BaseEvent & {
-	Event: "BlindTransfer";
-	Result: "Fail" | "Invalid" | "Not Permitted" | "Success";
-	TransfererChannel: string;
-	TransfererChannelState: number;
-	TransfererChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	TransfererCallerIDNum: number | string;
-	TransfererCallerIDName: string;
-	TransfererConnectedLineNum: number | string;
-	TransfererConnectedLineName: string;
-	TransfererLanguage: string;
-	TransfererAccountCode: number | string;
-	TransfererContext: string;
-	TransfererExten: number | string;
-	TransfererPriority: number | string;
-	TransfererUniqueid: number | string;
-	TransfererLinkedid: number | string;
-	TransfereeChannel: string;
-	TransfereeChannelState: number;
-	TransfereeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	TransfereeCallerIDNum: number | string;
-	TransfereeCallerIDName: string;
-	TransfereeConnectedLineNum: number | string;
-	TransfereeConnectedLineName: string;
-	TransfereeLanguage: string;
-	TransfereeAccountCode: number | string;
-	TransfereeContext: string;
-	TransfereeExten: number | string;
-	TransfereePriority: number;
-	TransfereeUniqueid: number | string;
-	TransfereeLinkedid: number | string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: number;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	IsExternal: "Yes" | "No";
-	Context: string;
-	Extension: string | number;
+  Event: 'BlindTransfer';
+  Result: 'Fail' | 'Invalid' | 'Not Permitted' | 'Success';
+  TransfererChannel: string;
+  TransfererChannelState: number;
+  TransfererChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  TransfererCallerIDNum: number | string;
+  TransfererCallerIDName: string;
+  TransfererConnectedLineNum: number | string;
+  TransfererConnectedLineName: string;
+  TransfererLanguage: string;
+  TransfererAccountCode: number | string;
+  TransfererContext: string;
+  TransfererExten: number | string;
+  TransfererPriority: number | string;
+  TransfererUniqueid: number | string;
+  TransfererLinkedid: number | string;
+  TransfereeChannel: string;
+  TransfereeChannelState: number;
+  TransfereeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  TransfereeCallerIDNum: number | string;
+  TransfereeCallerIDName: string;
+  TransfereeConnectedLineNum: number | string;
+  TransfereeConnectedLineName: string;
+  TransfereeLanguage: string;
+  TransfereeAccountCode: number | string;
+  TransfereeContext: string;
+  TransfereeExten: number | string;
+  TransfereePriority: number;
+  TransfereeUniqueid: number | string;
+  TransfereeLinkedid: number | string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: number;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  IsExternal: 'Yes' | 'No';
+  Context: string;
+  Extension: string | number;
 };
 
 /**
@@ -1683,15 +1683,15 @@ export type BlindTransfer = BaseEvent & {
  * - `BridgeNumChannels: number`
  */
 export type BridgeCreate = BaseEvent & {
-	Event: "BridgeCreate";
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: number;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
+  Event: 'BridgeCreate';
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: number;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
 };
 
 /**
@@ -1709,15 +1709,15 @@ export type BridgeCreate = BaseEvent & {
  * - `BridgeNumChannels: number`
  */
 export type BridgeDestroy = BaseEvent & {
-	Event: "BridgeDestroy";
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: number;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
+  Event: 'BridgeDestroy';
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: number;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
 };
 
 /**
@@ -1736,41 +1736,41 @@ export type BridgeDestroy = BaseEvent & {
  * - `Uniqueid: string`
  */
 export type BridgeEnter = BaseEvent & {
-	Event: "BridgeEnter";
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: number;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	SwapUniqueid?: string;
+  Event: 'BridgeEnter';
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: number;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  SwapUniqueid?: string;
 };
 
 /**
@@ -1786,32 +1786,32 @@ export type BridgeEnter = BaseEvent & {
  * - `Uniqueid: string`
  */
 export type BridgeInfoChannel = BaseEvent & {
-	Event: "BridgeInfoChannel";
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'BridgeInfoChannel';
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 /**
@@ -1825,15 +1825,15 @@ export type BridgeInfoChannel = BaseEvent & {
  * - `ListItems: number`
  */
 export type BridgeInfoComplete = BaseEvent & {
-	Event: "BridgeInfoComplete";
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: number;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
+  Event: 'BridgeInfoComplete';
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: number;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
 };
 
 /**
@@ -1852,40 +1852,40 @@ export type BridgeInfoComplete = BaseEvent & {
  * - `Uniqueid: string`
  */
 export type BridgeLeave = BaseEvent & {
-	Event: "BridgeLeave";
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: number;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	Channel: string;
-	ChannelState: number;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'BridgeLeave';
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: number;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  Channel: string;
+  ChannelState: number;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 /**
@@ -1903,23 +1903,23 @@ export type BridgeLeave = BaseEvent & {
  * - `BridgeNumChannels: number`
  */
 export type BridgeMerge = BaseEvent & {
-	Event: "BridgeMerge";
-	ToBridgeUniqueid: string | number;
-	ToBridgeType: string;
-	ToBridgeTechnology: string;
-	ToBridgeCreator: string;
-	ToBridgeName: string;
-	ToBridgeNumChannels: number;
-	ToBridgeVideoSourceMode: "none" | "talker" | "single";
-	ToBridgeVideoSource?: string;
-	FromBridgeUniqueid: string | number;
-	FromBridgeType: string;
-	FromBridgeTechnology: string;
-	FromBridgeCreator: string;
-	FromBridgeName: string;
-	FromBridgeNumChannels: number;
-	FromBridgeVideoSourceMode: "none" | "talker" | "single";
-	FromBridgeVideoSource?: string;
+  Event: 'BridgeMerge';
+  ToBridgeUniqueid: string | number;
+  ToBridgeType: string;
+  ToBridgeTechnology: string;
+  ToBridgeCreator: string;
+  ToBridgeName: string;
+  ToBridgeNumChannels: number;
+  ToBridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  ToBridgeVideoSource?: string;
+  FromBridgeUniqueid: string | number;
+  FromBridgeType: string;
+  FromBridgeTechnology: string;
+  FromBridgeCreator: string;
+  FromBridgeName: string;
+  FromBridgeNumChannels: number;
+  FromBridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  FromBridgeVideoSource?: string;
 };
 
 /**
@@ -1935,16 +1935,16 @@ export type BridgeMerge = BaseEvent & {
  * - `VideoSourceUniqueid: string`
  */
 export type BridgeVideoSourceUpdate = BaseEvent & {
-	Event: "BridgeVideoSourceUpdate";
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: number;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	BridgePreviousVideoSource: string;
+  Event: 'BridgeVideoSourceUpdate';
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: number;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  BridgePreviousVideoSource: string;
 };
 
 /**
@@ -1973,43 +1973,43 @@ export type BridgeVideoSourceUpdate = BaseEvent & {
  * - `Peer: string`
  */
 export type CEL = BaseEvent & {
-	Event: "CEL";
-	EventName:
-		| "CHAN_START"
-		| "CHAN_END"
-		| "ANSWER"
-		| "HANGUP"
-		| "BRIDGE_ENTER"
-		| "BRIDGE_EXIT"
-		| "APP_START"
-		| "APP_END"
-		| "PARK_START"
-		| "PARK_END"
-		| "BLINDTRANSFER"
-		| "ATTENDEDTRANSFER"
-		| "PICKUP"
-		| "FORWARD"
-		| "LINKEDID_END"
-		| "LOCAL_OPTIMIZE"
-		| "USER_DEFINED";
-	AccountCode: string;
-	CallerIDnum: string | number;
-	CallerIDname: string;
-	CallerIDani: string;
-	CallerIDrdnis: string;
-	CallerIDdnid: string;
-	Exten: string | number;
-	Context: string;
-	Application: string;
-	AppData: string;
-	EventTime: string;
-	AMAFlags: "OMIT" | "BILLING" | "DOCUMENTATION";
-	UniqueID: string | number;
-	LinkedID: number | string;
-	UserField: string;
-	Peer: string;
-	PeerAccount: string;
-	Extra: string;
+  Event: 'CEL';
+  EventName:
+    | 'CHAN_START'
+    | 'CHAN_END'
+    | 'ANSWER'
+    | 'HANGUP'
+    | 'BRIDGE_ENTER'
+    | 'BRIDGE_EXIT'
+    | 'APP_START'
+    | 'APP_END'
+    | 'PARK_START'
+    | 'PARK_END'
+    | 'BLINDTRANSFER'
+    | 'ATTENDEDTRANSFER'
+    | 'PICKUP'
+    | 'FORWARD'
+    | 'LINKEDID_END'
+    | 'LOCAL_OPTIMIZE'
+    | 'USER_DEFINED';
+  AccountCode: string;
+  CallerIDnum: string | number;
+  CallerIDname: string;
+  CallerIDani: string;
+  CallerIDrdnis: string;
+  CallerIDdnid: string;
+  Exten: string | number;
+  Context: string;
+  Application: string;
+  AppData: string;
+  EventTime: string;
+  AMAFlags: 'OMIT' | 'BILLING' | 'DOCUMENTATION';
+  UniqueID: string | number;
+  LinkedID: number | string;
+  UserField: string;
+  Peer: string;
+  PeerAccount: string;
+  Extra: string;
 };
 
 /**
@@ -2069,25 +2069,25 @@ export type CEL = BaseEvent & {
  * - `UserField: string`
  */
 export type Cdr = BaseEvent & {
-	Event: "Cdr";
-	AccountCode: string;
-	Source: string;
-	Destination: string;
-	DestinationContext: string;
-	CallerID: string;
-	Channel: string;
-	DestinationChannel: string;
-	LastApplication: string;
-	LastData: string;
-	StartTime: string;
-	AnswerTime: string;
-	EndTime: string;
-	Duration: string;
-	BillableSeconds: string;
-	Disposition: "NO ANSWER" | "FAILED" | "BUSY" | "ANSWERED" | "CONGESTION";
-	AMAFlags: "OMIT" | "BILLING" | "DOCUMENTATION";
-	UniqueID: string | number;
-	UserField: string;
+  Event: 'Cdr';
+  AccountCode: string;
+  Source: string;
+  Destination: string;
+  DestinationContext: string;
+  CallerID: string;
+  Channel: string;
+  DestinationChannel: string;
+  LastApplication: string;
+  LastData: string;
+  StartTime: string;
+  AnswerTime: string;
+  EndTime: string;
+  Duration: string;
+  BillableSeconds: string;
+  Disposition: 'NO ANSWER' | 'FAILED' | 'BUSY' | 'ANSWERED' | 'CONGESTION';
+  AMAFlags: 'OMIT' | 'BILLING' | 'DOCUMENTATION';
+  UniqueID: string | number;
+  UserField: string;
 };
 
 /**
@@ -2102,20 +2102,20 @@ export type Cdr = BaseEvent & {
  * - `Method: string`
  */
 export type ChallengeResponseFailed = BaseEvent & {
-	Event: "ChallengeResponseFailed";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Challenge: string;
-	Response: string;
-	ExpectedResponse: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'ChallengeResponseFailed';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Challenge: string;
+  Response: string;
+  ExpectedResponse: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 /**
@@ -2130,315 +2130,315 @@ export type ChallengeResponseFailed = BaseEvent & {
  * - `Method: string`
  */
 export type ChallengeSent = BaseEvent & {
-	Event: "ChallengeSent";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Challenge: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'ChallengeSent';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Challenge: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 export type ChanSpyStart = BaseEvent & {
-	Event: "ChanSpyStart";
-	SpyerChannel: string;
-	SpyerChannelState: string;
-	SpyerChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	SpyerCallerIDNum: string | number;
-	SpyerCallerIDName: string;
-	SpyerConnectedLineNum: string;
-	SpyerConnectedLineName: string;
-	SpyerLanguage: string;
-	SpyerAccountCode: string;
-	SpyerContext: string;
-	SpyerExten: string | number;
-	SpyerPriority: number;
-	SpyerUniqueid: string | number;
-	SpyerLinkedid: number | string;
-	SpyeeChannel: string;
-	SpyeeChannelState: string;
-	SpyeeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	SpyeeCallerIDNum: string | number;
-	SpyeeCallerIDName: string;
-	SpyeeConnectedLineNum: string;
-	SpyeeConnectedLineName: string;
-	SpyeeLanguage: string;
-	SpyeeAccountCode: string;
-	SpyeeContext: string;
-	SpyeeExten: string | number;
-	SpyeePriority: number;
-	SpyeeUniqueid: string | number;
-	SpyeeLinkedid: number | string;
+  Event: 'ChanSpyStart';
+  SpyerChannel: string;
+  SpyerChannelState: string;
+  SpyerChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  SpyerCallerIDNum: string | number;
+  SpyerCallerIDName: string;
+  SpyerConnectedLineNum: string;
+  SpyerConnectedLineName: string;
+  SpyerLanguage: string;
+  SpyerAccountCode: string;
+  SpyerContext: string;
+  SpyerExten: string | number;
+  SpyerPriority: number;
+  SpyerUniqueid: string | number;
+  SpyerLinkedid: number | string;
+  SpyeeChannel: string;
+  SpyeeChannelState: string;
+  SpyeeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  SpyeeCallerIDNum: string | number;
+  SpyeeCallerIDName: string;
+  SpyeeConnectedLineNum: string;
+  SpyeeConnectedLineName: string;
+  SpyeeLanguage: string;
+  SpyeeAccountCode: string;
+  SpyeeContext: string;
+  SpyeeExten: string | number;
+  SpyeePriority: number;
+  SpyeeUniqueid: string | number;
+  SpyeeLinkedid: number | string;
 };
 
 export type ChanSpyStop = BaseEvent & {
-	Event: "ChanSpyStop";
-	SpyerChannel: string;
-	SpyerChannelState: string;
-	SpyerChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	SpyerCallerIDNum: string | number;
-	SpyerCallerIDName: string;
-	SpyerConnectedLineNum: string;
-	SpyerConnectedLineName: string;
-	SpyerLanguage: string;
-	SpyerAccountCode: string;
-	SpyerContext: string;
-	SpyerExten: string | number;
-	SpyerPriority: number;
-	SpyerUniqueid: string | number;
-	SpyerLinkedid: number | string;
-	SpyeeChannel: string;
-	SpyeeChannelState: string;
-	SpyeeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	SpyeeCallerIDNum: string | number;
-	SpyeeCallerIDName: string;
-	SpyeeConnectedLineNum: string;
-	SpyeeConnectedLineName: string;
-	SpyeeLanguage: string;
-	SpyeeAccountCode: string;
-	SpyeeContext: string;
-	SpyeeExten: string | number;
-	SpyeePriority: number;
-	SpyeeUniqueid: string | number;
-	SpyeeLinkedid: number | string;
+  Event: 'ChanSpyStop';
+  SpyerChannel: string;
+  SpyerChannelState: string;
+  SpyerChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  SpyerCallerIDNum: string | number;
+  SpyerCallerIDName: string;
+  SpyerConnectedLineNum: string;
+  SpyerConnectedLineName: string;
+  SpyerLanguage: string;
+  SpyerAccountCode: string;
+  SpyerContext: string;
+  SpyerExten: string | number;
+  SpyerPriority: number;
+  SpyerUniqueid: string | number;
+  SpyerLinkedid: number | string;
+  SpyeeChannel: string;
+  SpyeeChannelState: string;
+  SpyeeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  SpyeeCallerIDNum: string | number;
+  SpyeeCallerIDName: string;
+  SpyeeConnectedLineNum: string;
+  SpyeeConnectedLineName: string;
+  SpyeeLanguage: string;
+  SpyeeAccountCode: string;
+  SpyeeContext: string;
+  SpyeeExten: string | number;
+  SpyeePriority: number;
+  SpyeeUniqueid: string | number;
+  SpyeeLinkedid: number | string;
 };
 
 export type ChannelTalkingStart = BaseEvent & {
-	Event: "ChannelTalkingStart";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'ChannelTalkingStart';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type ChannelTalkingStop = BaseEvent & {
-	Event: "ChannelTalkingStop";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Duration: string;
+  Event: 'ChannelTalkingStop';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Duration: string;
 };
 
 export type ConfbridgeEnd = BaseEvent & {
-	Event: "ConfbridgeEnd";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
+  Event: 'ConfbridgeEnd';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
 };
 
 export type ConfbridgeJoin = BaseEvent & {
-	Event: "ConfbridgeJoin";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Admin: "Yes" | "No";
-	Muted: "Yes" | "No";
+  Event: 'ConfbridgeJoin';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Admin: 'Yes' | 'No';
+  Muted: 'Yes' | 'No';
 };
 
 export type ConfbridgeLeave = BaseEvent & {
-	Event: "ConfbridgeLeave";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Admin: "Yes" | "No";
+  Event: 'ConfbridgeLeave';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Admin: 'Yes' | 'No';
 };
 
 export type ConfbridgeList = BaseEvent & {
-	Event: "ConfbridgeList";
-	Conference: string;
-	Admin: "Yes" | "No";
-	MarkedUser: "Yes" | "No";
-	WaitMarked: "Yes" | "No";
-	EndMarked: "Yes" | "No";
-	Waiting: "Yes" | "No";
-	Muted: "Yes" | "No";
-	Talking: "Yes" | "No";
-	AnsweredTime: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'ConfbridgeList';
+  Conference: string;
+  Admin: 'Yes' | 'No';
+  MarkedUser: 'Yes' | 'No';
+  WaitMarked: 'Yes' | 'No';
+  EndMarked: 'Yes' | 'No';
+  Waiting: 'Yes' | 'No';
+  Muted: 'Yes' | 'No';
+  Talking: 'Yes' | 'No';
+  AnsweredTime: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 /**
@@ -2455,191 +2455,191 @@ export type ConfbridgeList = BaseEvent & {
  * - `Muted: "Yes" | "No"`
  */
 export type ConfbridgeListRooms = BaseEvent & {
-	Event: "ConfbridgeListRooms";
-	Conference: string;
-	Parties: string;
-	Marked: string;
-	Locked: "Yes" | "No";
-	Muted: "Yes" | "No";
+  Event: 'ConfbridgeListRooms';
+  Conference: string;
+  Parties: string;
+  Marked: string;
+  Locked: 'Yes' | 'No';
+  Muted: 'Yes' | 'No';
 };
 
 export type ConfbridgeMute = BaseEvent & {
-	Event: "ConfbridgeMute";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Admin: "Yes" | "No";
+  Event: 'ConfbridgeMute';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Admin: 'Yes' | 'No';
 };
 
 export type ConfbridgeRecord = BaseEvent & {
-	Event: "ConfbridgeRecord";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
+  Event: 'ConfbridgeRecord';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
 };
 
 export type ConfbridgeStart = BaseEvent & {
-	Event: "ConfbridgeStart";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
+  Event: 'ConfbridgeStart';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
 };
 
 export type ConfbridgeStopRecord = BaseEvent & {
-	Event: "ConfbridgeStopRecord";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
+  Event: 'ConfbridgeStopRecord';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
 };
 
 export type ConfbridgeTalking = BaseEvent & {
-	Event: "ConfbridgeTalking";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	TalkingStatus: "on" | "off";
-	Admin: "Yes" | "No";
+  Event: 'ConfbridgeTalking';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  TalkingStatus: 'on' | 'off';
+  Admin: 'Yes' | 'No';
 };
 
 export type ConfbridgeUnmute = BaseEvent & {
-	Event: "ConfbridgeUnmute";
-	Conference: string;
-	BridgeUniqueid: string | number;
-	BridgeType: string;
-	BridgeTechnology: string;
-	BridgeCreator: string;
-	BridgeName: string;
-	BridgeNumChannels: string;
-	BridgeVideoSourceMode: "none" | "talker" | "single";
-	BridgeVideoSource?: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Admin: "Yes" | "No";
+  Event: 'ConfbridgeUnmute';
+  Conference: string;
+  BridgeUniqueid: string | number;
+  BridgeType: string;
+  BridgeTechnology: string;
+  BridgeCreator: string;
+  BridgeName: string;
+  BridgeNumChannels: string;
+  BridgeVideoSourceMode: 'none' | 'talker' | 'single';
+  BridgeVideoSource?: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Admin: 'Yes' | 'No';
 };
 
 export type ContactList = BaseEvent & {
-	Event: "ContactList";
-	ObjectType: "contact";
-	ObjectName: string;
-	ViaAddr?: string;
-	ViaPort?: number;
-	QualifyTimeout: number;
-	CallId?: string;
-	RegServer: number;
-	PruneOnBoot: boolean;
-	Path: string;
-	Endpoint: string | number;
-	AuthenticateQualify: boolean;
-	Uri: string;
-	QualifyFrequency: number;
-	UserAgent: string;
-	ExpirationTime: number;
-	OutboundProxy: string;
-	Status: "Reachable" | "Unreachable" | "NonQualified" | "Unknown";
-	RoundtripUsec: number;
+  Event: 'ContactList';
+  ObjectType: 'contact';
+  ObjectName: string;
+  ViaAddr?: string;
+  ViaPort?: number;
+  QualifyTimeout: number;
+  CallId?: string;
+  RegServer: number;
+  PruneOnBoot: boolean;
+  Path: string;
+  Endpoint: string | number;
+  AuthenticateQualify: boolean;
+  Uri: string;
+  QualifyFrequency: number;
+  UserAgent: string;
+  ExpirationTime: number;
+  OutboundProxy: string;
+  Status: 'Reachable' | 'Unreachable' | 'NonQualified' | 'Unknown';
+  RoundtripUsec: number;
 };
 
 /**
@@ -2653,77 +2653,71 @@ export type ContactList = BaseEvent & {
  * - `ListItems: number`
  */
 export type ContactListComplete = BaseEvent & {
-	Event: "ContactListComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'ContactListComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 export type ContactStatus = BaseEvent & {
-	Event: "ContactStatus";
-	URI: string;
-	ContactStatus:
-		| "Unknown"
-		| "Unreachable"
-		| "Reachable"
-		| "Unqualified"
-		| "Removed"
-		| "Updated";
-	AOR: string;
-	EndpointName: string;
-	RoundtripUsec: number;
+  Event: 'ContactStatus';
+  URI: string;
+  ContactStatus: 'Unknown' | 'Unreachable' | 'Reachable' | 'Unqualified' | 'Removed' | 'Updated';
+  AOR: string;
+  EndpointName: string;
+  RoundtripUsec: number;
 };
 
 export type ContactStatusDetail = BaseEvent & {
-	Event: "ContactStatusDetail";
-	AOR: string;
-	URI: string;
-	Status: "Reachable" | "Unreachable" | "NonQualified" | "Unknown";
-	RoundtripUsec: number;
-	EndpointName: string;
-	UserAgent: string;
-	RegExpire: string;
-	ViaAddress?: string;
-	CallID?: string;
-	ID: string;
-	AuthenticateQualify: boolean;
-	OutboundProxy: string;
-	Path: string;
-	QualifyFrequency: number;
-	QualifyTimeout: number;
+  Event: 'ContactStatusDetail';
+  AOR: string;
+  URI: string;
+  Status: 'Reachable' | 'Unreachable' | 'NonQualified' | 'Unknown';
+  RoundtripUsec: number;
+  EndpointName: string;
+  UserAgent: string;
+  RegExpire: string;
+  ViaAddress?: string;
+  CallID?: string;
+  ID: string;
+  AuthenticateQualify: boolean;
+  OutboundProxy: string;
+  Path: string;
+  QualifyFrequency: number;
+  QualifyTimeout: number;
 };
 
 export type CoreShowChannel = BaseEvent & {
-	Event: "CoreShowChannel";
-	ActionID: number;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	BridgeId?: string;
-	Application: string;
-	ApplicationData: string;
-	Duration: string;
+  Event: 'CoreShowChannel';
+  ActionID: number;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  BridgeId?: string;
+  Application: string;
+  ApplicationData: string;
+  Duration: string;
 };
 
 /**
@@ -2737,9 +2731,9 @@ export type CoreShowChannel = BaseEvent & {
  * - `ListItems: number`
  */
 export type CoreShowChannelMapComplete = BaseEvent & {
-	Event: "CoreShowChannelMapComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'CoreShowChannelMapComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 /**
@@ -2754,42 +2748,42 @@ export type CoreShowChannelMapComplete = BaseEvent & {
  * - `ListItems: number`
  */
 export type CoreShowChannelsComplete = BaseEvent & {
-	Event: "CoreShowChannelsComplete";
-	ActionID: number;
-	EventList: string;
-	ListItems: number;
+  Event: 'CoreShowChannelsComplete';
+  ActionID: number;
+  EventList: string;
+  ListItems: number;
 };
 
 export type DAHDIChannel = BaseEvent & {
-	Event: "DAHDIChannel";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DAHDIGroup: string;
-	DAHDISpan: string;
-	DAHDIChannel: string;
+  Event: 'DAHDIChannel';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DAHDIGroup: string;
+  DAHDISpan: string;
+  DAHDIChannel: string;
 };
 
 /**
@@ -2803,72 +2797,72 @@ export type DAHDIChannel = BaseEvent & {
  * - `Status: "enabled" | "disabled"`
  */
 export type DNDState = BaseEvent & {
-	Event: "DNDState";
-	DAHDIChannel: string;
-	Status: "enabled" | "disabled";
+  Event: 'DNDState';
+  DAHDIChannel: string;
+  Status: 'enabled' | 'disabled';
 };
 
 export type DTMFBegin = BaseEvent & {
-	Event: "DTMFBegin";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Digit: string; // Assuming string here because DTMF digits include characters like # and *
-	Direction: "Received" | "Sent";
+  Event: 'DTMFBegin';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Digit: string; // Assuming string here because DTMF digits include characters like # and *
+  Direction: 'Received' | 'Sent';
 };
 
 export type DTMFEnd = BaseEvent & {
-	Event: "DTMFEnd";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Digit: string;
-	DurationMs: string;
-	Direction: "Received" | "Sent";
+  Event: 'DTMFEnd';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Digit: string;
+  DurationMs: string;
+  Direction: 'Received' | 'Sent';
 };
 
 /**
@@ -2881,8 +2875,8 @@ export type DTMFEnd = BaseEvent & {
  * - `Mutex: string`
  */
 export type DeadlockStart = BaseEvent & {
-	Event: "DeadlockStart";
-	Mutex: string;
+  Event: 'DeadlockStart';
+  Mutex: string;
 };
 
 /**
@@ -2896,9 +2890,9 @@ export type DeadlockStart = BaseEvent & {
  * - `State: string`
  */
 export type DeviceStateChange = BaseEvent & {
-	Event: "DeviceStateChange";
-	Device: string;
-	State: string;
+  Event: 'DeviceStateChange';
+  Device: string;
+  State: string;
 };
 
 /**
@@ -2912,287 +2906,287 @@ export type DeviceStateChange = BaseEvent & {
  * - `ListItems: number`
  */
 export type DeviceStateListComplete = BaseEvent & {
-	Event: "DeviceStateListComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'DeviceStateListComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 export type DialBegin = BaseEvent & {
-	Event: "DialBegin";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: string;
-	DestChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	DialString: string;
+  Event: 'DialBegin';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: string;
+  DestChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  DialString: string;
 };
 
 export type DialEnd = BaseEvent & {
-	Event: "DialEnd";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: string;
-	DestChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	DialStatus:
-		| "ABORT"
-		| "ANSWER"
-		| "BUSY"
-		| "CANCEL"
-		| "CHANUNAVAIL"
-		| "CONGESTION"
-		| "CONTINUE"
-		| "GOTO"
-		| "NOANSWER";
-	Forward?: string;
+  Event: 'DialEnd';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: string;
+  DestChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  DialStatus:
+    | 'ABORT'
+    | 'ANSWER'
+    | 'BUSY'
+    | 'CANCEL'
+    | 'CHANUNAVAIL'
+    | 'CONGESTION'
+    | 'CONTINUE'
+    | 'GOTO'
+    | 'NOANSWER';
+  Forward?: string;
 };
 
 export type DialState = BaseEvent & {
-	Event: "DialState";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	DestChannel: string;
-	DestChannelState: string;
-	DestChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	DestCallerIDNum: string | number;
-	DestCallerIDName: string;
-	DestConnectedLineNum: number | string;
-	DestConnectedLineName: string;
-	DestLanguage: string;
-	DestAccountCode: number | string;
-	DestContext: string;
-	DestExten: string | number;
-	DestPriority: number;
-	DestUniqueid: string | number;
-	DestLinkedid: number | string;
-	DialStatus: "RINGING" | "PROCEEDING" | "PROGRESS";
-	Forward?: string;
+  Event: 'DialState';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  DestChannel: string;
+  DestChannelState: string;
+  DestChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  DestCallerIDNum: string | number;
+  DestCallerIDName: string;
+  DestConnectedLineNum: number | string;
+  DestConnectedLineName: string;
+  DestLanguage: string;
+  DestAccountCode: number | string;
+  DestContext: string;
+  DestExten: string | number;
+  DestPriority: number;
+  DestUniqueid: string | number;
+  DestLinkedid: number | string;
+  DialStatus: 'RINGING' | 'PROCEEDING' | 'PROGRESS';
+  Forward?: string;
 };
 
 export type EndpointDetail = BaseEvent & {
-	Event: "EndpointDetail";
-	ObjectType: "endpoint";
-	ObjectName: string;
-	Context: string;
-	Disallow: string;
-	Allow: string;
-	DtmfMode: string;
-	RtpIpv6: string;
-	RtpSymmetric: string;
-	IceSupport: string;
-	UsePtime: string;
-	ForceRport: string;
-	RewriteContact: string;
-	Transport: string;
-	OutboundProxy: string;
-	MohSuggest: string;
-	"100rel": string;
-	Timers: string;
-	TimersMinSe: string;
-	TimersSessExpires: string;
-	Auth: string;
-	OutboundAuth: string;
-	Aors: string;
-	MediaAddress: string;
-	IdentifyBy: string;
-	DirectMedia: string;
-	DirectMediaMethod: string;
-	TrustConnectedLine: string;
-	SendConnectedLine: string;
-	ConnectedLineMethod: string;
-	DirectMediaGlareMitigation: string;
-	DisableDirectMediaOnNat: string;
-	Callerid: string;
-	CalleridPrivacy: string;
-	CalleridTag: string;
-	TrustIdInbound: string;
-	TrustIdOutbound: string;
-	SendPai: string;
-	SendRpid: string;
-	SendDiversion: string;
-	Mailboxes: string;
-	AggregateMwi: string;
-	MediaEncryption: string;
-	MediaEncryptionOptimistic: string;
-	UseAvpf: string;
-	ForceAvp: string;
-	MediaUseReceivedTransport: string;
-	OneTouchRecording: string;
-	InbandProgress: string;
-	CallGroup: string;
-	PickupGroup: string;
-	NamedCallGroup: string;
-	NamedPickupGroup: string;
-	DeviceStateBusyAt: string;
-	T38Udptl: string;
-	T38UdptlEc: string;
-	T38UdptlMaxdatagram: string;
-	FaxDetect: string;
-	T38UdptlNat: string;
-	T38UdptlIpv6: string;
-	T38BindUdptlToMediaAddress: string;
-	ToneZone: string;
-	Language: string;
-	RecordOnFeature: string;
-	RecordOffFeature: string;
-	AllowTransfer: string;
-	UserEqPhone: string;
-	MohPassthrough: string;
-	SdpOwner: string;
-	SdpSession: string;
-	TosAudio: string;
-	TosVideo: string;
-	CosAudio: string;
-	CosVideo: string;
-	AllowSubscribe: string;
-	SubMinExpiry: string;
-	FromUser: string;
-	FromDomain: string;
-	MwiFromUser: string;
-	RtpEngine: string;
-	DtlsVerify: string;
-	DtlsRekey: string;
-	DtlsCertFile: string;
-	DtlsPrivateKey: string;
-	DtlsCipher: string;
-	DtlsCaFile: string;
-	DtlsCaPath: string;
-	DtlsSetup: string;
-	SrtpTag32: string;
-	RedirectMethod: string;
-	SetVar: string;
-	MessageContext: string;
-	Accountcode: string;
-	PreferredCodecOnly: string;
-	DeviceState: string;
-	ActiveChannels: string;
-	SubscribeContext: string;
-	Allowoverlap: string;
-	OverlapContext: string;
+  Event: 'EndpointDetail';
+  ObjectType: 'endpoint';
+  ObjectName: string;
+  Context: string;
+  Disallow: string;
+  Allow: string;
+  DtmfMode: string;
+  RtpIpv6: string;
+  RtpSymmetric: string;
+  IceSupport: string;
+  UsePtime: string;
+  ForceRport: string;
+  RewriteContact: string;
+  Transport: string;
+  OutboundProxy: string;
+  MohSuggest: string;
+  '100rel': string;
+  Timers: string;
+  TimersMinSe: string;
+  TimersSessExpires: string;
+  Auth: string;
+  OutboundAuth: string;
+  Aors: string;
+  MediaAddress: string;
+  IdentifyBy: string;
+  DirectMedia: string;
+  DirectMediaMethod: string;
+  TrustConnectedLine: string;
+  SendConnectedLine: string;
+  ConnectedLineMethod: string;
+  DirectMediaGlareMitigation: string;
+  DisableDirectMediaOnNat: string;
+  Callerid: string;
+  CalleridPrivacy: string;
+  CalleridTag: string;
+  TrustIdInbound: string;
+  TrustIdOutbound: string;
+  SendPai: string;
+  SendRpid: string;
+  SendDiversion: string;
+  Mailboxes: string;
+  AggregateMwi: string;
+  MediaEncryption: string;
+  MediaEncryptionOptimistic: string;
+  UseAvpf: string;
+  ForceAvp: string;
+  MediaUseReceivedTransport: string;
+  OneTouchRecording: string;
+  InbandProgress: string;
+  CallGroup: string;
+  PickupGroup: string;
+  NamedCallGroup: string;
+  NamedPickupGroup: string;
+  DeviceStateBusyAt: string;
+  T38Udptl: string;
+  T38UdptlEc: string;
+  T38UdptlMaxdatagram: string;
+  FaxDetect: string;
+  T38UdptlNat: string;
+  T38UdptlIpv6: string;
+  T38BindUdptlToMediaAddress: string;
+  ToneZone: string;
+  Language: string;
+  RecordOnFeature: string;
+  RecordOffFeature: string;
+  AllowTransfer: string;
+  UserEqPhone: string;
+  MohPassthrough: string;
+  SdpOwner: string;
+  SdpSession: string;
+  TosAudio: string;
+  TosVideo: string;
+  CosAudio: string;
+  CosVideo: string;
+  AllowSubscribe: string;
+  SubMinExpiry: string;
+  FromUser: string;
+  FromDomain: string;
+  MwiFromUser: string;
+  RtpEngine: string;
+  DtlsVerify: string;
+  DtlsRekey: string;
+  DtlsCertFile: string;
+  DtlsPrivateKey: string;
+  DtlsCipher: string;
+  DtlsCaFile: string;
+  DtlsCaPath: string;
+  DtlsSetup: string;
+  SrtpTag32: string;
+  RedirectMethod: string;
+  SetVar: string;
+  MessageContext: string;
+  Accountcode: string;
+  PreferredCodecOnly: string;
+  DeviceState: string;
+  ActiveChannels: string;
+  SubscribeContext: string;
+  Allowoverlap: string;
+  OverlapContext: string;
 };
 
 /**
@@ -3206,9 +3200,9 @@ export type EndpointDetail = BaseEvent & {
  * - `ListItems: number`
  */
 export type EndpointDetailComplete = BaseEvent & {
-	Event: "EndpointDetailComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'EndpointDetailComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 /**
@@ -3228,15 +3222,15 @@ export type EndpointDetailComplete = BaseEvent & {
  * - `ActiveChannels: string`
  */
 export type EndpointList = BaseEvent & {
-	Event: "EndpointList";
-	ObjectType: "endpoint";
-	ObjectName: string;
-	Transport: string;
-	Aor: string;
-	Auths: string;
-	OutboundAuths: string;
-	DeviceState: string;
-	ActiveChannels: string;
+  Event: 'EndpointList';
+  ObjectType: 'endpoint';
+  ObjectName: string;
+  Transport: string;
+  Aor: string;
+  Auths: string;
+  OutboundAuths: string;
+  DeviceState: string;
+  ActiveChannels: string;
 };
 
 /**
@@ -3250,9 +3244,9 @@ export type EndpointList = BaseEvent & {
  * - `ListItems: number`
  */
 export type EndpointListComplete = BaseEvent & {
-	Event: "EndpointListComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'EndpointListComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 /**
@@ -3266,165 +3260,165 @@ export type EndpointListComplete = BaseEvent & {
  * - `ListItems: number`
  */
 export type ExtensionStateListComplete = BaseEvent & {
-	Event: "ExtensionStateListComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'ExtensionStateListComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 export type ExtensionStatus = BaseEvent & {
-	Event: "ExtensionStatus";
-	Exten: string | number;
-	Context: string;
-	Hint: string;
-	Status: -2 | -1 | 0 | 1 | 2 | 4 | 8 | 9 | 16 | 17;
-	StatusText:
-		| "Idle"
-		| "InUse"
-		| "Busy"
-		| "Unavailable"
-		| "Ringing"
-		| "InUse&Ringing"
-		| "Hold"
-		| "InUse&Hold"
-		| "Unknown";
+  Event: 'ExtensionStatus';
+  Exten: string | number;
+  Context: string;
+  Hint: string;
+  Status: -2 | -1 | 0 | 1 | 2 | 4 | 8 | 9 | 16 | 17;
+  StatusText:
+    | 'Idle'
+    | 'InUse'
+    | 'Busy'
+    | 'Unavailable'
+    | 'Ringing'
+    | 'InUse&Ringing'
+    | 'Hold'
+    | 'InUse&Hold'
+    | 'Unknown';
 };
 
 export type FAXSession = BaseEvent & {
-	Event: "FAXSession";
-	ActionID?: number;
-	SessionNumber: string;
-	Operation: "gateway" | "V.21" | "send" | "receive" | "none";
-	State:
-		| "Uninitialized"
-		| "Initialized"
-		| "Open"
-		| "Active"
-		| "Complete"
-		| "Reserved"
-		| "Inactive"
-		| "Unknown";
-	ErrorCorrectionMode?: "yes" | "no";
-	DataRate?: string;
-	ImageResolution?: string;
-	PageNumber?: string;
-	FileName?: string;
-	PagesTransmitted?: string;
-	PagesReceived?: string;
-	TotalBadLines?: string;
+  Event: 'FAXSession';
+  ActionID?: number;
+  SessionNumber: string;
+  Operation: 'gateway' | 'V.21' | 'send' | 'receive' | 'none';
+  State:
+    | 'Uninitialized'
+    | 'Initialized'
+    | 'Open'
+    | 'Active'
+    | 'Complete'
+    | 'Reserved'
+    | 'Inactive'
+    | 'Unknown';
+  ErrorCorrectionMode?: 'yes' | 'no';
+  DataRate?: string;
+  ImageResolution?: string;
+  PageNumber?: string;
+  FileName?: string;
+  PagesTransmitted?: string;
+  PagesReceived?: string;
+  TotalBadLines?: string;
 };
 
 export type FAXSessionsComplete = BaseEvent & {
-	Event: "FAXSessionsComplete";
-	ActionID?: number;
-	Total: string;
+  Event: 'FAXSessionsComplete';
+  ActionID?: number;
+  Total: string;
 };
 
 export type FAXSessionsEntry = BaseEvent & {
-	Event: "FAXSessionsEntry";
-	ActionID?: number;
-	Channel: string;
-	Technology: string;
-	SessionNumber: string;
-	SessionType: "G.711" | "T.38";
-	Operation: "gateway" | "V.21" | "send" | "receive" | "none";
-	State:
-		| "Uninitialized"
-		| "Initialized"
-		| "Open"
-		| "Active"
-		| "Complete"
-		| "Reserved"
-		| "Inactive"
-		| "Unknown";
-	Files: string;
+  Event: 'FAXSessionsEntry';
+  ActionID?: number;
+  Channel: string;
+  Technology: string;
+  SessionNumber: string;
+  SessionType: 'G.711' | 'T.38';
+  Operation: 'gateway' | 'V.21' | 'send' | 'receive' | 'none';
+  State:
+    | 'Uninitialized'
+    | 'Initialized'
+    | 'Open'
+    | 'Active'
+    | 'Complete'
+    | 'Reserved'
+    | 'Inactive'
+    | 'Unknown';
+  Files: string;
 };
 
 export type FAXStats = BaseEvent & {
-	Event: "FAXStats";
-	ActionID?: number;
-	CurrentSessions: string;
-	ReservedSessions: string;
-	TransmitAttempts: string;
-	ReceiveAttempts: string;
-	CompletedFAXes: string;
-	FailedFAXes: string;
+  Event: 'FAXStats';
+  ActionID?: number;
+  CurrentSessions: string;
+  ReservedSessions: string;
+  TransmitAttempts: string;
+  ReceiveAttempts: string;
+  CompletedFAXes: string;
+  FailedFAXes: string;
 };
 
 export type FAXStatus = BaseEvent & {
-	Event: "FAXStatus";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Operation: "gateway" | "receive" | "send";
-	Status: string;
-	LocalStationID: string;
-	FileName: string;
+  Event: 'FAXStatus';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Operation: 'gateway' | 'receive' | 'send';
+  Status: string;
+  LocalStationID: string;
+  FileName: string;
 };
 
 export type FailedACL = BaseEvent & {
-	Event: "FailedACL";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Module?: string;
-	ACLName?: string;
-	SessionTV?: string;
+  Event: 'FailedACL';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Module?: string;
+  ACLName?: string;
+  SessionTV?: string;
 };
 
 export type Flash = BaseEvent & {
-	Event: "Flash";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'Flash';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 /**
@@ -3439,191 +3433,191 @@ export type Flash = BaseEvent & {
  * - `LastReload: string`
  */
 export type FullyBooted = BaseEvent & {
-	Event: "FullyBooted";
-	Status: string;
-	Uptime: string;
-	LastReload: string;
+  Event: 'FullyBooted';
+  Status: string;
+  Uptime: string;
+  LastReload: string;
 };
 
 export type Hangup = BaseEvent & {
-	Event: "Hangup";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Cause: string;
-	"Cause-txt": string;
+  Event: 'Hangup';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Cause: string;
+  'Cause-txt': string;
 };
 
 export type HangupHandlerPop = BaseEvent & {
-	Event: "HangupHandlerPop";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Handler: string;
+  Event: 'HangupHandlerPop';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Handler: string;
 };
 
 export type HangupHandlerPush = BaseEvent & {
-	Event: "HangupHandlerPush";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Handler: string;
+  Event: 'HangupHandlerPush';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Handler: string;
 };
 
 export type HangupHandlerRun = BaseEvent & {
-	Event: "HangupHandlerRun";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Handler: string;
+  Event: 'HangupHandlerRun';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Handler: string;
 };
 
 export type HangupRequest = BaseEvent & {
-	Event: "HangupRequest";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Cause: string;
+  Event: 'HangupRequest';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Cause: string;
 };
 
 export type Hold = BaseEvent & {
-	Event: "Hold";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	MusicClass: string;
+  Event: 'Hold';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  MusicClass: string;
 };
 
 /**
@@ -3642,60 +3636,60 @@ export type Hold = BaseEvent & {
  * - `EndpointName: string`
  */
 export type IdentifyDetail = BaseEvent & {
-	Event: "IdentifyDetail";
-	ObjectType: "identify";
-	ObjectName: string;
-	Endpoint: string | number;
-	SrvLookups: string;
-	Match: string;
-	MatchHeader: string;
-	EndpointName: string;
+  Event: 'IdentifyDetail';
+  ObjectType: 'identify';
+  ObjectName: string;
+  Endpoint: string | number;
+  SrvLookups: string;
+  Match: string;
+  MatchHeader: string;
+  EndpointName: string;
 };
 
 export type InvalidAccountID = BaseEvent & {
-	Event: "InvalidAccountID";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'InvalidAccountID';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 export type InvalidPassword = BaseEvent & {
-	Event: "InvalidPassword";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Module?: string;
-	SessionTV?: string;
-	Challenge?: string;
-	ReceivedChallenge?: string;
-	ReceivedHash?: string;
+  Event: 'InvalidPassword';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Module?: string;
+  SessionTV?: string;
+  Challenge?: string;
+  ReceivedChallenge?: string;
+  ReceivedHash?: string;
 };
 
 export type InvalidTransport = BaseEvent & {
-	Event: "InvalidTransport";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	AttemptedTransport: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'InvalidTransport';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  AttemptedTransport: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 /**
@@ -3709,294 +3703,294 @@ export type InvalidTransport = BaseEvent & {
  * - `Status: "Failure" | "Success" | "Decline"`
  */
 export type Load = BaseEvent & {
-	Event: "Load";
-	Module: string;
-	Status: "Failure" | "Success" | "Decline";
+  Event: 'Load';
+  Module: string;
+  Status: 'Failure' | 'Success' | 'Decline';
 };
 
 export type LoadAverageLimit = BaseEvent & {
-	Event: "LoadAverageLimit";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'LoadAverageLimit';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 export type LocalBridge = BaseEvent & {
-	Event: "LocalBridge";
-	LocalOneChannel: string;
-	LocalOneChannelState: string;
-	LocalOneChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	LocalOneCallerIDNum: string | number;
-	LocalOneCallerIDName: string;
-	LocalOneConnectedLineNum: string;
-	LocalOneConnectedLineName: string;
-	LocalOneLanguage: string;
-	LocalOneAccountCode: string;
-	LocalOneContext: string;
-	LocalOneExten: string | number;
-	LocalOnePriority: number;
-	LocalOneUniqueid: string | number;
-	LocalOneLinkedid: number | string;
-	LocalTwoChannel: string;
-	LocalTwoChannelState: string;
-	LocalTwoChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	LocalTwoCallerIDNum: string | number;
-	LocalTwoCallerIDName: string;
-	LocalTwoConnectedLineNum: string;
-	LocalTwoConnectedLineName: string;
-	LocalTwoLanguage: string;
-	LocalTwoAccountCode: string;
-	LocalTwoContext: string;
-	LocalTwoExten: string | number;
-	LocalTwoPriority: number;
-	LocalTwoUniqueid: string | number;
-	LocalTwoLinkedid: number | string;
-	Context: string;
-	Exten: string | number;
-	LocalOptimization: "Yes" | "No";
+  Event: 'LocalBridge';
+  LocalOneChannel: string;
+  LocalOneChannelState: string;
+  LocalOneChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  LocalOneCallerIDNum: string | number;
+  LocalOneCallerIDName: string;
+  LocalOneConnectedLineNum: string;
+  LocalOneConnectedLineName: string;
+  LocalOneLanguage: string;
+  LocalOneAccountCode: string;
+  LocalOneContext: string;
+  LocalOneExten: string | number;
+  LocalOnePriority: number;
+  LocalOneUniqueid: string | number;
+  LocalOneLinkedid: number | string;
+  LocalTwoChannel: string;
+  LocalTwoChannelState: string;
+  LocalTwoChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  LocalTwoCallerIDNum: string | number;
+  LocalTwoCallerIDName: string;
+  LocalTwoConnectedLineNum: string;
+  LocalTwoConnectedLineName: string;
+  LocalTwoLanguage: string;
+  LocalTwoAccountCode: string;
+  LocalTwoContext: string;
+  LocalTwoExten: string | number;
+  LocalTwoPriority: number;
+  LocalTwoUniqueid: string | number;
+  LocalTwoLinkedid: number | string;
+  Context: string;
+  Exten: string | number;
+  LocalOptimization: 'Yes' | 'No';
 };
 
 export type LocalOptimizationBegin = BaseEvent & {
-	Event: "LocalOptimizationBegin";
-	LocalOneChannel: string;
-	LocalOneChannelState: string;
-	LocalOneChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	LocalOneCallerIDNum: string | number;
-	LocalOneCallerIDName: string;
-	LocalOneConnectedLineNum: string;
-	LocalOneConnectedLineName: string;
-	LocalOneLanguage: string;
-	LocalOneAccountCode: string;
-	LocalOneContext: string;
-	LocalOneExten: string | number;
-	LocalOnePriority: number;
-	LocalOneUniqueid: string | number;
-	LocalOneLinkedid: number | string;
-	LocalTwoChannel: string;
-	LocalTwoChannelState: string;
-	LocalTwoChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	LocalTwoCallerIDNum: string | number;
-	LocalTwoCallerIDName: string;
-	LocalTwoConnectedLineNum: string;
-	LocalTwoConnectedLineName: string;
-	LocalTwoLanguage: string;
-	LocalTwoAccountCode: string;
-	LocalTwoContext: string;
-	LocalTwoExten: string | number;
-	LocalTwoPriority: number;
-	LocalTwoUniqueid: string | number;
-	LocalTwoLinkedid: number | string;
-	SourceChannel: string;
-	SourceChannelState: string;
-	SourceChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	SourceCallerIDNum: string | number;
-	SourceCallerIDName: string;
-	SourceConnectedLineNum: string;
-	SourceConnectedLineName: string;
-	SourceLanguage: string;
-	SourceAccountCode: string;
-	SourceContext: string;
-	SourceExten: string | number;
-	SourcePriority: number;
-	SourceUniqueid: string | number;
-	SourceLinkedid: number | string;
-	DestUniqueId: string | number;
-	Id: string;
+  Event: 'LocalOptimizationBegin';
+  LocalOneChannel: string;
+  LocalOneChannelState: string;
+  LocalOneChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  LocalOneCallerIDNum: string | number;
+  LocalOneCallerIDName: string;
+  LocalOneConnectedLineNum: string;
+  LocalOneConnectedLineName: string;
+  LocalOneLanguage: string;
+  LocalOneAccountCode: string;
+  LocalOneContext: string;
+  LocalOneExten: string | number;
+  LocalOnePriority: number;
+  LocalOneUniqueid: string | number;
+  LocalOneLinkedid: number | string;
+  LocalTwoChannel: string;
+  LocalTwoChannelState: string;
+  LocalTwoChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  LocalTwoCallerIDNum: string | number;
+  LocalTwoCallerIDName: string;
+  LocalTwoConnectedLineNum: string;
+  LocalTwoConnectedLineName: string;
+  LocalTwoLanguage: string;
+  LocalTwoAccountCode: string;
+  LocalTwoContext: string;
+  LocalTwoExten: string | number;
+  LocalTwoPriority: number;
+  LocalTwoUniqueid: string | number;
+  LocalTwoLinkedid: number | string;
+  SourceChannel: string;
+  SourceChannelState: string;
+  SourceChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  SourceCallerIDNum: string | number;
+  SourceCallerIDName: string;
+  SourceConnectedLineNum: string;
+  SourceConnectedLineName: string;
+  SourceLanguage: string;
+  SourceAccountCode: string;
+  SourceContext: string;
+  SourceExten: string | number;
+  SourcePriority: number;
+  SourceUniqueid: string | number;
+  SourceLinkedid: number | string;
+  DestUniqueId: string | number;
+  Id: string;
 };
 
 export type LocalOptimizationEnd = BaseEvent & {
-	Event: "LocalOptimizationEnd";
-	LocalOneChannel: string;
-	LocalOneChannelState: string;
-	LocalOneChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	LocalOneCallerIDNum: string | number;
-	LocalOneCallerIDName: string;
-	LocalOneConnectedLineNum: string;
-	LocalOneConnectedLineName: string;
-	LocalOneLanguage: string;
-	LocalOneAccountCode: string;
-	LocalOneContext: string;
-	LocalOneExten: string | number;
-	LocalOnePriority: number;
-	LocalOneUniqueid: string | number;
-	LocalOneLinkedid: number | string;
-	LocalTwoChannel: string;
-	LocalTwoChannelState: string;
-	LocalTwoChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	LocalTwoCallerIDNum: string | number;
-	LocalTwoCallerIDName: string;
-	LocalTwoConnectedLineNum: string;
-	LocalTwoConnectedLineName: string;
-	LocalTwoLanguage: string;
-	LocalTwoAccountCode: string;
-	LocalTwoContext: string;
-	LocalTwoExten: string | number;
-	LocalTwoPriority: number;
-	LocalTwoUniqueid: string | number;
-	LocalTwoLinkedid: number | string;
-	Success: string;
-	Id: string;
+  Event: 'LocalOptimizationEnd';
+  LocalOneChannel: string;
+  LocalOneChannelState: string;
+  LocalOneChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  LocalOneCallerIDNum: string | number;
+  LocalOneCallerIDName: string;
+  LocalOneConnectedLineNum: string;
+  LocalOneConnectedLineName: string;
+  LocalOneLanguage: string;
+  LocalOneAccountCode: string;
+  LocalOneContext: string;
+  LocalOneExten: string | number;
+  LocalOnePriority: number;
+  LocalOneUniqueid: string | number;
+  LocalOneLinkedid: number | string;
+  LocalTwoChannel: string;
+  LocalTwoChannelState: string;
+  LocalTwoChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  LocalTwoCallerIDNum: string | number;
+  LocalTwoCallerIDName: string;
+  LocalTwoConnectedLineNum: string;
+  LocalTwoConnectedLineName: string;
+  LocalTwoLanguage: string;
+  LocalTwoAccountCode: string;
+  LocalTwoContext: string;
+  LocalTwoExten: string | number;
+  LocalTwoPriority: number;
+  LocalTwoUniqueid: string | number;
+  LocalTwoLinkedid: number | string;
+  Success: string;
+  Id: string;
 };
 
 export type LogChannel = BaseEvent & {
-	Event: "LogChannel";
-	Channel: string;
-	Enabled?: string;
-	Reason?: string;
+  Event: 'LogChannel';
+  Channel: string;
+  Enabled?: string;
+  Reason?: string;
 };
 
 export type MCID = BaseEvent & {
-	Event: "MCID";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	MCallerIDNumValid: string;
-	MCallerIDNum: string | number;
-	MCallerIDton: string;
-	MCallerIDNumPlan: string;
-	MCallerIDNumPres: string;
-	MCallerIDNameValid: string;
-	MCallerIDName: string;
-	MCallerIDNameCharSet: string;
-	MCallerIDNamePres: string;
-	MCallerIDSubaddr: string;
-	MCallerIDSubaddrType: string;
-	MCallerIDSubaddrOdd: string;
-	MCallerIDPres: string;
-	MConnectedIDNumValid: string;
-	MConnectedIDNum: string;
-	MConnectedIDton: string;
-	MConnectedIDNumPlan: string;
-	MConnectedIDNumPres: string;
-	MConnectedIDNameValid: string;
-	MConnectedIDName: string;
-	MConnectedIDNameCharSet: string;
-	MConnectedIDNamePres: string;
-	MConnectedIDSubaddr: string;
-	MConnectedIDSubaddrType: string;
-	MConnectedIDSubaddrOdd: string;
-	MConnectedIDPres: string;
+  Event: 'MCID';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  MCallerIDNumValid: string;
+  MCallerIDNum: string | number;
+  MCallerIDton: string;
+  MCallerIDNumPlan: string;
+  MCallerIDNumPres: string;
+  MCallerIDNameValid: string;
+  MCallerIDName: string;
+  MCallerIDNameCharSet: string;
+  MCallerIDNamePres: string;
+  MCallerIDSubaddr: string;
+  MCallerIDSubaddrType: string;
+  MCallerIDSubaddrOdd: string;
+  MCallerIDPres: string;
+  MConnectedIDNumValid: string;
+  MConnectedIDNum: string;
+  MConnectedIDton: string;
+  MConnectedIDNumPlan: string;
+  MConnectedIDNumPres: string;
+  MConnectedIDNameValid: string;
+  MConnectedIDName: string;
+  MConnectedIDNameCharSet: string;
+  MConnectedIDNamePres: string;
+  MConnectedIDSubaddr: string;
+  MConnectedIDSubaddrType: string;
+  MConnectedIDSubaddrOdd: string;
+  MConnectedIDPres: string;
 };
 
 export type MWIGet = BaseEvent & {
-	Event: "MWIGet";
-	ActionID?: number;
-	Mailbox: string;
-	OldMessages: string;
-	NewMessages: string;
+  Event: 'MWIGet';
+  ActionID?: number;
+  Mailbox: string;
+  OldMessages: string;
+  NewMessages: string;
 };
 
 export type MWIGetComplete = BaseEvent & {
-	Event: "MWIGetComplete";
-	ActionID?: number;
-	EventList: string;
-	ListItems: number;
+  Event: 'MWIGetComplete';
+  ActionID?: number;
+  EventList: string;
+  ListItems: number;
 };
 
 /**
@@ -4009,71 +4003,71 @@ export type MWIGetComplete = BaseEvent & {
  * - `Meetme: string`
  */
 export type MeetmeEnd = BaseEvent & {
-	Event: "MeetmeEnd";
-	Meetme: string;
+  Event: 'MeetmeEnd';
+  Meetme: string;
 };
 
 export type MeetmeJoin = BaseEvent & {
-	Event: "MeetmeJoin";
-	Meetme: string;
-	User: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'MeetmeJoin';
+  Meetme: string;
+  User: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type MeetmeLeave = BaseEvent & {
-	Event: "MeetmeLeave";
-	Meetme: string;
-	User: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Duration: string;
+  Event: 'MeetmeLeave';
+  Meetme: string;
+  User: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Duration: string;
 };
 
 /**
@@ -4097,19 +4091,19 @@ export type MeetmeLeave = BaseEvent & {
  * - `Talking: string`
  */
 export type MeetmeList = BaseEvent & {
-	Event: "MeetmeList";
-	Conference: string;
-	UserNumber: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Channel: string;
-	Admin: string;
-	Role: "Listen only" | "Talk only" | "Talk and listen";
-	MarkedUser: string;
-	Muted: string;
-	Talking: string;
+  Event: 'MeetmeList';
+  Conference: string;
+  UserNumber: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Channel: string;
+  Admin: string;
+  Role: 'Listen only' | 'Talk only' | 'Talk and listen';
+  MarkedUser: string;
+  Muted: string;
+  Talking: string;
 };
 
 /**
@@ -4127,802 +4121,802 @@ export type MeetmeList = BaseEvent & {
  * - `Locked: string`
  */
 export type MeetmeListRooms = BaseEvent & {
-	Event: "MeetmeListRooms";
-	Conference: string;
-	Parties: string;
-	Marked: string;
-	Activity: string;
-	Creation: "Dynamic" | "Static";
-	Locked: string;
+  Event: 'MeetmeListRooms';
+  Conference: string;
+  Parties: string;
+  Marked: string;
+  Activity: string;
+  Creation: 'Dynamic' | 'Static';
+  Locked: string;
 };
 
 export type MeetmeMute = BaseEvent & {
-	Event: "MeetmeMute";
-	Meetme: string;
-	User: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Duration: string;
-	Status: "on" | "off";
+  Event: 'MeetmeMute';
+  Meetme: string;
+  User: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Duration: string;
+  Status: 'on' | 'off';
 };
 
 export type MeetmeTalkRequest = BaseEvent & {
-	Event: "MeetmeTalkRequest";
-	Meetme: string;
-	User: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Duration: string;
-	Status: "on" | "off";
+  Event: 'MeetmeTalkRequest';
+  Meetme: string;
+  User: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Duration: string;
+  Status: 'on' | 'off';
 };
 
 export type MeetmeTalking = BaseEvent & {
-	Event: "MeetmeTalking";
-	Meetme: string;
-	User: string;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Duration: string;
-	Status: "on" | "off";
+  Event: 'MeetmeTalking';
+  Meetme: string;
+  User: string;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Duration: string;
+  Status: 'on' | 'off';
 };
 
 export type MemoryLimit = BaseEvent & {
-	Event: "MemoryLimit";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'MemoryLimit';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 export type MessageWaiting = BaseEvent & {
-	Event: "MessageWaiting";
-	Channel?: string;
-	ChannelState?: string;
-	ChannelStateDesc?:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum?: string;
-	CallerIDName?: string;
-	ConnectedLineNum?: string;
-	ConnectedLineName?: string;
-	Language?: string;
-	AccountCode?: string;
-	Context?: string;
-	Exten?: string;
-	Priority?: string;
-	Uniqueid?: string;
-	Linkedid?: string;
-	Mailbox: string;
-	Waiting: string;
-	New: string;
-	Old: string;
+  Event: 'MessageWaiting';
+  Channel?: string;
+  ChannelState?: string;
+  ChannelStateDesc?:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum?: string;
+  CallerIDName?: string;
+  ConnectedLineNum?: string;
+  ConnectedLineName?: string;
+  Language?: string;
+  AccountCode?: string;
+  Context?: string;
+  Exten?: string;
+  Priority?: string;
+  Uniqueid?: string;
+  Linkedid?: string;
+  Mailbox: string;
+  Waiting: string;
+  New: string;
+  Old: string;
 };
 
 export type MiniVoiceMail = BaseEvent & {
-	Event: "MiniVoiceMail";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Action: "SentNotification";
-	Mailbox: string;
-	Counter: string;
+  Event: 'MiniVoiceMail';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Action: 'SentNotification';
+  Mailbox: string;
+  Counter: string;
 };
 
 export type MixMonitorMute = BaseEvent & {
-	Event: "MixMonitorMute";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Direction: "read" | "write" | "both";
-	State: 1 | 0; // 1 when muted, 0 when unmuted
+  Event: 'MixMonitorMute';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Direction: 'read' | 'write' | 'both';
+  State: 1 | 0; // 1 when muted, 0 when unmuted
 };
 
 export type MixMonitorStart = BaseEvent & {
-	Event: "MixMonitorStart";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'MixMonitorStart';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type MixMonitorStop = BaseEvent & {
-	Event: "MixMonitorStop";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'MixMonitorStop';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type MonitorStart = BaseEvent & {
-	Event: "MonitorStart";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'MonitorStart';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type MonitorStop = BaseEvent & {
-	Event: "MonitorStop";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'MonitorStop';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type MusicOnHoldStart = BaseEvent & {
-	Event: "MusicOnHoldStart";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Class: string;
+  Event: 'MusicOnHoldStart';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Class: string;
 };
 
 export type MusicOnHoldStop = BaseEvent & {
-	Event: "MusicOnHoldStop";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'MusicOnHoldStop';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type NewAccountCode = BaseEvent & {
-	Event: "NewAccountCode";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	OldAccountCode: string;
+  Event: 'NewAccountCode';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  OldAccountCode: string;
 };
 
 export type NewCallerid = BaseEvent & {
-	Event: "NewCallerid";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	"CID-CallingPres": string;
+  Event: 'NewCallerid';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  'CID-CallingPres': string;
 };
 
 export type NewConnectedLine = BaseEvent & {
-	Event: "NewConnectedLine";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'NewConnectedLine';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type NewExten = BaseEvent & {
-	Event: "NewExten";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Extension: string | number;
-	Application: string;
-	AppData: string;
+  Event: 'NewExten';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Extension: string | number;
+  Application: string;
+  AppData: string;
 };
 
 export type Newchannel = BaseEvent & {
-	Event: "Newchannel";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'Newchannel';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type Newstate = BaseEvent & {
-	Event: "Newstate";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'Newstate';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type OriginateResponse = BaseEvent & {
-	Event: "OriginateResponse";
-	ActionID?: number;
-	Response: "Failure" | "Success";
-	Channel: string;
-	Context: string;
-	Exten: string | number;
-	Application: string;
-	Data: string;
-	Reason: string;
-	Uniqueid: string | number;
-	CallerIDNum: string | number;
-	CallerIDName: string;
+  Event: 'OriginateResponse';
+  ActionID?: number;
+  Response: 'Failure' | 'Success';
+  Channel: string;
+  Context: string;
+  Exten: string | number;
+  Application: string;
+  Data: string;
+  Reason: string;
+  Uniqueid: string | number;
+  CallerIDNum: string | number;
+  CallerIDName: string;
 };
 
 export type ParkedCall = BaseEvent & {
-	Event: "ParkedCall";
-	ParkeeChannel: string;
-	ParkeeChannelState: string;
-	ParkeeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	ParkeeCallerIDNum: string | number;
-	ParkeeCallerIDName: string;
-	ParkeeConnectedLineNum: string;
-	ParkeeConnectedLineName: string;
-	ParkeeLanguage: string;
-	ParkeeAccountCode: string;
-	ParkeeContext: string;
-	ParkeeExten: string | number;
-	ParkeePriority: number;
-	ParkeeUniqueid: string | number;
-	ParkeeLinkedid: number | string;
-	ParkerDialString: string;
-	Parkinglot: string;
-	ParkingSpace: string;
-	ParkingTimeout: string;
-	ParkingDuration: string;
+  Event: 'ParkedCall';
+  ParkeeChannel: string;
+  ParkeeChannelState: string;
+  ParkeeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  ParkeeCallerIDNum: string | number;
+  ParkeeCallerIDName: string;
+  ParkeeConnectedLineNum: string;
+  ParkeeConnectedLineName: string;
+  ParkeeLanguage: string;
+  ParkeeAccountCode: string;
+  ParkeeContext: string;
+  ParkeeExten: string | number;
+  ParkeePriority: number;
+  ParkeeUniqueid: string | number;
+  ParkeeLinkedid: number | string;
+  ParkerDialString: string;
+  Parkinglot: string;
+  ParkingSpace: string;
+  ParkingTimeout: string;
+  ParkingDuration: string;
 };
 
 export type ParkedCallGiveUp = BaseEvent & {
-	Event: "ParkedCallGiveUp";
-	ParkeeChannel: string;
-	ParkeeChannelState: string;
-	ParkeeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	ParkeeCallerIDNum: string | number;
-	ParkeeCallerIDName: string;
-	ParkeeConnectedLineNum: string;
-	ParkeeConnectedLineName: string;
-	ParkeeLanguage: string;
-	ParkeeAccountCode: string;
-	ParkeeContext: string;
-	ParkeeExten: string | number;
-	ParkeePriority: number;
-	ParkeeUniqueid: string | number;
-	ParkeeLinkedid: number | string;
-	ParkerChannel: string;
-	ParkerChannelState: string;
-	ParkerChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	ParkerCallerIDNum: string | number;
-	ParkerCallerIDName: string;
-	ParkerConnectedLineNum: string;
-	ParkerConnectedLineName: string;
-	ParkerLanguage: string;
-	ParkerAccountCode: string;
-	ParkerContext: string;
-	ParkerExten: string | number;
-	ParkerPriority: number;
-	ParkerUniqueid: string | number;
-	ParkerLinkedid: number | string;
-	ParkerDialString: string;
-	Parkinglot: string;
-	ParkingSpace: string;
-	ParkingTimeout: string;
-	ParkingDuration: string;
+  Event: 'ParkedCallGiveUp';
+  ParkeeChannel: string;
+  ParkeeChannelState: string;
+  ParkeeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  ParkeeCallerIDNum: string | number;
+  ParkeeCallerIDName: string;
+  ParkeeConnectedLineNum: string;
+  ParkeeConnectedLineName: string;
+  ParkeeLanguage: string;
+  ParkeeAccountCode: string;
+  ParkeeContext: string;
+  ParkeeExten: string | number;
+  ParkeePriority: number;
+  ParkeeUniqueid: string | number;
+  ParkeeLinkedid: number | string;
+  ParkerChannel: string;
+  ParkerChannelState: string;
+  ParkerChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  ParkerCallerIDNum: string | number;
+  ParkerCallerIDName: string;
+  ParkerConnectedLineNum: string;
+  ParkerConnectedLineName: string;
+  ParkerLanguage: string;
+  ParkerAccountCode: string;
+  ParkerContext: string;
+  ParkerExten: string | number;
+  ParkerPriority: number;
+  ParkerUniqueid: string | number;
+  ParkerLinkedid: number | string;
+  ParkerDialString: string;
+  Parkinglot: string;
+  ParkingSpace: string;
+  ParkingTimeout: string;
+  ParkingDuration: string;
 };
 
 export type ParkedCallSwap = BaseEvent & {
-	Event: "ParkedCallSwap";
-	ParkeeChannel: string;
-	ParkeeChannelState: string;
-	ParkeeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	ParkeeCallerIDNum: string | number;
-	ParkeeCallerIDName: string;
-	ParkeeConnectedLineNum: string;
-	ParkeeConnectedLineName: string;
-	ParkeeLanguage: string;
-	ParkeeAccountCode: string;
-	ParkeeContext: string;
-	ParkeeExten: string | number;
-	ParkeePriority: number;
-	ParkeeUniqueid: string | number;
-	ParkeeLinkedid: number | string;
-	ParkerChannel: string;
-	ParkerChannelState: string;
-	ParkerChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	ParkerCallerIDNum: string | number;
-	ParkerCallerIDName: string;
-	ParkerConnectedLineNum: string;
-	ParkerConnectedLineName: string;
-	ParkerLanguage: string;
-	ParkerAccountCode: string;
-	ParkerContext: string;
-	ParkerExten: string | number;
-	ParkerPriority: number;
-	ParkerUniqueid: string | number;
-	ParkerLinkedid: number | string;
-	ParkerDialString: string;
-	Parkinglot: string;
-	ParkingSpace: string;
-	ParkingTimeout: string;
-	ParkingDuration: string;
+  Event: 'ParkedCallSwap';
+  ParkeeChannel: string;
+  ParkeeChannelState: string;
+  ParkeeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  ParkeeCallerIDNum: string | number;
+  ParkeeCallerIDName: string;
+  ParkeeConnectedLineNum: string;
+  ParkeeConnectedLineName: string;
+  ParkeeLanguage: string;
+  ParkeeAccountCode: string;
+  ParkeeContext: string;
+  ParkeeExten: string | number;
+  ParkeePriority: number;
+  ParkeeUniqueid: string | number;
+  ParkeeLinkedid: number | string;
+  ParkerChannel: string;
+  ParkerChannelState: string;
+  ParkerChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  ParkerCallerIDNum: string | number;
+  ParkerCallerIDName: string;
+  ParkerConnectedLineNum: string;
+  ParkerConnectedLineName: string;
+  ParkerLanguage: string;
+  ParkerAccountCode: string;
+  ParkerContext: string;
+  ParkerExten: string | number;
+  ParkerPriority: number;
+  ParkerUniqueid: string | number;
+  ParkerLinkedid: number | string;
+  ParkerDialString: string;
+  Parkinglot: string;
+  ParkingSpace: string;
+  ParkingTimeout: string;
+  ParkingDuration: string;
 };
 
 export type ParkedCallTimeOut = BaseEvent & {
-	Event: "ParkedCallTimeOut";
-	ParkeeChannel: string;
-	ParkeeChannelState: string;
-	ParkeeChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	ParkeeCallerIDNum: string | number;
-	ParkeeCallerIDName: string;
-	ParkeeConnectedLineNum: string;
-	ParkeeConnectedLineName: string;
-	ParkeeLanguage: string;
-	ParkeeAccountCode: string;
-	ParkeeContext: string;
-	ParkeeExten: string | number;
-	ParkeePriority: number;
-	ParkeeUniqueid: string | number;
-	ParkeeLinkedid: number | string;
-	ParkerChannel: string;
-	ParkerChannelState: string;
-	ParkerChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	ParkerCallerIDNum: string | number;
-	ParkerCallerIDName: string;
-	ParkerConnectedLineNum: string;
-	ParkerConnectedLineName: string;
-	ParkerLanguage: string;
-	ParkerAccountCode: string;
-	ParkerContext: string;
-	ParkerExten: string | number;
-	ParkerPriority: number;
-	ParkerUniqueid: string | number;
-	ParkerLinkedid: number | string;
-	ParkerDialString: string;
-	Parkinglot: string;
-	ParkingSpace: string;
-	ParkingTimeout: string;
-	ParkingDuration: string;
+  Event: 'ParkedCallTimeOut';
+  ParkeeChannel: string;
+  ParkeeChannelState: string;
+  ParkeeChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  ParkeeCallerIDNum: string | number;
+  ParkeeCallerIDName: string;
+  ParkeeConnectedLineNum: string;
+  ParkeeConnectedLineName: string;
+  ParkeeLanguage: string;
+  ParkeeAccountCode: string;
+  ParkeeContext: string;
+  ParkeeExten: string | number;
+  ParkeePriority: number;
+  ParkeeUniqueid: string | number;
+  ParkeeLinkedid: number | string;
+  ParkerChannel: string;
+  ParkerChannelState: string;
+  ParkerChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  ParkerCallerIDNum: string | number;
+  ParkerCallerIDName: string;
+  ParkerConnectedLineNum: string;
+  ParkerConnectedLineName: string;
+  ParkerLanguage: string;
+  ParkerAccountCode: string;
+  ParkerContext: string;
+  ParkerExten: string | number;
+  ParkerPriority: number;
+  ParkerUniqueid: string | number;
+  ParkerLinkedid: number | string;
+  ParkerDialString: string;
+  Parkinglot: string;
+  ParkingSpace: string;
+  ParkingTimeout: string;
+  ParkingDuration: string;
 };
 
 /**
@@ -4941,68 +4935,68 @@ export type ParkedCallTimeOut = BaseEvent & {
  * - `Time: string`
  */
 export type PeerStatus = BaseEvent & {
-	Event: "PeerStatus";
-	ChannelType: string;
-	Peer: string;
-	PeerStatus: "Unknown" | "Registered" | "Unregistered" | "Rejected" | "Lagged";
-	Cause: string;
-	Address: string;
-	Port: string;
-	Time: string;
+  Event: 'PeerStatus';
+  ChannelType: string;
+  Peer: string;
+  PeerStatus: 'Unknown' | 'Registered' | 'Unregistered' | 'Rejected' | 'Lagged';
+  Cause: string;
+  Address: string;
+  Port: string;
+  Time: string;
 };
 
 export type Pickup = BaseEvent & {
-	Event: "Pickup";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	TargetChannel: string;
-	TargetChannelState: string;
-	TargetChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	TargetCallerIDNum: string | number;
-	TargetCallerIDName: string;
-	TargetConnectedLineNum: string;
-	TargetConnectedLineName: string;
-	TargetLanguage: string;
-	TargetAccountCode: string;
-	TargetContext: string;
-	TargetExten: string | number;
-	TargetPriority: number;
-	TargetUniqueid: string | number;
-	TargetLinkedid: number | string;
+  Event: 'Pickup';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  TargetChannel: string;
+  TargetChannelState: string;
+  TargetChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  TargetCallerIDNum: string | number;
+  TargetCallerIDName: string;
+  TargetConnectedLineNum: string;
+  TargetConnectedLineName: string;
+  TargetLanguage: string;
+  TargetAccountCode: string;
+  TargetContext: string;
+  TargetExten: string | number;
+  TargetPriority: number;
+  TargetUniqueid: string | number;
+  TargetLinkedid: number | string;
 };
 
 /**
@@ -5018,11 +5012,11 @@ export type Pickup = BaseEvent & {
  * - `Message: string`
  */
 export type PresenceStateChange = BaseEvent & {
-	Event: "PresenceStateChange";
-	Presentity: string;
-	Status: string;
-	Subtype: string;
-	Message: string;
+  Event: 'PresenceStateChange';
+  Presentity: string;
+  Status: string;
+  Subtype: string;
+  Message: string;
 };
 
 /**
@@ -5036,9 +5030,9 @@ export type PresenceStateChange = BaseEvent & {
  * - `ListItems: number`
  */
 export type PresenceStateListComplete = BaseEvent & {
-	Event: "PresenceStateListComplete";
-	EventList: string;
-	ListItems: number;
+  Event: 'PresenceStateListComplete';
+  EventList: string;
+  ListItems: number;
 };
 
 /**
@@ -5056,110 +5050,110 @@ export type PresenceStateListComplete = BaseEvent & {
  * - `Message: string`
  */
 export type PresenceStatus = BaseEvent & {
-	Event: "PresenceStatus";
-	Exten: string | number;
-	Context: string;
-	Hint: string;
-	Status: string;
-	Subtype: string;
-	Message: string;
+  Event: 'PresenceStatus';
+  Exten: string | number;
+  Context: string;
+  Hint: string;
+  Status: string;
+  Subtype: string;
+  Message: string;
 };
 
 export type QueueCallerAbandon = BaseEvent & {
-	Event: "QueueCallerAbandon";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Queue: string;
-	Position: string;
-	OriginalPosition: string;
-	HoldTime: number;
+  Event: 'QueueCallerAbandon';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Queue: string;
+  Position: string;
+  OriginalPosition: string;
+  HoldTime: number;
 };
 
 export type QueueCallerJoin = BaseEvent & {
-	Event: "QueueCallerJoin";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Queue: string;
-	Position: string;
-	Count: string;
+  Event: 'QueueCallerJoin';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Queue: string;
+  Position: string;
+  Count: string;
 };
 
 export type QueueCallerLeave = BaseEvent & {
-	Event: "QueueCallerLeave";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Queue: string;
-	Count: string;
-	Position: string;
+  Event: 'QueueCallerLeave';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Queue: string;
+  Count: string;
+  Position: string;
 };
 
 /**
@@ -5181,177 +5175,177 @@ export type QueueCallerLeave = BaseEvent & {
  * - `Priority: string`
  */
 export type QueueEntry = BaseEvent & {
-	Event: "QueueEntry";
-	Queue: string;
-	Position: string;
-	Channel: string;
-	Uniqueid: string | number;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Wait: string;
-	Priority: number;
+  Event: 'QueueEntry';
+  Queue: string;
+  Position: string;
+  Channel: string;
+  Uniqueid: string | number;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Wait: string;
+  Priority: number;
 };
 
 export type QueueSummary = BaseEvent & {
-	Event: "QueueSummary";
-	Queue: string;
-	LoggedIn: number;
-	Available: number;
-	Callers: number;
-	HoldTime: number;
-	TalkTime: number;
-	LongestHoldTime: number;
-	ActionID: number;
-	TimeEvent: number;
+  Event: 'QueueSummary';
+  Queue: string;
+  LoggedIn: number;
+  Available: number;
+  Callers: number;
+  HoldTime: number;
+  TalkTime: number;
+  LongestHoldTime: number;
+  ActionID: number;
+  TimeEvent: number;
 };
 
 export type QueueSummaryComplete = BaseEvent & {
-	Event: "QueueSummaryComplete";
-	ActionID: number;
-	EventList: string;
-	ListItems: number;
+  Event: 'QueueSummaryComplete';
+  ActionID: number;
+  EventList: string;
+  ListItems: number;
 };
 
 export type QueueMember = BaseEvent & {
-	Event: "QueueMember";
-	Queue: string;
-	Name: string;
-	Location: string;
-	StateInterface: string;
-	Membership: "dynamic" | "realtime" | "static";
-	Penalty: number;
-	CallsTaken: number;
-	LastCall: number;
-	LastPause: number;
-	LoginTime: number;
-	InCall: number;
-	Status: number;
-	Paused: number;
-	PausedReason?: string | number;
-	Wrapuptime: number;
-	ActionID: number;
+  Event: 'QueueMember';
+  Queue: string;
+  Name: string;
+  Location: string;
+  StateInterface: string;
+  Membership: 'dynamic' | 'realtime' | 'static';
+  Penalty: number;
+  CallsTaken: number;
+  LastCall: number;
+  LastPause: number;
+  LoginTime: number;
+  InCall: number;
+  Status: number;
+  Paused: number;
+  PausedReason?: string | number;
+  Wrapuptime: number;
+  ActionID: number;
 };
 
 export type QueueMemberAdded = BaseEvent & {
-	Event: "QueueMemberAdded";
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	StateInterface: string;
-	Membership: "dynamic" | "realtime" | "static";
-	Penalty: number;
-	CallsTaken: number;
-	LastCall: number;
-	LastPause: number;
-	LoginTime: number;
-	InCall: 0 | 1;
-	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-	Paused: 0 | 1;
-	PausedReason?: string | number;
-	Ringinuse: 0 | 1;
-	Wrapuptime: number;
+  Event: 'QueueMemberAdded';
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  StateInterface: string;
+  Membership: 'dynamic' | 'realtime' | 'static';
+  Penalty: number;
+  CallsTaken: number;
+  LastCall: number;
+  LastPause: number;
+  LoginTime: number;
+  InCall: 0 | 1;
+  Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  Paused: 0 | 1;
+  PausedReason?: string | number;
+  Ringinuse: 0 | 1;
+  Wrapuptime: number;
 };
 
 export type QueueMemberPause = BaseEvent & {
-	Event: "QueueMemberPause";
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	StateInterface: string;
-	Membership: "dynamic" | "realtime" | "static";
-	Penalty: number;
-	CallsTaken: number;
-	LastCall: number;
-	LastPause: number;
-	LoginTime: number;
-	InCall: 0 | 1;
-	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-	Paused: 0 | 1;
-	PausedReason?: string | number;
-	Ringinuse: 0 | 1;
-	Wrapuptime: number;
+  Event: 'QueueMemberPause';
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  StateInterface: string;
+  Membership: 'dynamic' | 'realtime' | 'static';
+  Penalty: number;
+  CallsTaken: number;
+  LastCall: number;
+  LastPause: number;
+  LoginTime: number;
+  InCall: 0 | 1;
+  Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  Paused: 0 | 1;
+  PausedReason?: string | number;
+  Ringinuse: 0 | 1;
+  Wrapuptime: number;
 };
 
 export type QueueMemberPenalty = BaseEvent & {
-	Event: "QueueMemberPenalty";
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	StateInterface: string;
-	Membership: "dynamic" | "realtime" | "static";
-	Penalty: number;
-	CallsTaken: number;
-	LastCall: number;
-	LastPause: number;
-	LoginTime: number;
-	InCall: 0 | 1;
-	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-	Paused: 0 | 1;
-	PausedReason?: string | number;
-	Ringinuse: 0 | 1;
-	Wrapuptime: number;
+  Event: 'QueueMemberPenalty';
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  StateInterface: string;
+  Membership: 'dynamic' | 'realtime' | 'static';
+  Penalty: number;
+  CallsTaken: number;
+  LastCall: number;
+  LastPause: number;
+  LoginTime: number;
+  InCall: 0 | 1;
+  Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  Paused: 0 | 1;
+  PausedReason?: string | number;
+  Ringinuse: 0 | 1;
+  Wrapuptime: number;
 };
 
 export type QueueMemberRemoved = BaseEvent & {
-	Event: "QueueMemberRemoved";
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	StateInterface: string;
-	Membership: "dynamic" | "realtime" | "static";
-	Penalty: number;
-	CallsTaken: number;
-	LastCall: number;
-	LastPause: number;
-	LoginTime: number;
-	InCall: 0 | 1;
-	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-	Paused: 0 | 1;
-	PausedReason?: string | number;
-	Ringinuse: 0 | 1;
-	Wrapuptime: number;
+  Event: 'QueueMemberRemoved';
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  StateInterface: string;
+  Membership: 'dynamic' | 'realtime' | 'static';
+  Penalty: number;
+  CallsTaken: number;
+  LastCall: number;
+  LastPause: number;
+  LoginTime: number;
+  InCall: 0 | 1;
+  Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  Paused: 0 | 1;
+  PausedReason?: string | number;
+  Ringinuse: 0 | 1;
+  Wrapuptime: number;
 };
 
 export type QueueMemberRinginuse = BaseEvent & {
-	Event: "QueueMemberRinginuse";
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	StateInterface: string;
-	Membership: "dynamic" | "realtime" | "static";
-	Penalty: number;
-	CallsTaken: number;
-	LastCall: number;
-	LastPause: number;
-	LoginTime: number;
-	InCall: 0 | 1;
-	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-	Paused: 0 | 1;
-	PausedReason?: string | number;
-	Ringinuse: 0 | 1;
-	Wrapuptime: number;
+  Event: 'QueueMemberRinginuse';
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  StateInterface: string;
+  Membership: 'dynamic' | 'realtime' | 'static';
+  Penalty: number;
+  CallsTaken: number;
+  LastCall: number;
+  LastPause: number;
+  LoginTime: number;
+  InCall: 0 | 1;
+  Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  Paused: 0 | 1;
+  PausedReason?: string | number;
+  Ringinuse: 0 | 1;
+  Wrapuptime: number;
 };
 
 export type QueueMemberStatus = BaseEvent & {
-	Event: "QueueMemberStatus";
-	Queue: string;
-	MemberName: string;
-	Interface: string;
-	StateInterface: string;
-	Membership: "dynamic" | "realtime" | "static";
-	Penalty: number;
-	CallsTaken: number;
-	LastCall: number;
-	LastPause: number;
-	LoginTime: number;
-	InCall: 0 | 1;
-	Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-	Paused: 0 | 1;
-	PausedReason?: string | number;
-	Ringinuse: 0 | 1;
-	Wrapuptime: number;
+  Event: 'QueueMemberStatus';
+  Queue: string;
+  MemberName: string;
+  Interface: string;
+  StateInterface: string;
+  Membership: 'dynamic' | 'realtime' | 'static';
+  Penalty: number;
+  CallsTaken: number;
+  LastCall: number;
+  LastPause: number;
+  LoginTime: number;
+  InCall: 0 | 1;
+  Status: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  Paused: 0 | 1;
+  PausedReason?: string | number;
+  Ringinuse: 0 | 1;
+  Wrapuptime: number;
 };
 
 /**
@@ -5372,96 +5366,96 @@ export type QueueMemberStatus = BaseEvent & {
  * - `ServiceLevelPerf2: string`
  */
 export type QueueParams = BaseEvent & {
-	Event: "QueueParams";
-	Max: string;
-	Strategy: string;
-	Calls: number;
-	Holdtime: number;
-	TalkTime: number;
-	Completed: number;
-	Abandoned: number;
-	ServiceLevelPerf: number;
-	ServiceLevelPerf2: number;
+  Event: 'QueueParams';
+  Max: string;
+  Strategy: string;
+  Calls: number;
+  Holdtime: number;
+  TalkTime: number;
+  Completed: number;
+  Abandoned: number;
+  ServiceLevelPerf: number;
+  ServiceLevelPerf2: number;
 };
 
 export type RTCPReceived = BaseEvent & {
-	Event: "RTCPReceived";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc:
-		| "Down"
-		| "Rsrvd"
-		| "OffHook"
-		| "Dialing"
-		| "Ring"
-		| "Ringing"
-		| "Up"
-		| "Busy"
-		| "Dialing Offhook"
-		| "Pre-ring"
-		| "Unknown";
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	SSRC: string;
-	PT: "200(SR)" | "201(RR)";
-	From: string;
-	RTT: string;
-	ReportCount: string;
-	SentNTP?: string;
-	SentRTP?: string;
-	SentPackets?: string;
-	SentOctets?: string;
-	ReportXSourceSSRC: string;
-	ReportXFractionLost: string;
-	ReportXCumulativeLost: string;
-	ReportXHighestSequence: string;
-	ReportXSequenceNumberCycles: string;
-	ReportXIAJitter: string;
-	ReportXLSR: string;
-	ReportXDLSR: string;
+  Event: 'RTCPReceived';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc:
+    | 'Down'
+    | 'Rsrvd'
+    | 'OffHook'
+    | 'Dialing'
+    | 'Ring'
+    | 'Ringing'
+    | 'Up'
+    | 'Busy'
+    | 'Dialing Offhook'
+    | 'Pre-ring'
+    | 'Unknown';
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  SSRC: string;
+  PT: '200(SR)' | '201(RR)';
+  From: string;
+  RTT: string;
+  ReportCount: string;
+  SentNTP?: string;
+  SentRTP?: string;
+  SentPackets?: string;
+  SentOctets?: string;
+  ReportXSourceSSRC: string;
+  ReportXFractionLost: string;
+  ReportXCumulativeLost: string;
+  ReportXHighestSequence: string;
+  ReportXSequenceNumberCycles: string;
+  ReportXIAJitter: string;
+  ReportXLSR: string;
+  ReportXDLSR: string;
 };
 
 export type RTCPSent = BaseEvent & {
-	Event: "RTCPSent";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	SSRC: string;
-	PT: "200(SR)" | "201(RR)";
-	To: string;
-	ReportCount: string;
-	SentNTP?: string;
-	SentRTP?: string;
-	SentPackets?: string;
-	SentOctets?: string;
-	ReportXSourceSSRC: string;
-	ReportXFractionLost: string;
-	ReportXCumulativeLost: string;
-	ReportXHighestSequence: string;
-	ReportXSequenceNumberCycles: string;
-	ReportXIAJitter: string;
-	ReportXLSR: string;
-	ReportXDLSR: string;
+  Event: 'RTCPSent';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  SSRC: string;
+  PT: '200(SR)' | '201(RR)';
+  To: string;
+  ReportCount: string;
+  SentNTP?: string;
+  SentRTP?: string;
+  SentPackets?: string;
+  SentOctets?: string;
+  ReportXSourceSSRC: string;
+  ReportXFractionLost: string;
+  ReportXCumulativeLost: string;
+  ReportXHighestSequence: string;
+  ReportXSequenceNumberCycles: string;
+  ReportXIAJitter: string;
+  ReportXLSR: string;
+  ReportXDLSR: string;
 };
 
 /**
@@ -5493,36 +5487,36 @@ export type RTCPSent = BaseEvent & {
  * - `FileName: string`
  */
 export type ReceiveFAX = BaseEvent & {
-	Event: "ReceiveFAX";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	LocalStationID: string;
-	RemoteStationID: string;
-	PagesTransferred: string;
-	Resolution: string;
-	TransferRate: string;
-	FileName: string;
+  Event: 'ReceiveFAX';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  LocalStationID: string;
+  RemoteStationID: string;
+  PagesTransferred: string;
+  Resolution: string;
+  TransferRate: string;
+  FileName: string;
 };
 
 export type Registry = BaseEvent & {
-	Event: "Registry";
-	ChannelType: string;
-	Username: string;
-	Domain: string;
-	Status: "Registered" | "Unregistered" | "Rejected" | "Failed";
-	Cause?: string;
+  Event: 'Registry';
+  ChannelType: string;
+  Username: string;
+  Domain: string;
+  Status: 'Registered' | 'Unregistered' | 'Rejected' | 'Failed';
+  Cause?: string;
 };
 
 /**
@@ -5536,9 +5530,9 @@ export type Registry = BaseEvent & {
  * - `Status: "0" | "1" | "2" | "3" | "4" | "5" | "6"`
  */
 export type Reload = BaseEvent & {
-	Event: "Reload";
-	Module: string;
-	Status: "0" | "1" | "2" | "3" | "4" | "5" | "6";
+  Event: 'Reload';
+  Module: string;
+  Status: '0' | '1' | '2' | '3' | '4' | '5' | '6';
 };
 
 /**
@@ -5564,74 +5558,74 @@ export type Reload = BaseEvent & {
  * - `Linkedid: string`
  */
 export type Rename = BaseEvent & {
-	Event: "Rename";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'Rename';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type RequestBadFormat = BaseEvent & {
-	Event: "RequestBadFormat";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	RequestType: string;
-	Module?: string;
-	SessionTV?: string;
-	RequestParams?: string;
+  Event: 'RequestBadFormat';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  RequestType: string;
+  Module?: string;
+  SessionTV?: string;
+  RequestParams?: string;
 };
 
 export type RequestNotAllowed = BaseEvent & {
-	Event: "RequestNotAllowed";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	RequestType: string;
-	Module?: string;
-	SessionTV?: string;
-	RequestParams?: string;
+  Event: 'RequestNotAllowed';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  RequestType: string;
+  Module?: string;
+  SessionTV?: string;
+  RequestParams?: string;
 };
 
 export type RequestNotSupported = BaseEvent & {
-	Event: "RequestNotSupported";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	RequestType: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'RequestNotSupported';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  RequestType: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 export type SIPQualifyPeerDone = BaseEvent & {
-	Event: "SIPQualifyPeerDone";
-	Peer: string;
-	ActionID?: number;
+  Event: 'SIPQualifyPeerDone';
+  Peer: string;
+  ActionID?: number;
 };
 
 /**
@@ -5663,41 +5657,41 @@ export type SIPQualifyPeerDone = BaseEvent & {
  * - `FileName: string`
  */
 export type SendFAX = BaseEvent & {
-	Event: "SendFAX";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	LocalStationID: string;
-	RemoteStationID: string;
-	PagesTransferred: string;
-	Resolution: string;
-	TransferRate: string;
-	FileName: string;
+  Event: 'SendFAX';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  LocalStationID: string;
+  RemoteStationID: string;
+  PagesTransferred: string;
+  Resolution: string;
+  TransferRate: string;
+  FileName: string;
 };
 
 export type SessionLimit = BaseEvent & {
-	Event: "SessionLimit";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'SessionLimit';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 /**
@@ -5724,22 +5718,22 @@ export type SessionLimit = BaseEvent & {
  * - `Source: "RTPTimeout" | "SIPSessionTimer"`
  */
 export type SessionTimeout = BaseEvent & {
-	Event: "SessionTimeout";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Source: "RTPTimeout" | "SIPSessionTimer";
+  Event: 'SessionTimeout';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Source: 'RTPTimeout' | 'SIPSessionTimer';
 };
 
 /**
@@ -5753,9 +5747,9 @@ export type SessionTimeout = BaseEvent & {
  * - `Restart: "True" | "False"`
  */
 export type Shutdown = BaseEvent & {
-	Event: "Shutdown";
-	Shutdown: "Uncleanly" | "Cleanly";
-	Restart: "True" | "False";
+  Event: 'Shutdown';
+  Shutdown: 'Uncleanly' | 'Cleanly';
+  Restart: 'True' | 'False';
 };
 
 /**
@@ -5782,22 +5776,22 @@ export type Shutdown = BaseEvent & {
  * - `Cause: string`
  */
 export type SoftHangupRequest = BaseEvent & {
-	Event: "SoftHangupRequest";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Cause: string;
+  Event: 'SoftHangupRequest';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Cause: string;
 };
 
 /**
@@ -5811,9 +5805,9 @@ export type SoftHangupRequest = BaseEvent & {
  * - `Alarm: string`
  */
 export type SpanAlarm = BaseEvent & {
-	Event: "SpanAlarm";
-	Span: string;
-	Alarm: string;
+  Event: 'SpanAlarm';
+  Span: string;
+  Alarm: string;
 };
 
 /**
@@ -5826,43 +5820,43 @@ export type SpanAlarm = BaseEvent & {
  * - `Span: string`
  */
 export type SpanAlarmClear = BaseEvent & {
-	Event: "SpanAlarmClear";
-	Span: string;
+  Event: 'SpanAlarmClear';
+  Span: string;
 };
 
 export type Status = BaseEvent & {
-	Event: "Status";
-	ActionID?: number;
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Type: string;
-	DNID: string;
-	EffectiveConnectedLineNum: string;
-	EffectiveConnectedLineName: string;
-	TimeToHangup: string;
-	BridgeID: string;
-	Application: string;
-	Data: string;
-	Nativeformats: string;
-	Readformat: string;
-	Readtrans: string;
-	Writeformat: string;
-	Writetrans: string;
-	Callgroup: string;
-	Pickupgroup: string;
-	Seconds: string;
+  Event: 'Status';
+  ActionID?: number;
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Type: string;
+  DNID: string;
+  EffectiveConnectedLineNum: string;
+  EffectiveConnectedLineName: string;
+  TimeToHangup: string;
+  BridgeID: string;
+  Application: string;
+  Data: string;
+  Nativeformats: string;
+  Readformat: string;
+  Readtrans: string;
+  Writeformat: string;
+  Writetrans: string;
+  Callgroup: string;
+  Pickupgroup: string;
+  Seconds: string;
 };
 
 /**
@@ -5875,51 +5869,51 @@ export type Status = BaseEvent & {
  * - `Items: string`
  */
 export type StatusComplete = BaseEvent & {
-	Event: "StatusComplete";
-	Items: string;
+  Event: 'StatusComplete';
+  Items: string;
 };
 
 export type SuccessfulAuth = BaseEvent & {
-	Event: "SuccessfulAuth";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	UsingPassword: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'SuccessfulAuth';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  UsingPassword: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 export type TransportDetail = BaseEvent & {
-	Event: "TransportDetail";
-	ObjectType: string; // Always 'transport'
-	ObjectName: string;
-	Protocol: string;
-	Bind: string;
-	AsycOperations: string; // Always '1'
-	CaListFile: string;
-	CaListPath: string;
-	CertFile: string;
-	PrivKeyFile: string;
-	Password: string;
-	ExternalSignalingAddress: string;
-	ExternalSignalingPort: string;
-	ExternalMediaAddress: string;
-	Domain: string;
-	VerifyServer: string;
-	VerifyClient: string;
-	RequireClientCert: string;
-	Method: string;
-	Cipher: string;
-	LocalNet: string;
-	Tos: string;
-	Cos: string;
-	WebsocketWriteTimeout: string;
-	EndpointName: string;
+  Event: 'TransportDetail';
+  ObjectType: string; // Always 'transport'
+  ObjectName: string;
+  Protocol: string;
+  Bind: string;
+  AsycOperations: string; // Always '1'
+  CaListFile: string;
+  CaListPath: string;
+  CertFile: string;
+  PrivKeyFile: string;
+  Password: string;
+  ExternalSignalingAddress: string;
+  ExternalSignalingPort: string;
+  ExternalMediaAddress: string;
+  Domain: string;
+  VerifyServer: string;
+  VerifyClient: string;
+  RequireClientCert: string;
+  Method: string;
+  Cipher: string;
+  LocalNet: string;
+  Tos: string;
+  Cos: string;
+  WebsocketWriteTimeout: string;
+  EndpointName: string;
 };
 
 /**
@@ -5978,69 +5972,69 @@ export type TransportDetail = BaseEvent & {
  * - `RetrieverLinkedid: string`
  */
 export type UnParkedCall = BaseEvent & {
-	Event: "UnParkedCall";
-	ParkeeChannel: string;
-	ParkeeChannelState: string;
-	ParkeeChannelStateDesc: string;
-	ParkeeCallerIDNum: string | number;
-	ParkeeCallerIDName: string;
-	ParkeeConnectedLineNum: string;
-	ParkeeConnectedLineName: string;
-	ParkeeLanguage: string;
-	ParkeeAccountCode: string;
-	ParkeeContext: string;
-	ParkeeExten: string | number;
-	ParkeePriority: number;
-	ParkeeUniqueid: string | number;
-	ParkeeLinkedid: number | string;
-	ParkerChannel: string;
-	ParkerChannelState: string;
-	ParkerChannelStateDesc: string;
-	ParkerCallerIDNum: string | number;
-	ParkerCallerIDName: string;
-	ParkerConnectedLineNum: string;
-	ParkerConnectedLineName: string;
-	ParkerLanguage: string;
-	ParkerAccountCode: string;
-	ParkerContext: string;
-	ParkerExten: string | number;
-	ParkerPriority: number;
-	ParkerUniqueid: string | number;
-	ParkerLinkedid: number | string;
-	ParkerDialString: string;
-	Parkinglot: string;
-	ParkingSpace: string;
-	ParkingTimeout: string;
-	ParkingDuration: string;
-	RetrieverChannel: string;
-	RetrieverChannelState: string;
-	RetrieverChannelStateDesc: string;
-	RetrieverCallerIDNum: string | number;
-	RetrieverCallerIDName: string;
-	RetrieverConnectedLineNum: string;
-	RetrieverConnectedLineName: string;
-	RetrieverLanguage: string;
-	RetrieverAccountCode: string;
-	RetrieverContext: string;
-	RetrieverExten: string | number;
-	RetrieverPriority: number;
-	RetrieverUniqueid: string | number;
-	RetrieverLinkedid: number | string;
+  Event: 'UnParkedCall';
+  ParkeeChannel: string;
+  ParkeeChannelState: string;
+  ParkeeChannelStateDesc: string;
+  ParkeeCallerIDNum: string | number;
+  ParkeeCallerIDName: string;
+  ParkeeConnectedLineNum: string;
+  ParkeeConnectedLineName: string;
+  ParkeeLanguage: string;
+  ParkeeAccountCode: string;
+  ParkeeContext: string;
+  ParkeeExten: string | number;
+  ParkeePriority: number;
+  ParkeeUniqueid: string | number;
+  ParkeeLinkedid: number | string;
+  ParkerChannel: string;
+  ParkerChannelState: string;
+  ParkerChannelStateDesc: string;
+  ParkerCallerIDNum: string | number;
+  ParkerCallerIDName: string;
+  ParkerConnectedLineNum: string;
+  ParkerConnectedLineName: string;
+  ParkerLanguage: string;
+  ParkerAccountCode: string;
+  ParkerContext: string;
+  ParkerExten: string | number;
+  ParkerPriority: number;
+  ParkerUniqueid: string | number;
+  ParkerLinkedid: number | string;
+  ParkerDialString: string;
+  Parkinglot: string;
+  ParkingSpace: string;
+  ParkingTimeout: string;
+  ParkingDuration: string;
+  RetrieverChannel: string;
+  RetrieverChannelState: string;
+  RetrieverChannelStateDesc: string;
+  RetrieverCallerIDNum: string | number;
+  RetrieverCallerIDName: string;
+  RetrieverConnectedLineNum: string;
+  RetrieverConnectedLineName: string;
+  RetrieverLanguage: string;
+  RetrieverAccountCode: string;
+  RetrieverContext: string;
+  RetrieverExten: string | number;
+  RetrieverPriority: number;
+  RetrieverUniqueid: string | number;
+  RetrieverLinkedid: number | string;
 };
 
 export type UnexpectedAddress = BaseEvent & {
-	Event: "UnexpectedAddress";
-	EventTV: string;
-	Severity: "Informational" | "Error";
-	Service: string;
-	EventVersion: string;
-	AccountID: string;
-	SessionID: string;
-	LocalAddress: string;
-	RemoteAddress: string;
-	ExpectedAddress: string;
-	Module?: string;
-	SessionTV?: string;
+  Event: 'UnexpectedAddress';
+  EventTV: string;
+  Severity: 'Informational' | 'Error';
+  Service: string;
+  EventVersion: string;
+  AccountID: string;
+  SessionID: string;
+  LocalAddress: string;
+  RemoteAddress: string;
+  ExpectedAddress: string;
+  Module?: string;
+  SessionTV?: string;
 };
 
 /**
@@ -6066,21 +6060,21 @@ export type UnexpectedAddress = BaseEvent & {
  * - `Linkedid: string`
  */
 export type Unhold = BaseEvent & {
-	Event: "Unhold";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'Unhold';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 /**
@@ -6094,9 +6088,9 @@ export type Unhold = BaseEvent & {
  * - `Status: "Success"`
  */
 export type Unload = BaseEvent & {
-	Event: "Unload";
-	Module: string;
-	Status: "Success";
+  Event: 'Unload';
+  Module: string;
+  Status: 'Success';
 };
 
 /**
@@ -6123,22 +6117,22 @@ export type Unload = BaseEvent & {
  * - `UserEvent: string`
  */
 export type UserEvent = BaseEvent & {
-	Event: "UserEvent";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	UserEvent: string;
+  Event: 'UserEvent';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  UserEvent: string;
 };
 
 /**
@@ -6166,23 +6160,23 @@ export type UserEvent = BaseEvent & {
  * - `Value: string`
  */
 export type VarSet = BaseEvent & {
-	Event: "VarSet";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
-	Variable: string;
-	Value: string;
+  Event: 'VarSet';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
+  Variable: string;
+  Value: string;
 };
 
 /**
@@ -6197,10 +6191,10 @@ export type VarSet = BaseEvent & {
  * - `NewPassword: string`
  */
 export type VoicemailPasswordChange = BaseEvent & {
-	Event: "VoicemailPasswordChange";
-	Context: string;
-	Mailbox: string;
-	NewPassword: string;
+  Event: 'VoicemailPasswordChange';
+  Context: string;
+  Mailbox: string;
+  NewPassword: string;
 };
 
 /**
@@ -6226,203 +6220,203 @@ export type VoicemailPasswordChange = BaseEvent & {
  * - `Linkedid: string`
  */
 export type Wink = BaseEvent & {
-	Event: "Wink";
-	Channel: string;
-	ChannelState: string;
-	ChannelStateDesc: string;
-	CallerIDNum: string | number;
-	CallerIDName: string;
-	ConnectedLineNum: string;
-	ConnectedLineName: string;
-	Language: string;
-	AccountCode: string;
-	Context: string;
-	Exten: string | number;
-	Priority: number;
-	Uniqueid: string | number;
-	Linkedid: number | string;
+  Event: 'Wink';
+  Channel: string;
+  ChannelState: string;
+  ChannelStateDesc: string;
+  CallerIDNum: string | number;
+  CallerIDName: string;
+  ConnectedLineNum: string;
+  ConnectedLineName: string;
+  Language: string;
+  AccountCode: string;
+  Context: string;
+  Exten: string | number;
+  Priority: number;
+  Uniqueid: string | number;
+  Linkedid: number | string;
 };
 
 export type AMIEvent =
-	| AGIExecEnd
-	| AGIExecStart
-	| AOCD
-	| AOCE
-	| AOCS
-	| AgentCalled
-	| AgentComplete
-	| AgentConnect
-	| AgentDump
-	| AgentLogin
-	| AgentLogoff
-	| AgentRingNoAnswer
-	| Agents
-	| AgentsComplete
-	| Alarm
-	| AlarmClear
-	| AorDetail
-	| AorList
-	| AorListComplete
-	| AsyncAGIEnd
-	| AsyncAGIExec
-	| AsyncAGIStart
-	| AttendedTransfer
-	| AuthDetail
-	| AuthList
-	| AuthListComplete
-	| AuthMethodNotAllowed
-	| BlindTransfer
-	| BridgeCreate
-	| BridgeDestroy
-	| BridgeEnter
-	| BridgeInfoChannel
-	| BridgeInfoComplete
-	| BridgeLeave
-	| BridgeMerge
-	| BridgeVideoSourceUpdate
-	| CEL
-	| Cdr
-	| ChallengeResponseFailed
-	| ChallengeSent
-	| ChanSpyStart
-	| ChanSpyStop
-	| ChannelTalkingStart
-	| ChannelTalkingStop
-	| ConfbridgeEnd
-	| ConfbridgeJoin
-	| ConfbridgeLeave
-	| ConfbridgeList
-	| ConfbridgeListRooms
-	| ConfbridgeMute
-	| ConfbridgeRecord
-	| ConfbridgeStart
-	| ConfbridgeStopRecord
-	| ConfbridgeTalking
-	| ConfbridgeUnmute
-	| ContactList
-	| ContactListComplete
-	| ContactStatus
-	| ContactStatusDetail
-	| CoreShowChannel
-	| CoreShowChannelMapComplete
-	| CoreShowChannelsComplete
-	| DAHDIChannel
-	| DNDState
-	| DTMFBegin
-	| DTMFEnd
-	| DeadlockStart
-	| DeviceStateChange
-	| DeviceStateListComplete
-	| DialBegin
-	| DialEnd
-	| DialState
-	| EndpointDetail
-	| EndpointDetailComplete
-	| EndpointList
-	| EndpointListComplete
-	| ExtensionStateListComplete
-	| ExtensionStatus
-	| FAXSession
-	| FAXSessionsComplete
-	| FAXSessionsEntry
-	| FAXStats
-	| FAXStatus
-	| FailedACL
-	| Flash
-	| FullyBooted
-	| Hangup
-	| HangupHandlerPop
-	| HangupHandlerPush
-	| HangupHandlerRun
-	| HangupRequest
-	| Hold
-	| IdentifyDetail
-	| InvalidAccountID
-	| InvalidPassword
-	| InvalidTransport
-	| Load
-	| LoadAverageLimit
-	| LocalBridge
-	| LocalOptimizationBegin
-	| LocalOptimizationEnd
-	| LogChannel
-	| MCID
-	| MWIGet
-	| MWIGetComplete
-	| MeetmeEnd
-	| MeetmeJoin
-	| MeetmeLeave
-	| MeetmeList
-	| MeetmeListRooms
-	| MeetmeMute
-	| MeetmeTalkRequest
-	| MeetmeTalking
-	| MemoryLimit
-	| MessageWaiting
-	| MiniVoiceMail
-	| MixMonitorMute
-	| MixMonitorStart
-	| MixMonitorStop
-	| MonitorStart
-	| MonitorStop
-	| MusicOnHoldStart
-	| MusicOnHoldStop
-	| NewAccountCode
-	| NewCallerid
-	| NewConnectedLine
-	| NewExten
-	| Newchannel
-	| Newstate
-	| OriginateResponse
-	| ParkedCall
-	| ParkedCallGiveUp
-	| ParkedCallSwap
-	| ParkedCallTimeOut
-	| PeerStatus
-	| Pickup
-	| PresenceStateChange
-	| PresenceStateListComplete
-	| PresenceStatus
-	| QueueSummary
-	| QueueSummaryComplete
-	| QueueMember
-	| QueueCallerAbandon
-	| QueueCallerJoin
-	| QueueCallerLeave
-	| QueueEntry
-	| QueueMemberAdded
-	| QueueMemberPause
-	| QueueMemberPenalty
-	| QueueMemberRemoved
-	| QueueMemberRinginuse
-	| QueueMemberStatus
-	| QueueParams
-	| RTCPReceived
-	| RTCPSent
-	| ReceiveFAX
-	| Registry
-	| Reload
-	| Rename
-	| RequestBadFormat
-	| RequestNotAllowed
-	| RequestNotSupported
-	| SIPQualifyPeerDone
-	| SendFAX
-	| SessionLimit
-	| SessionTimeout
-	| Shutdown
-	| SoftHangupRequest
-	| SpanAlarm
-	| SpanAlarmClear
-	| Status
-	| StatusComplete
-	| SuccessfulAuth
-	| TransportDetail
-	| UnParkedCall
-	| UnexpectedAddress
-	| Unhold
-	| Unload
-	| UserEvent
-	| VarSet
-	| VoicemailPasswordChange
-	| Wink;
+  | AGIExecEnd
+  | AGIExecStart
+  | AOCD
+  | AOCE
+  | AOCS
+  | AgentCalled
+  | AgentComplete
+  | AgentConnect
+  | AgentDump
+  | AgentLogin
+  | AgentLogoff
+  | AgentRingNoAnswer
+  | Agents
+  | AgentsComplete
+  | Alarm
+  | AlarmClear
+  | AorDetail
+  | AorList
+  | AorListComplete
+  | AsyncAGIEnd
+  | AsyncAGIExec
+  | AsyncAGIStart
+  | AttendedTransfer
+  | AuthDetail
+  | AuthList
+  | AuthListComplete
+  | AuthMethodNotAllowed
+  | BlindTransfer
+  | BridgeCreate
+  | BridgeDestroy
+  | BridgeEnter
+  | BridgeInfoChannel
+  | BridgeInfoComplete
+  | BridgeLeave
+  | BridgeMerge
+  | BridgeVideoSourceUpdate
+  | CEL
+  | Cdr
+  | ChallengeResponseFailed
+  | ChallengeSent
+  | ChanSpyStart
+  | ChanSpyStop
+  | ChannelTalkingStart
+  | ChannelTalkingStop
+  | ConfbridgeEnd
+  | ConfbridgeJoin
+  | ConfbridgeLeave
+  | ConfbridgeList
+  | ConfbridgeListRooms
+  | ConfbridgeMute
+  | ConfbridgeRecord
+  | ConfbridgeStart
+  | ConfbridgeStopRecord
+  | ConfbridgeTalking
+  | ConfbridgeUnmute
+  | ContactList
+  | ContactListComplete
+  | ContactStatus
+  | ContactStatusDetail
+  | CoreShowChannel
+  | CoreShowChannelMapComplete
+  | CoreShowChannelsComplete
+  | DAHDIChannel
+  | DNDState
+  | DTMFBegin
+  | DTMFEnd
+  | DeadlockStart
+  | DeviceStateChange
+  | DeviceStateListComplete
+  | DialBegin
+  | DialEnd
+  | DialState
+  | EndpointDetail
+  | EndpointDetailComplete
+  | EndpointList
+  | EndpointListComplete
+  | ExtensionStateListComplete
+  | ExtensionStatus
+  | FAXSession
+  | FAXSessionsComplete
+  | FAXSessionsEntry
+  | FAXStats
+  | FAXStatus
+  | FailedACL
+  | Flash
+  | FullyBooted
+  | Hangup
+  | HangupHandlerPop
+  | HangupHandlerPush
+  | HangupHandlerRun
+  | HangupRequest
+  | Hold
+  | IdentifyDetail
+  | InvalidAccountID
+  | InvalidPassword
+  | InvalidTransport
+  | Load
+  | LoadAverageLimit
+  | LocalBridge
+  | LocalOptimizationBegin
+  | LocalOptimizationEnd
+  | LogChannel
+  | MCID
+  | MWIGet
+  | MWIGetComplete
+  | MeetmeEnd
+  | MeetmeJoin
+  | MeetmeLeave
+  | MeetmeList
+  | MeetmeListRooms
+  | MeetmeMute
+  | MeetmeTalkRequest
+  | MeetmeTalking
+  | MemoryLimit
+  | MessageWaiting
+  | MiniVoiceMail
+  | MixMonitorMute
+  | MixMonitorStart
+  | MixMonitorStop
+  | MonitorStart
+  | MonitorStop
+  | MusicOnHoldStart
+  | MusicOnHoldStop
+  | NewAccountCode
+  | NewCallerid
+  | NewConnectedLine
+  | NewExten
+  | Newchannel
+  | Newstate
+  | OriginateResponse
+  | ParkedCall
+  | ParkedCallGiveUp
+  | ParkedCallSwap
+  | ParkedCallTimeOut
+  | PeerStatus
+  | Pickup
+  | PresenceStateChange
+  | PresenceStateListComplete
+  | PresenceStatus
+  | QueueSummary
+  | QueueSummaryComplete
+  | QueueMember
+  | QueueCallerAbandon
+  | QueueCallerJoin
+  | QueueCallerLeave
+  | QueueEntry
+  | QueueMemberAdded
+  | QueueMemberPause
+  | QueueMemberPenalty
+  | QueueMemberRemoved
+  | QueueMemberRinginuse
+  | QueueMemberStatus
+  | QueueParams
+  | RTCPReceived
+  | RTCPSent
+  | ReceiveFAX
+  | Registry
+  | Reload
+  | Rename
+  | RequestBadFormat
+  | RequestNotAllowed
+  | RequestNotSupported
+  | SIPQualifyPeerDone
+  | SendFAX
+  | SessionLimit
+  | SessionTimeout
+  | Shutdown
+  | SoftHangupRequest
+  | SpanAlarm
+  | SpanAlarmClear
+  | Status
+  | StatusComplete
+  | SuccessfulAuth
+  | TransportDetail
+  | UnParkedCall
+  | UnexpectedAddress
+  | Unhold
+  | Unload
+  | UserEvent
+  | VarSet
+  | VoicemailPasswordChange
+  | Wink;

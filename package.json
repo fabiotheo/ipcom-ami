@@ -8,7 +8,11 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "node build.js",
-		"start": "node dist/esm/index.js"
+		"start": "node dist/esm/index.js",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"format": "prettier --write src",
+		"format:check": "prettier --check src"
 	},
 	"keywords": [],
 	"author": "Fabio Theodoro <fabio@ipcom.com.br>",
@@ -23,10 +27,15 @@
 	},
 	"homepage": "https://github.com/fabiotheo/ipcom-ami#readme",
 	"devDependencies": {
-		"@biomejs/biome": "1.8.3",
-		"@types/node": "^22.4.0",
-		"esbuild": "^0.23.1",
-		"typescript": "^5.5.4"
+		"@eslint/js": "^9.39.2",
+		"@types/node": "^25.0.3",
+		"esbuild": "^0.27.2",
+		"eslint": "^9.39.2",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-import": "^2.32.0",
+		"prettier": "^3.7.4",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.52.0"
 	},
 	"dependencies": {
 		"events": "^3.3.0",
