@@ -7,11 +7,11 @@ export interface I_BridgeEnter {
     BridgeCreator: string;
     BridgeName: string;
     BridgeNumChannels: number;
-    BridgeVideoSourceMode: "talker" | "single" | string;
+    BridgeVideoSourceMode: 'talker' | 'single' | string;
     BridgeVideoSource: string;
     Channel: string;
     ChannelState: number;
-    ChannelStateDesc: "Down" | "Rsrvd" | "offHook" | "Diealing" | "Ring" | "Ringing" | "Up" | "Busy" | "Dialing Offhook" | "Pre-ring" | "Unknown" | string;
+    ChannelStateDesc: 'Down' | 'Rsrvd' | 'offHook' | 'Diealing' | 'Ring' | 'Ringing' | 'Up' | 'Busy' | 'Dialing Offhook' | 'Pre-ring' | 'Unknown' | string;
     CallerIDNum: number;
     CallerIDName: string;
     ConnectedLineNum: number;
@@ -33,7 +33,7 @@ export interface I_BridgeCreate {
     BridgeCreator: string;
     BridgeName: string;
     BridgeNumChannels: number;
-    BridgeVideoSourceMode: "talker" | "single" | string;
+    BridgeVideoSourceMode: 'talker' | 'single' | string;
     BridgeVideoSource: string;
 }
 export interface I_BridgeLeave {
@@ -45,11 +45,11 @@ export interface I_BridgeLeave {
     BridgeCreator: string;
     BridgeName: string;
     BridgeNumChannels: number;
-    BridgeVideoSourceMode: "talker" | "single" | string;
+    BridgeVideoSourceMode: 'talker' | 'single' | string;
     BridgeVideoSource: string;
     Channel: string;
     ChannelState: number;
-    ChannelStateDesc: "Down" | "Rsrvd" | "offHook" | "Diealing" | "Ring" | "Ringing" | "Up" | "Busy" | "Dialing Offhook" | "Pre-ring" | "Unknown" | string;
+    ChannelStateDesc: 'Down' | 'Rsrvd' | 'offHook' | 'Diealing' | 'Ring' | 'Ringing' | 'Up' | 'Busy' | 'Dialing Offhook' | 'Pre-ring' | 'Unknown' | string;
     CallerIDNum: number;
     CallerIDName: string;
     ConnectedLineNum: number;
@@ -71,7 +71,7 @@ export interface I_BridgeDestroy {
     BridgeCreator: string;
     BridgeName: string;
     BridgeNumChannels: number;
-    BridgeVideoSourceMode: "talker" | "single" | string;
+    BridgeVideoSourceMode: 'talker' | 'single' | string;
     BridgeVideoSource: string;
 }
 export interface I_BridgeMerge {
@@ -108,7 +108,7 @@ export interface I_BridgeInfoChannel {
     Event: string;
     Channel: string;
     ChannelState: number;
-    ChannelStateDesc: "Down" | "Rsrvd" | "offHook" | "Diealing" | "Ring" | "Ringing" | "Up" | "Busy" | "Dialing Offhook" | "Pre-ring" | "Unknown" | string;
+    ChannelStateDesc: 'Down' | 'Rsrvd' | 'offHook' | 'Diealing' | 'Ring' | 'Ringing' | 'Up' | 'Busy' | 'Dialing Offhook' | 'Pre-ring' | 'Unknown' | string;
     CallerIDNum: number;
     CallerIDName: string;
     ConnectedLineNum: number;

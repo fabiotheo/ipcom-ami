@@ -1,10 +1,10 @@
-import { EventEmitter } from "node:events";
-import { Socket } from "node:net";
-import { eAmiActions } from "./e-ami-actions.js";
-import type { I_Request } from "./interfaces/actions.interface.js";
-import type { IeAmiOptions } from "./interfaces/configure.interface.js";
-export * from "./typeGuards.js";
-export * from "./types/events.js";
+import { EventEmitter } from 'node:events';
+import { Socket } from 'node:net';
+import { eAmiActions } from './e-ami-actions.js';
+import type { I_Request } from './interfaces/actions.interface.js';
+import type { IeAmiOptions } from './interfaces/configure.interface.js';
+export * from './typeGuards.js';
+export * from './types/events.js';
 export declare const eAMI_EVENTS: {
     CONNECT: string;
     DO_RECONNECT: string;

@@ -4,7 +4,7 @@ export interface I_QueueMember {
     MemberName: string;
     Interface: string;
     StateInterface: string;
-    Membership: "dynamic" | "realtime" | "static" | string;
+    Membership: 'dynamic' | 'realtime' | 'static' | string;
     Penalty: number;
     CallsTaken: number;
     LastCall: number;
@@ -16,12 +16,12 @@ export interface I_QueueMember {
     Ringinuse: 0 | 1;
 }
 export interface I_QueueMemberAdded {
-    Event: "QueueMemberAdded";
+    Event: 'QueueMemberAdded';
     Queue: string;
     MemberName: string;
     Interface: string;
     StateInterface: string;
-    Membership: "dynamic" | "realtime" | "static" | string;
+    Membership: 'dynamic' | 'realtime' | 'static' | string;
     Penalty: number;
     CallsTaken: number;
     LastCall: number;
@@ -30,12 +30,12 @@ export interface I_QueueMemberAdded {
     Ringinuse: 0 | 1;
 }
 export interface I_QueueMemberRemoved {
-    Event: "QueueMemberRemoved";
+    Event: 'QueueMemberRemoved';
     Queue: string;
     MemberName: string;
     Interface: string;
     StateInterface: string;
-    Membership: "dynamic" | "realtime" | "static" | string;
+    Membership: 'dynamic' | 'realtime' | 'static' | string;
     Penalty: number;
     CallsTaken: number;
     LastCall: number;
@@ -44,12 +44,12 @@ export interface I_QueueMemberRemoved {
     Ringinuse: 0 | 1;
 }
 export interface I_QueueMemberPenalty {
-    Event: "QueueMemberPenalty";
+    Event: 'QueueMemberPenalty';
     Queue: string;
     MemberName: string;
     Interface: string;
     StateInterface: string;
-    Membership: "dynamic" | "realtime" | "static" | string;
+    Membership: 'dynamic' | 'realtime' | 'static' | string;
     Penalty: number;
     CallsTaken: number;
     LastCall: number;
@@ -63,7 +63,7 @@ export interface I_QueueMemberStatus {
     MemberName: string;
     Interface: string;
     StateInterface: string;
-    Membership: "dynamic" | "realtime" | "static" | string;
+    Membership: 'dynamic' | 'realtime' | 'static' | string;
     Penalty: number;
     CallsTaken: number;
     LastCall: number;
@@ -80,7 +80,7 @@ export interface I_QueueMemberPause {
     MemberName: string;
     Interface: string;
     StateInterface: string;
-    Membership: "dynamic" | "realtime" | "static" | string;
+    Membership: 'dynamic' | 'realtime' | 'static' | string;
     Penalty: number;
     CallsTaken: number;
     LastCall: number;

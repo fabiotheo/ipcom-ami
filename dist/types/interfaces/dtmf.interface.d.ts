@@ -14,7 +14,7 @@ export interface I_DTMFBegin {
     Uniqueid: number;
     Linkedid: number;
     Digit: string;
-    Direction: "Received" | "Sent";
+    Direction: 'Received' | 'Sent';
 }
 export interface I_DTMFEnd {
     Event: string;
@@ -33,6 +33,6 @@ export interface I_DTMFEnd {
     Linkedid: number;
     Digit: string;
     DurationMs: number;
-    Direction: "Received" | "Sent";
+    Direction: 'Received' | 'Sent';
 }
 //# sourceMappingURL=dtmf.interface.d.ts.map

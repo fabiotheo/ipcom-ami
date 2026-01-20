@@ -1,5 +1,5 @@
 export interface I_UserEvent {
-    Event: "UserEvent";
+    Event: 'UserEvent';
     Channel: string;
     ChannelState: number;
     ChannelStateDesc: string;

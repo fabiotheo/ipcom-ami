@@ -18,7 +18,7 @@ export interface I_RTCPSent {
     To: string;
     From: string;
     SSRC: number;
-    PT: "200(SR)" | "201(SR)";
+    PT: '200(SR)' | '201(SR)';
     ReportCount: number;
     SentNTP: number;
     SentRTP: number;
@@ -53,7 +53,7 @@ export interface I_RTCPReceived {
     To: string;
     From: string;
     SSRC: number;
-    PT: "200(SR)" | "201(SR)";
+    PT: '200(SR)' | '201(SR)';
     ReportCount: number;
     SentNTP: number;
     SentRTP: number;

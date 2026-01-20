@@ -1,5 +1,5 @@
 export interface I_OriginateResponse {
-    Event: "OriginateResponse";
+    Event: 'OriginateResponse';
     ActionID?: number | string;
     Response: string;
     Channel: string;
