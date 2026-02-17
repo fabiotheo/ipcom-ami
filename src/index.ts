@@ -56,6 +56,7 @@ export class eAmi {
   private _excludeEvents: string[];
 
   private _queueRequest: I_Request[];
+  private _remainder = '';
   public _socketHandler?: Socket = undefined;
   private _actions: eAmiActions;
   public events: EventEmitter;
@@ -191,6 +192,8 @@ export class eAmi {
     } else {
       if (this.debug) console.log('Socket handler is undefined, cannot destroy socket.');
     }
+
+    this._remainder = '';
 
     // ✅ Limpar heartbeat timeout
     if (this._heartbeatHandler) {
@@ -573,7 +576,7 @@ export class eAmi {
   }
 
   private getData(buffer: Buffer): I_Response {
-    let dataStr: string = buffer.toString();
+    let dataStr: string = this._remainder + buffer.toString();
     let iDelim: number;
     let typeResponse = '';
     let dataArray: string[] = [];
@@ -583,7 +586,13 @@ export class eAmi {
     let dataObject: I_Response = {};
 
     if (dataStr.startsWith('Asterisk Call Manager')) {
-      dataStr = dataStr.substring(dataStr.indexOf(CRLF) + 2);
+      const idx = dataStr.indexOf(CRLF);
+      if (idx !== -1) {
+        dataStr = dataStr.substring(idx + 2);
+      } else {
+        this._remainder = dataStr;
+        return {};
+      }
     }
 
     while (true) {
@@ -658,6 +667,13 @@ export class eAmi {
         default:
           break;
       }
+    }
+
+    this._remainder = dataStr;
+
+    if (this._remainder.length > 1024 * 1024) {
+      if (this.debug) console.log('AMI buffer overflow — clearing remainder');
+      this._remainder = '';
     }
 
     return dataObject;

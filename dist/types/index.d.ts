@@ -83,6 +83,7 @@ export declare class eAmi {
     private _countReconnect;
     private _excludeEvents;
     private _queueRequest;
+    private _remainder;
     _socketHandler?: Socket;
     private _actions;
     events: EventEmitter;
