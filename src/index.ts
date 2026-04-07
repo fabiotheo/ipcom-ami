@@ -621,7 +621,11 @@ export class eAmi {
         }
 
         const valueNumber = _toNumber(value);
-        if (valueNumber !== undefined && _isFinite(valueNumber)) {
+        if (
+          valueNumber !== undefined &&
+          _isFinite(valueNumber) &&
+          !(typeof value === 'string' && value.length > 1 && value.startsWith('0') && !value.startsWith('0.'))
+        ) {
           value = valueNumber;
         } else if (value && value.indexOf('unknown') >= 0) {
           value = null;
