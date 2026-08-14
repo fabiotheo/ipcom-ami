@@ -124,7 +124,15 @@ export declare class eAmi {
     get isLoggedIn(): boolean;
     get lastConnectTime(): number;
     get actions(): eAmiActions;
+    /**
+     * Requisições em voo, como array.
+     *
+     * ⚠️ É uma CÓPIA da fila interna — mutar o retorno não altera nada.
+     * Para saber o tamanho, prefira `queueRequestSize`, que é O(1).
+     */
     get queueRequest(): I_Request[];
+    /** Quantidade de requisições em voo. O(1). */
+    get queueRequestSize(): number;
     private addSocketListeners;
     destroySocket(): void;
     /**
@@ -149,6 +157,11 @@ export declare class eAmi {
      * ```
      */
     cleanup(): void;
+    /**
+     * Normaliza o ActionID em chave de índice.
+     * Resolve a ambiguidade número/string: 123 e '123' viram a mesma chave.
+     */
+    private requestKey;
     private addRequest;
     private removeRequest;
     getRequest(actionID: unknown): I_Request | null;

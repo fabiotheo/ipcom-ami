@@ -12,7 +12,6 @@ import {
 } from './constants.js';
 import { eAmiActions } from './e-ami-actions.js';
 import {
-  _indexOfArray,
   _isEmpty,
   _isFinite,
   _isNull,
@@ -55,7 +54,7 @@ export class eAmi {
 
   private _excludeEvents: string[];
 
-  private _queueRequest: I_Request[];
+  private _queueRequest: Map<string, I_Request>;
   private _remainder = '';
   public _socketHandler?: Socket = undefined;
   private _actions: eAmiActions;
@@ -107,7 +106,7 @@ export class eAmi {
 
     this.events = new EventEmitter();
 
-    this._queueRequest = [];
+    this._queueRequest = new Map();
 
     this._isLoggedIn = false;
 
@@ -163,8 +162,19 @@ export class eAmi {
     return this._actions;
   }
 
+  /**
+   * Requisições em voo, como array.
+   *
+   * ⚠️ É uma CÓPIA da fila interna — mutar o retorno não altera nada.
+   * Para saber o tamanho, prefira `queueRequestSize`, que é O(1).
+   */
   get queueRequest(): I_Request[] {
-    return this._queueRequest;
+    return Array.from(this._queueRequest.values());
+  }
+
+  /** Quantidade de requisições em voo. O(1). */
+  get queueRequestSize(): number {
+    return this._queueRequest.size;
   }
 
   private addSocketListeners(): void {
@@ -228,38 +238,33 @@ export class eAmi {
     if (this.debug) console.log('All event listeners removed');
   }
 
+  /**
+   * Normaliza o ActionID em chave de índice.
+   * Resolve a ambiguidade número/string: 123 e '123' viram a mesma chave.
+   */
+  private requestKey(actionID: unknown): string | null {
+    if (actionID === undefined || actionID === null || actionID === '') return null;
+    return String(actionID);
+  }
+
   private addRequest(request: I_Request): void {
-    this.queueRequest.push(request);
+    const key = this.requestKey(request.ActionID);
+    if (key !== null) this._queueRequest.set(key, request);
     this.events.emit(eAMI_EVENTS.SEND, request);
   }
 
   private removeRequest(actionID: unknown): boolean {
-    if (_isUndefined(actionID)) return false;
+    const key = this.requestKey(actionID);
+    if (key === null) return false;
 
-    const index: number = _indexOfArray(this.queueRequest, actionID);
-
-    if (index < 0) return false;
-    try {
-      this.queueRequest.splice(index, 1);
-      return true;
-    } catch (error) {
-      if (this.debug) console.log('Error remove request', error);
-      return false;
-    }
+    return this._queueRequest.delete(key);
   }
 
   public getRequest(actionID: unknown): I_Request | null {
-    if (_isUndefined(actionID)) return null;
+    const key = this.requestKey(actionID);
+    if (key === null) return null;
 
-    const numActionID = _toNumber(actionID);
-    const searchID =
-      numActionID !== undefined && Number.isFinite(numActionID) ? numActionID : actionID;
-
-    const index: number = _indexOfArray(this.queueRequest, searchID);
-
-    if (index < 0) return null;
-
-    return this.queueRequest[index];
+    return this._queueRequest.get(key) ?? null;
   }
 
   private setRequest(actionID: unknown, newRequest: I_Request): void {
@@ -477,6 +482,10 @@ export class eAmi {
       const cleanupAll = () => {
         clearTimeout(fallbackTimeout);
         cleanupListeners();
+        // A requisição saiu de voo — resolvida, rejeitada ou expirada. Antes,
+        // só o caminho de reenvio removia da fila, então toda ação que dava
+        // CERTO ficava registrada para sempre e a fila crescia sem limite.
+        this.removeRequest(actionID);
       };
 
       // handlers for resolve

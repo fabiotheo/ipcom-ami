@@ -1,12 +1,12 @@
 {
 	"name": "@ipcom/asterisk-ami",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"type": "module",
 	"main": "./dist/cjs/index.cjs",
 	"module": "./dist/esm/index.js",
 	"types": "./dist/types/index.d.ts",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "npm run build && node --test \"__tests__/**/*.test.mjs\"",
 		"build": "node build.js",
 		"start": "node dist/esm/index.js",
 		"lint": "eslint src",
